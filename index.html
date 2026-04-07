@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🩺 每日临床知识 | Mayo Clinic × 北京协和医院</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f8fafc;
+            color: #2d3748;
+            line-height: 1.7;
+        }
+        .hero {
+            background: linear-gradient(135deg, #1a5f7a, #2e7d6b);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .hero h1 { font-size: 36px; margin-bottom: 10px; }
+        .hero p { font-size: 18px; opacity: 0.9; }
+        .container { max-width: 900px; margin: 0 auto; padding: 40px 20px; }
+        .day-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 16px;
+            margin-top: 30px;
+        }
+        .day-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid #e2e8f0;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: block;
+        }
+        .day-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+        }
+        .day-num {
+            font-size: 13px;
+            font-weight: 700;
+            color: #2e7d6b;
+            background: #e8f5f1;
+            padding: 4px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .day-title { font-size: 18px; font-weight: 700; color: #1a3a5c; margin-bottom: 6px; }
+        .day-desc { font-size: 13px; color: #666; }
+        .day-date { font-size: 12px; color: #aaa; margin-top: 8px; }
+        .progress-bar {
+            background: #e2e8f0;
+            border-radius: 20px;
+            height: 8px;
+            margin-top: 40px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            background: linear-gradient(90deg, #1a5f7a, #2e7d6b);
+            height: 100%;
+            border-radius: 20px;
+            width: 25%;
+        }
+        .progress-label {
+            text-align: center;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #888;
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #aaa;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <h1>🩺 每日临床知识</h1>
+    <p>Mayo Clinic × 北京协和医院 临床培训标准</p>
+    <p style="font-size: 14px; opacity: 0.7; margin-top: 8px;">器官系统专题 · 20天循环 · 每日更新</p>
+</div>
+
+<div class="container">
+    <div class="progress-label">已发布：Day 1–5 / 20</div>
+    <div class="progress-bar"><div class="progress-fill"></div></div>
+
+    <div class="day-grid">
+
+        <a class="day-card" href="临床知识_Day1_2026-04-03.html">
+            <div class="day-num">Day 1</div>
+            <div class="day-title">心血管系统</div>
+            <div class="day-desc">急性冠脉综合征 · 高血压 · 心力衰竭</div>
+            <div class="day-date">2026-04-03</div>
+        </a>
+
+        <a class="day-card" href="临床知识_Day2_2026-04-04.html">
+            <div class="day-num">Day 2</div>
+            <div class="day-title">呼吸系统</div>
+            <div class="day-desc">哮喘 · COPD · 肺炎 · 肺栓塞</div>
+            <div class="day-date">2026-04-04</div>
+        </a>
+
+        <a class="day-card" href="临床知识_Day3_2026-04-05.html">
+            <div class="day-num">Day 3</div>
+            <div class="day-title">消化系统</div>
+            <div class="day-desc">GERD · 消化性溃疡 · 急性阑尾炎</div>
+            <div class="day-date">2026-04-05</div>
+        </a>
+
+        <a class="day-card" href="临床知识_Day4_2026-04-06.html">
+            <div class="day-num">Day 4</div>
+            <div class="day-title">肝胆胰系统</div>
+            <div class="day-desc">急性胆囊炎 · 胆石症 · 急性胰腺炎</div>
+            <div class="day-date">2026-04-06</div>
+        </a>
+
+        <a class="day-card" href="临床知识_Day5_2026-04-07.html">
+            <div class="day-num">Day 5</div>
+            <div class="day-title">肾脏与泌尿系统</div>
+            <div class="day-desc">AKI · CKD · UTI · 肾结石</div>
+            <div class="day-desc" style="color:#2e7d6b; margin-top:4px;">🦴 含膝关节置换适应证</div>
+            <div class="day-date">2026-04-07</div>
+        </a>
+
+    </div>
+</div>
+
+<footer>
+    <p>📖 内容来源：Mayo Clinic × 北京协和医院 临床培训标准</p>
+    <p>🔗 GitHub: <a href="https://github.com/marvinchima723/DailyClinicalKnowledge" style="color:#2e7d6b;">marvinchima723/DailyClinicalKnowledge</a></p>
+</footer>
+
+</body>
+</html>
