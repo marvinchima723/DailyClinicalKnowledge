@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🫀 Day 1 | 心血管系统 — 每日临床知识</title>
+    <style>
+        :root {
+            --primary: #c0392b;
+            --primary-light: #fdf2f2;
+            --secondary: #1a5a7a;
+            --secondary-light: #e8f4f8;
+            --accent: #e07b39;
+            --accent-light: #fef3e2;
+            --success: #27ae60;
+            --success-light: #e8f7ef;
+            --bg: #f7f9fc;
+            --card: #ffffff;
+            --text: #2c3e50;
+            --muted: #7f8c8d;
+            --border: #e1e8ed;
+            --shadow: 0 2px 12px rgba(0,0,0,0.08);
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+        a { color: var(--secondary); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary) 0%, #8e2d1f 100%);
+            color: white;
+            padding: 40px 24px;
+            text-align: center;
+        }
+        .hero .day-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.35);
+            border-radius: 20px;
+            padding: 4px 18px;
+            font-size: 0.82rem;
+            margin-bottom: 14px;
+        }
+        .hero h1 { font-size: 1.9rem; font-weight: 700; margin-bottom: 8px; }
+        .hero .subtitle { opacity: 0.88; font-size: 0.95rem; margin-bottom: 6px; }
+        .hero .source { font-size: 0.78rem; opacity: 0.7; }
+        .progress-bar { max-width: 600px; margin: 16px auto 0; background: rgba(255,255,255,0.2); border-radius: 10px; height: 6px; }
+        .progress-bar .fill { background: white; border-radius: 10px; height: 100%; width: 5%; }
+
+        .container { max-width: 860px; margin: 0 auto; padding: 28px 20px; }
+
+        .meta-info {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+        .meta-chip {
+            background: var(--secondary-light);
+            color: var(--secondary);
+            border-radius: 20px;
+            padding: 4px 14px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .disease-section {
+            background: var(--card);
+            border-radius: 16px;
+            box-shadow: var(--shadow);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+        .disease-header {
+            padding: 22px 28px 18px;
+            border-bottom: 1px solid var(--border);
+        }
+        .disease-header h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4px;
+        }
+        .disease-header .eng-title { font-size: 0.82rem; color: var(--muted); font-weight: 400; }
+        .disease-body { padding: 22px 28px; }
+
+        .key-facts {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        .key-fact {
+            background: var(--primary-light);
+            border-left: 3px solid var(--primary);
+            border-radius: 0 8px 8px 0;
+            padding: 10px 14px;
+            font-size: 0.85rem;
+        }
+        .key-fact .label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px; }
+        .key-fact .value { font-weight: 600; color: var(--primary); }
+
+        .pearl {
+            background: var(--accent-light);
+            border: 1px solid #f5d9b0;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin-bottom: 18px;
+            font-size: 0.88rem;
+        }
+        .pearl-title { font-weight: 700; color: var(--accent); margin-bottom: 4px; font-size: 0.82rem; }
+        .pearl-title::before { content: "💡 "; }
+
+        .danger {
+            background: #fef2f2;
+            border: 1px solid #fecaca;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin-bottom: 18px;
+            font-size: 0.88rem;
+        }
+        .danger-title { font-weight: 700; color: #dc2626; margin-bottom: 4px; font-size: 0.82rem; }
+        .danger-title::before { content: "🚨 "; }
+
+        .clinical-point {
+            background: var(--success-light);
+            border: 1px solid #a7d9c5;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin-bottom: 18px;
+            font-size: 0.88rem;
+        }
+        .clinical-point-title { font-weight: 700; color: var(--success); margin-bottom: 4px; font-size: 0.82rem; }
+        .clinical-point-title::before { content: "✅ "; }
+
+        h3 { font-size: 0.98rem; font-weight: 700; color: var(--secondary); margin-bottom: 10px; margin-top: 18px; }
+        h3:first-child { margin-top: 0; }
+        p { margin-bottom: 10px; font-size: 0.9rem; }
+
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        @media (max-width: 600px) { .grid-2 { grid-template-columns: 1fr; } }
+
+        ul, ol { padding-left: 20px; margin-bottom: 10px; font-size: 0.9rem; }
+        li { margin-bottom: 5px; }
+
+        .formula-box {
+            background: #f8f9fa;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-family: "Courier New", monospace;
+            font-size: 0.88rem;
+            margin: 10px 0;
+            color: #2c3e50;
+        }
+
+        table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
+        th { background: var(--secondary); color: white; padding: 8px 12px; text-align: left; }
+        td { padding: 8px 12px; border-bottom: 1px solid var(--border); }
+        tr:last-child td { border-bottom: none; }
+        tr:nth-child(even) td { background: #f8fafb; }
+
+        .ref { font-size: 0.78rem; color: var(--muted); border-top: 1px solid var(--border); padding-top: 12px; margin-top: 18px; }
+        .ref strong { color: var(--muted); }
+
+        .differential-box {
+            background: #f5f5f5;
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 12px 0;
+        }
+        .differential-box h4 { font-size: 0.88rem; color: var(--secondary); margin-bottom: 8px; }
+
+        .nav-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+            border-top: 1px solid var(--border);
+            margin-top: 28px;
+        }
+        .nav-footer .series-title { font-size: 0.82rem; color: var(--muted); }
+        .nav-footer .next-badge {
+            background: var(--secondary);
+            color: white;
+            border-radius: 20px;
+            padding: 6px 16px;
+            font-size: 0.82rem;
+        }
+
+        footer { text-align: center; padding: 24px; color: var(--muted); font-size: 0.8rem; border-top: 1px solid var(--border); margin-top: 20px; }
+    </style>
+</head>
+<body>
+
+<div class="hero">
+    <div class="day-badge">Day 1 / 20 · 器官系统专题</div>
+    <h1>🫀 心血管系统</h1>
+    <div class="subtitle">Cardiovascular System — 冠状动脉疾病 · 高血压 · 心力衰竭</div>
+    <div class="source">基于 Mayo Clinic Cardiovascular Medicine Training &amp; 北京协和医院心血管内科专培标准</div>
+    <div class="progress-bar"><div class="fill"></div></div>
+</div>
+
+<div class="container">
+
+    <div class="meta-info">
+        <span class="meta-chip">📅 2026-04-03</span>
+        <span class="meta-chip">⏰ 学习时间：15-20 分钟</span>
+        <span class="meta-chip">🏥 明日预告：呼吸系统</span>
+        <span class="meta-chip">📖 来源：Mayo Clinic + 协和医院专培教材</span>
+    </div>
+
+    <!-- 疾病一：急性冠脉综合征 -->
+    <div class="disease-section">
+        <div class="disease-header">
+            <h2>一、急性冠脉综合征（ACS）</h2>
+            <div class="eng-title">Acute Coronary Syndrome · STEMI / NSTEMI / Unstable Angina</div>
+        </div>
+        <div class="disease-body">
+
+            <div class="key-facts">
+                <div class="key-fact">
+                    <div class="label">定义</div>
+                    <div class="value">冠状动脉急性闭塞导致心肌缺血坏死</div>
+                </div>
+                <div class="key-fact">
+                    <div class="label">典型症状</div>
+                    <div class="value">压榨性胸骨后疼痛 ≥20min，伴冷汗、恶心</div>
+                </div>
+                <div class="key-fact">
+                    <div class="label">首选用药</div>
+                    <div class="value">阿司匹林 + 替格瑞洛 + 依诺肝素</div>
+                </div>
+                <div class="key-fact">
+                    <div class="label">再灌注</div>
+                    <div class="value">PCI（首选）&lt;90min；溶栓&lt;30min（Fibrinolysis）</div>
+                </div>
+            </div>
+
+            <div class="danger">
+                <div class="danger-title">⚠️ 临床决策关键 — 鉴别诊断</div>
+                <p style="margin:0">胸痛患者到达急诊后 <strong>10分钟内</strong> 必须完成 12 导联心电图！</p>
+                <ul style="margin:6px 0 0">
+                    <li>ST 段弓背向上抬高 → <strong>STEMI</strong>（立即启动导管室）</li>
+                    <li>ST 段压低/T波倒置 → <strong>NSTEMI/UA</strong>（风险分层）</li>
+                    <li>心电图正常不能排除 ACS，<strong>动态复查</strong>！</li>
+                </ul>
+            </div>
+
+            <h3>📋 STEMI 诊断标准（第三版全球定义）</h3>
+            <ul>
+                <li>心脏标志物（cTn）升高超过99百分位 + 至少以下一项：
+                <ul>
+                    <li>心肌缺血症状（新胸痛/呼吸困难）</li>
+                    <li>新发ST段抬高（男性V2-V3 ≥2mm，其他导联 ≥1mm；女性V2-V3 ≥1.5mm）</li>
+                    <li>新发左束支传导阻滞（LBBB）</li>
+                    <li>病理性Q波</li>
+                    <li>影像学显示新发节段性室壁运动异常</li>
+                </ul>
+                </li>
+            </ul>
+
+            <h3>💊 STEMI 急性期治疗方案（Mayo Clinic Protocol）</h3>
+            <div class="grid-2">
+                <div>
+                    <h3 style="margin-top:0;font-size:0.88rem;">抗栓治疗</h3>
+                    <ul>
+                        <li><strong>阿司匹林</strong> 300mg 嚼服（立即）</li>
+                        <li><strong>替格瑞洛</strong> 180mg 口服（或氯吡格雷600mg）</li>
+                        <li><strong>依诺肝素</strong> 1mg/kg 皮下 q12h</li>
+                        <li><strong>普通肝素</strong>（PCI术中）：70-100U/kg</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 style="margin-top:0;font-size:0.88rem;">再灌注 &amp; 辅助</h3>
+                    <ul>
+                        <li><strong>直接PCI</strong>（首选，若D2B时间&lt;90min）</li>
+                        <li>溶栓（若无法及时PCI）：rt-PA/TNK-tPA</li>
+                        <li>β受体阻滞剂（无禁忌证）</li>
+                        <li>他汀（强化：阿托伐他汀80mg）</li>
+                        <li>ACEI/ARB（心梗后LVEF&lt;40%必用）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>📊 NSTEMI 风险分层（GRACE评分）</h3>
+            <table>
+                <tr><th>评分项目</th><th>内容</th></tr>
+                <tr><td>年龄</td><td>≤40=0, 40-49=18, 50-59=36, 60-69=55, 70-79=73, ≥80=91</td></tr>
+                <tr><td>心率</td><td>&lt;70=0, 70-89=7, 90-109=34, 110-149=59, 150-199=88, ≥200=100</td></tr>
+                <tr><td>收缩压</td><td>&gt;200=0, 160-199=10, 140-159=22, 120-139=35, &lt;120=53</td></tr>
+                <tr><td>Killip分级</td><td>I=0, II=20, III=39, IV=59</td></tr>
+                <tr><td>危险因素</td><td>心电图ST变化(+14)、心脏标志物升高(+14)</td></tr>
+                <tr><td colspan="2"><strong>高危</strong>（&gt;140）：立即侵入治疗（24h内）｜<strong>中危</strong>（109-140）：48-72h｜<strong>低危</strong>（≤108）：保守治疗</td></tr>
+            </table>
+
+            <div class="pearl">
+                <div class="pearl-title">协和临床经验</div>
+                ACS患者就诊后立即嚼服<strong>阿司匹林300mg + 替格瑞洛180mg</strong>（或氯吡格雷300-600mg），建立双抗通道，这是整个ACS治疗的基石。双抗启动后不建议延期手术。
+            </div>
+
+            <div class="clinical-point">
+                <div class="clinical-point-title">鉴别诊断</div>
+                <div class="differential-box">
+                    <h4>胸痛鉴别"4321"框架</h4>
+                    <ul>
+                        <li><strong>4</strong> 种致命胸痛：ACS、主动脉夹层、肺栓塞、张力性气胸</li>
+                        <li><strong>3</strong> 种高危非致命：食管破裂、纵隔炎、心包填塞</li>
+                        <li><strong>2</strong> 种中等危：肺感染、胸腔肿瘤</li>
+                        <li><strong>1</strong> 种低危：肌肉骨骼性胸痛（Costochondritis）</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ref">
+                <strong>参考文献：</strong><br>
+                1. ESC Guidelines for the management of ACS, 2023<br>
+                2. 中国急性冠脉综合征诊疗指南, 中华心血管病杂志, 2021<br>
+                3. Mayo Clinic Cardiovascular Medicine Fellowship Curriculum<br>
+                4. 北京协和医院心血管内科专科医师规范化培训实施细则, 2017
+            </div>
+        </div>
+    </div>
+
+    <!-- 疾病二：高血压 -->
+    <div class="disease-section">
+        <div class="disease-header">
+            <h2>二、原发性高血压</h2>
+            <div class="eng-title">Essential Hypertension</div>
+        </div>
+        <div class="disease-body">
+
+            <div class="key-facts">
+                <div class="key-fact">
+                    <div class="label">定义</div>
+                    <div class="value">SBP≥140mmHg 或 DBP≥90mmHg（非同日3次）</div>
+                </div>
+                <div class="key-fact">
+                    <div class="label">中国患病率</div>
+                    <div class="value">约 27.9% （约3亿高血压患者）</div>
+                </div>
+                <div class="key-fact">
+                    <div class="label">核心机制</div>
+                    <div class="value">RAA系统激活 + 交感激活 + 血管重构</div>
+                </div>
+                <div class="key-fact">
+                    <div class="label">一线用药</div>
+                    <div class="value">CCB/ACEI/ARB/利尿剂（+β-blocker if 冠心病）</div>
+                </div>
+            </div>
+
+            <h3>🩺 血压测量规范（2019年中国指南）</h3>
+            <ol>
+                <li>静息5分钟，背靠椅背，双脚平放</li>
+                <li>使用经过验证的上臂式电子血压计（示波法）</li>
+                <li>袖带与心脏同一水平，包裹度为上臂围的80-100%</li>
+                <li>测量3次，间隔1-2分钟，取后2次平均值</li>
+                <li><strong>诊室血压</strong>和<strong>家庭血压（HBPM）</strong>联合诊断</li>
+            </ol>
+            <div class="formula-box">
+                诊室血压 ≥140/90mmHg + 家庭血压均值 ≥135/85mmHg → 可诊断高血压
+            </div>
+
+            <h3>🩺 高血压分级与危险分层</h3>
+            <table>
+                <tr><th>分级</th><th>收缩压(mmHg)</th><th>舒张压(mmHg)</th><th>CV风险</th></tr>
+                <tr><td>正常高值</td><td>120-139</td><td>80-89</td><td>—</td></tr>
+                <tr><td>高血压1级</td><td>140-159</td><td>90-99</td><td>低/中危</td></tr>
+                <tr><td>高血压2级</td><td>160-179</td><td>100-109</td><td>高/极高危</td></tr>
+                <tr><td>高血压3级</td><td>≥180</td><td>≥110</td><td>极高危</td></tr>
+            </table>
+
+            <h3>💊 高血压药物治疗路径（2018 ESC/ASH推荐）</h3>
+            <div class="clinical-point">
+                <div class="clinical-point-title">一线药物选择逻辑</div>
+                <ul>
+                    <li><strong>CCB（氨氯地平/硝苯地平）</strong>：老年人、动脉硬化、单纯收缩期高血压首选</li>
+                    <li><strong>ACEI（培哚普利/贝那普利）</strong>：心梗后、慢性心衰、糖尿病肾病、LVEF减低</li>
+                    <li><strong>ARB（缬沙坦/厄贝沙坦）</strong>：ACEI不耐受（咳嗽）者替代</li>
+                    <li><strong>利尿剂（氢氯噻嗪/吲达帕胺）</strong>：老年人、盐敏感高血压</li>
+                    <li><strong>β受体阻滞剂</strong>：合并冠心病、心衰、心律失常</li>
+                </ul>
+            </div>
+
+            <div class="pearl">
+                <div class="pearl-title">联合用药原则</div>
+                <p>2级高血压（或高危）起始即可<strong>双药联合</strong>：</p>
+                <div class="formula-box">
+                    ACEI/ARB + CCB（最常用）<br>
+                    ACEI/ARB + 利尿剂<br>
+                    CCB + 利尿剂<br>
+                    ⚠️ 不推荐 ACEI + ARB 联合！
+                </div>
+                <p style="margin-top:8px">目标血压：&lt;140/90mmHg（一般）；&lt;130/80mmHg（高危/糖尿病/心脑血管病）</p>
+            </div>
+
+            <div class="danger">
+                <div class="danger-title">高血压急症（Hypertensive Emergency）</div>
+                <p>BP ≥ 180/120mmHg + 急性靶器官损害：</p>
+                <ul>
+                    <li><strong>脑病/卒中</strong>：拉贝洛尔/尼卡地平，避免血压降太快（24h内降&lt;25%）</li>
+                    <li><strong>急性心衰</strong>：硝酸甘油/硝普钠 + 袢利尿剂</li>
+                    <li><strong>主动脉夹层</strong>：立即SBP降至100-120mmHg，首选β阻滞剂+硝普钠</li>
+                    <li><strong>ACS</strong>：首选β阻滞剂+硝酸酯类</li>
+                </ul>
+                <p style="margin-top:8px">⚠️ 禁用：短效硝苯地平（快速降压→脑梗死风险！）</p>
+            </div>
+
+            <div class="ref">
+                <strong>参考文献：</strong><br>
+                1. 2018 ESC/ESH Hypertension Guidelines<br>
+                2. 中国高血压防治指南（2018年修订版）<br>
+                3. 2020 ISH Global Hypertension Practice Guidelines
+            </div>
+        </div>
+    </div>
+
+    <!-- 疾病三：心力衰竭 -->
+    <div class="disease-section">
+        <div class="disease-header">
+            <h2>三、慢性心力衰竭</h2>
+            <div class="eng-title">Chronic Heart Failure (CHF) · HFrEF vs HFpEF</div>
+        </div>
+        <div class="disease-body">
+
+            <div class="key-facts">
+                <div class="key-fact">
+                    <div class="label">定义</div>
+                    <div class="value">心脏结构和/或功能异常→心输出量↓+静息/活动时症状</div>
+                </div>
+                <div class="key-fact">
+                    <div class="label">分类</div>
+                    <div class="value">HFrEF（LVEF≤40%）/HFpEF（LVEF≥50%）/HFmrEF（41-49%）</div>
+                </div>
+                <div class="key-fact">
+                    <div class="label">NYHA分级</div>
+                    <div class="value">I-IV级（Ⅰ日常活动无症状→Ⅳ无法活动）</div>
+                </div>
+                <div class="key-fact">
+                    <div class="label">核心药物</div>
+                    <div class="value">ARNI/ACEI+β阻滞剂+MRA+SGLT2i（"四驾马车"）</div>
+                </div>
+            </div>
+
+            <h3>🔬 心衰分类与诊断流程</h3>
+            <div class="formula-box">
+                疑诊心衰 → 超声心动图（LVEF）→ 分类 → 病因查找 → 治疗
+            </div>
+
+            <h3>HFrEF 诊断标准（ESC 2021）</h3>
+            <ul>
+                <li>症状±体征（劳力性呼吸困难、端坐呼吸、水肿、疲乏）</li>
+                <li>LVEF ≤ 40%</li>
+                <li>至少1项辅助检查异常：
+                <ul>
+                    <li>利钠肽升高（NT-proBNP > 125pg/mL）</li>
+                    <li>心脏结构异常（左室大/左房大/室壁厚）</li>
+                    <li>舒张功能异常（E/e' > 15）</li>
+                </ul>
+                </li>
+            </ul>
+
+            <h3>💊 HFrEF 治疗—"新四联"（2021 ESC Guidelines）</h3>
+            <div class="clinical-point">
+                <div class="clinical-point-title">核心药物治疗方案（无禁忌证者全部启动）</div>
+                <table>
+                    <tr><th>药物类别</th><th>代表药物</th><th>起始剂量</th><th>目标</th></tr>
+                    <tr><td>ARNI（首选）或ACEI</td><td>沙库巴曲/缬沙坦</td><td>25-50mg bid</td><td>200mg bid</td></tr>
+                    <tr><td>β受体阻滞剂</td><td>美托洛尔/卡维地洛/比索洛尔</td><td>低剂量起始</td><td>目标剂量或最大耐受</td></tr>
+                    <tr><td>MRA</td><td>螺内酯/依普利酮</td><td>12.5-25mg qd</td><td>25-50mg qd</td></tr>
+                    <tr><td>SGLT2i</td><td>达格列净/恩格列净</td><td>10mg qd</td><td>10mg qd</td></tr>
+                </table>
+                <p style="margin-top:8px;font-size:0.85rem;">⚠️ <strong>协和经验：</strong>ARNI（沙库巴曲/缬沙坦）替代ACEI/ARB可额外降低CV死亡20%，HFrEF首选！</p>
+            </div>
+
+            <div class="pearl">
+                <div class="pearl-title">心衰加重信号（需警惕）</div>
+                <ul>
+                    <li>体重 3天内增加 > 2kg（液体潴留）</li>
+                    <li>呼吸困难加重（平卧需垫高枕头 → 端坐呼吸）</li>
+                    <li>24h尿量显著减少</li>
+                    <li>下肢水肿再次出现或加重</li>
+                    <li>NT-proBNP 较前升高 > 30%</li>
+                </ul>
+            </div>
+
+            <div class="danger">
+                <div class="danger-title">急性失代偿心衰急救（急诊处理）</div>
+                <ul>
+                    <li><strong>呋塞米</strong> 静脉推注 20-40mg（利尿，监测尿量/K/Mg/肌酐）</li>
+                    <li><strong>硝酸甘油</strong> 泵入（心源性肺水肿，BP<90mmHg慎用）</li>
+                    <li><strong>面罩吸氧</strong>（SpO2 < 90%时）</li>
+                    <li>无创通气（CPAP/BiPAP）—— 急性肺水肿伴呼吸衰竭</li>
+                    <li>吗啡（谨慎使用——不推荐常规使用）</li>
+                </ul>
+            </div>
+
+            <div class="ref">
+                <strong>参考文献：</strong><br>
+                1. 2021 ESC Heart Failure Guidelines<br>
+                2. 2016 ESC Heart Failure Position Statement<br>
+                3. 达格列净在心衰患者中的DELIVER试验, NEJM 2022<br>
+                4. 北京协和医院心内科慢性心衰管理路径
+            </div>
+        </div>
+    </div>
+
+    <!-- 知识框架总览 -->
+    <div class="disease-section">
+        <div class="disease-header" style="background:#f8f9fc;">
+            <h2 style="color:var(--secondary);">📊 心血管系统知识框架总览（20天专题地图）</h2>
+        </div>
+        <div class="disease-body">
+            <table>
+                <tr><th>Day</th><th>专题</th><th>核心疾病</th><th>关键技能</th></tr>
+                <tr style="background:#fef2f2;"><td>1</td><td>🫀 心血管</td><td>ACS·高血压·心衰</td><td>胸痛鉴别·ECG判读·急救流程</td></tr>
+                <tr><td>2</td><td>🫁 呼吸</td><td>COPD·肺炎·哮喘</td><td>血气分析·肺功能·抗生素选择</td></tr>
+                <tr><td>3</td><td>🍽️ 消化</td><td>消化性溃疡·胃食管反流· IBD</td><td>HP根除·内镜指征·黑便鉴别</td></tr>
+                <tr><td colspan="4" style="text-align:center;color:var(--muted);">... 更多专题请关注明日推送 ...</td></tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="nav-footer">
+        <div>
+            <div class="series-title">每日临床知识 · Mayo Clinic + 协和医院标准</div>
+        </div>
+        <div class="next-badge">明日 → 🫁 呼吸系统</div>
+    </div>
+
+</div>
+
+<footer>
+    🩺 每日临床知识网站 · 基于 Mayo Clinic Cardiovascular Fellowship &amp; 北京协和医院专培标准<br>
+    本内容仅供临床学习参考，不替代临床诊疗决策
+</footer>
+
+</body>
+</html>

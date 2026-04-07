@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🩺 每日临床知识 | Day 4 肝胆胰系统 | 2026-04-06</title>
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --secondary: #57837b;
+            --accent: #c1e1c1;
+            --highlight: #fff3cd;
+            --warning: #f8d7da;
+            --danger: #f5c6cb;
+            --info: #e8f4f8;
+            --bg: #f8fafc;
+            --text: #2d3748;
+            --white: #ffffff;
+            --border: #e2e8f0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        header {
+            background: linear-gradient(135deg, #1a5f7a, #3d7a5f);
+            color: var(--white);
+            padding: 40px 30px;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 30px;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        .header-date { font-size: 14px; opacity: 0.9; }
+        h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+        .subtitle { font-size: 18px; opacity: 0.9; margin-bottom: 15px; }
+        .source-note {
+            background: rgba(255,255,255,0.15);
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-size: 13px;
+            border-left: 4px solid rgba(255,255,255,0.5);
+        }
+        .disease-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+        }
+        .disease-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--accent);
+        }
+        .disease-icon { font-size: 32px; }
+        .disease-title { font-size: 22px; font-weight: 700; color: #2d6a4f; }
+        .disease-en { font-size: 13px; color: var(--secondary); font-style: italic; }
+        .section-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 18px 0 10px 0;
+            padding-left: 10px;
+            border-left: 3px solid var(--secondary);
+        }
+        p { margin-bottom: 12px; font-size: 15px; }
+        ul { margin: 10px 0 15px 20px; }
+        li { margin-bottom: 8px; font-size: 15px; }
+        .highlight-box {
+            background: var(--highlight);
+            border-left: 4px solid #ffc107;
+            padding: 15px 18px;
+            margin: 18px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .highlight-box.danger { background: var(--warning); border-left-color: #dc3545; }
+        .highlight-box.info { background: var(--info); border-left-color: var(--primary); }
+        .highlight-box h4 { font-size: 14px; font-weight: 700; margin-bottom: 8px; color: #856404; }
+        .highlight-box.danger h4 { color: #721c24; }
+        .highlight-box.info h4 { color: var(--primary); }
+        .highlight-box p { margin-bottom: 0; font-size: 14px; }
+        .key-points { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 15px 0; }
+        .key-point {
+            background: linear-gradient(135deg, #e8f4f8, #f0f9ff);
+            padding: 12px 15px;
+            border-radius: 10px;
+            font-size: 14px;
+        }
+        .key-point strong { color: var(--primary); }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 14px; }
+        th { background: #2d6a4f; color: var(--white); padding: 10px 12px; text-align: left; }
+        td { padding: 10px 12px; border-bottom: 1px solid var(--border); }
+        tr:hover { background: #f8fafc; }
+        .ref {
+            font-size: 12px; color: #64748b; margin-top: 20px;
+            padding-top: 15px; border-top: 1px dashed var(--border);
+        }
+        .ref span { color: var(--secondary); font-weight: 600; }
+        .progress-bar { background: var(--border); border-radius: 10px; height: 8px; margin: 20px 0; overflow: hidden; }
+        .progress-fill { background: linear-gradient(90deg, #1a5f7a, #3d7a5f); height: 100%; border-radius: 10px; }
+
+        /* 🏥 解剖模块样式 */
+        .anatomy-box {
+            background: linear-gradient(135deg, #f0fdf4, #ecfdf5);
+            border: 1px solid #bbf7d0;
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin: 18px 0;
+        }
+        .anatomy-box h4 {
+            font-size: 14px; font-weight: 700; color: #166534;
+            margin-bottom: 12px; display: flex; align-items: center; gap: 8px;
+        }
+        .anatomy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .anatomy-item {
+            background: rgba(255,255,255,0.7);
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 13px;
+        }
+        .anatomy-item strong { color: #166534; display: block; margin-bottom: 3px; }
+        .anatomy-img {
+            width: 100%; max-width: 400px; margin: 15px auto;
+            display: block; border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        /* 📰 每日新闻模块样式 */
+        .news-section {
+            background: linear-gradient(135deg, #1e3a5f, #2d5a87);
+            color: var(--white);
+            border-radius: 16px;
+            padding: 28px;
+            margin: 30px 0;
+        }
+        .news-section h2 {
+            font-size: 20px; font-weight: 700; margin-bottom: 20px;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .news-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        .news-card {
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 16px;
+            backdrop-filter: blur(10px);
+        }
+        .news-card-tag {
+            font-size: 11px; font-weight: 600; text-transform: uppercase;
+            letter-spacing: 0.5px; margin-bottom: 8px;
+            padding: 3px 8px; border-radius: 4px; display: inline-block;
+        }
+        .tag-bone { background: rgba(251, 146, 60, 0.3); color: #fb923c; }
+        .tag-wearable { background: rgba(34, 197, 94, 0.3); color: #4ade80; }
+        .tag-ai { background: rgba(168, 85, 247, 0.3); color: #c084fc; }
+        .news-card h4 { font-size: 14px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+        .news-card p { font-size: 12px; opacity: 0.85; line-height: 1.6; margin: 0; }
+        .news-card .source { font-size: 11px; opacity: 0.7; margin-top: 8px; display: block; }
+        .news-card .link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #93c5fd;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(147, 197, 253, 0.4);
+            padding-bottom: 2px;
+        }
+        .news-card .link:hover { color: #fff; border-bottom-color: #fff; }
+
+        .nav-footer {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border);
+        }
+        .nav-link { color: var(--primary); text-decoration: none; font-size: 14px; font-weight: 600; }
+        .nav-link:hover { text-decoration: underline; }
+        footer { text-align: center; padding: 30px; color: #64748b; font-size: 13px; }
+        @media (max-width: 768px) {
+            .key-points, .anatomy-grid, .news-grid { grid-template-columns: 1fr; }
+            h1 { font-size: 22px; }
+            .disease-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-top">
+                <span class="badge">Day 4 / 20</span>
+                <span class="header-date">2026年4月6日 · 周一</span>
+            </div>
+            <h1>🩺 每日临床知识</h1>
+            <p class="subtitle">肝胆胰系统 · Hepatobiliary & Pancreatic</p>
+            <div class="source-note">
+                <strong>📚 教学标准：</strong>Mayo Clinic Internal Medicine Board Review + 北京协和医院肝胆胰外科规范化培训教材<br>
+                <strong>📖 参考文献：</strong>UpToDate · 协和肝胆胰疾病诊疗指南（2024）· 中华医学会外科学分会指南 · Tokyo Guidelines 2018 (TG18)
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="progress-bar"><div class="progress-fill" style="width: 20%;"></div></div>
+
+        <!-- ========== 疾病1：急性胆囊炎 ========== -->
+        <div class="disease-card">
+            <div class="disease-header">
+                <span class="disease-icon">🟢</span>
+                <div>
+                    <div class="disease-title">急性胆囊炎</div>
+                    <div class="disease-en">Acute Cholecystitis</div>
+                </div>
+            </div>
+
+            <div class="anatomy-box">
+                <h4>🫁 相关解剖</h4>
+                <div class="anatomy-grid">
+                    <div class="anatomy-item">
+                        <strong>胆囊解剖</strong>
+                        位于肝右叶脏面（胆囊窝），分底、体、颈、管四部分。长5-8cm，容积30-60ml。
+                    </div>
+                    <div class="anatomy-item">
+                        <strong>胆囊三角（Calot三角）</strong>
+                        胆囊管、肝总管、胆囊动脉围成。腹腔镜手术关键标志，需警惕胆囊动脉变异。
+                    </div>
+                    <div class="anatomy-item">
+                        <strong>胆囊动脉</strong>
+                        通常发自肝右动脉（70%），变异率20-30%，需术中辨认。
+                    </div>
+                    <div class="anatomy-item">
+                        <strong>胆囊管汇合</strong>
+                        长2-4cm，在肝十二指肠韧带内汇入肝总管，末端有Heister瓣膜。
+                    </div>
+                </div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Gallbladder.svg/640px-Gallbladder.svg.png" alt="胆囊解剖示意图" class="anatomy-img" onerror="this.style.display='none'">
+            </div>
+
+            <div class="section-title">定义</div>
+            <p>胆囊的急性炎症，通常由胆囊结石嵌顿于胆囊管或Hartmann袋引发胆囊出口梗阻所致。是急性腹痛的常见病因。</p>
+
+            <div class="section-title">流行病学</div>
+            <p>人群终身患病风险约 3-4%，女性多于男性（3:1），肥胖、多次妊娠、年龄>40岁为主要危险因素。</p>
+
+            <div class="section-title">病理生理</div>
+            <ul>
+                <li><strong>结石嵌顿：</strong>胆囊管梗阻（>90%病例），胆汁淤积、胆囊扩张</li>
+                <li><strong>胆囊张力增加：</strong>静脉回流受阻、胆囊壁水肿</li>
+                <li><strong>细菌感染：</strong>通常为继发性，常见菌：大肠杆菌、克雷伯杆菌、肠球菌</li>
+                <li><strong>炎症进展：</strong>单纯性水肿→化脓性→坏疽性→穿孔性</li>
+            </ul>
+
+            <div class="section-title">临床表现</div>
+            <ul>
+                <li><strong>典型三联征：</strong>右上腹痛 + 发热 + Murphy征阳性</li>
+                <li><strong>腹痛特点：</strong>持续性右上腹或上腹痛，可放射至右肩胛区</li>
+                <li><strong>消化道症状：</strong>恶心、呕吐、厌食</li>
+                <li><strong>体征：</strong>右上腹压痛、Murphy征阳性、可触及肿大胆囊</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h4>⚡ 临床决策关键点</h4>
+                <p><strong>Murphy征检查：</strong>检查者拇指置于右肋缘下胆囊区，嘱患者深吸气时腹痛突然加重为阳性，敏感性65-86%，特异性35-94%。</p>
+            </div>
+
+            <div class="section-title">诊断标准</div>
+            <ul>
+                <li>局部炎症体征（Murphy征/右上腹压痛）+ 全身炎症体征（发热、CRP升高、WBC升高）</li>
+                <li><strong>影像学（UCG首选）：</strong>胆囊增大、胆囊壁增厚（>4mm）、胆囊周围积液、结石影</li>
+                <li><strong>HIDA（hepatobiliary scan）：</strong>胆囊不显影提示急性梗阻，敏感性>95%</li>
+            </ul>
+
+            <div class="key-points">
+                <div class="key-point"><strong>🔍 鉴别诊断：</strong>急性胰腺炎、阑尾炎（高位）、消化性溃疡穿孔、肝炎、肝脓肿</div>
+                <div class="key-point"><strong>⚠️ 并发症：</strong>胆囊坏疽/穿孔（老年患者死亡率高）、胆囊周围脓肿、胆汁性腹膜炎</div>
+            </div>
+
+            <div class="section-title">治疗方案</div>
+            <table>
+                <tr><th>治疗策略</th><th>具体方案</th></tr>
+                <tr><td>急诊手术</td><td>腹腔镜胆囊切除术（LC）——48-72小时内为金标准</td></tr>
+                <tr><td>保守治疗</td><td>仅适用于手术高危或晚期患者：禁食、抗生素、静脉补液</td></tr>
+                <tr><td>经皮胆囊造瘘</td><td>适用于重症/老年/手术高危患者：超声引导下穿刺引流，8周后评估</td></tr>
+            </table>
+
+            <div class="highlight-box danger">
+                <h4>🚨 手术时机选择</h4>
+                <p>早期手术（72小时内）并发症率和死亡率更低。老年患者（>80岁）即使症状轻，也应谨慎评估。</p>
+            </div>
+
+            <div class="ref"><span>📚 参考文献：</span>Mayo Clinic Internal Medicine Board Review · Tokyo Guidelines 2018 (TG18) · 中华外科学会急性胆道感染诊疗指南</div>
+        </div>
+
+        <!-- ========== 疾病2：胆石症 ========== -->
+        <div class="disease-card">
+            <div class="disease-header">
+                <span class="disease-icon">💎</span>
+                <div>
+                    <div class="disease-title">胆石症</div>
+                    <div class="disease-en">Cholelithiasis & Choledocholithiasis</div>
+                </div>
+            </div>
+
+            <div class="anatomy-box">
+                <h4>🫁 相关解剖</h4>
+                <div class="anatomy-grid">
+                    <div class="anatomy-item">
+                        <strong>肝外胆管系统</strong>
+                        左/右肝管→肝总管→胆总管（长7-10cm，直径6-8mm），末端与胰管汇合形成Vater壶腹
+                    </div>
+                    <div class="anatomy-item">
+                        <strong>胆总管（CBD）</strong>
+                        走行于肝十二指肠韧带内，在胰头后方与胰管汇合，开口于十二指肠降部内侧
+                    </div>
+                    <div class="anatomy-item">
+                        <strong>Vater壶腹</strong>
+                        乏特氏壶腹，胆胰管汇合部，有Oddi括约肌调节胆汁/胰液排放
+                    </div>
+                    <div class="anatomy-item">
+                        <strong>结石分布</strong>
+                        胆囊结石（80%）、胆总管结石（10-15%）、肝内胆管结石（5-10%）
+                    </div>
+                </div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Gray1098.png/640px-Gray1098.png" alt="胆道系统解剖示意图" class="anatomy-img" onerror="this.style.display='none'">
+            </div>
+
+            <div class="section-title">定义</div>
+            <p>胆囊（胆囊结石）或胆总管（胆总管结石）中形成结石的疾病。胆固醇结石最常见（约80%），胆色素结石次之。</p>
+
+            <div class="section-title">流行病学</div>
+            <p>西方国家患病率10-15%，中国约5-8%。"5F"危险因素：Female（女性）、Forty（40岁以上）、Fat（肥胖）、Fertile（多产）、Fair（白种人）。</p>
+
+            <div class="section-title">病理生理</div>
+            <ul>
+                <li><strong>胆固醇结石：</strong>胆汁胆固醇过饱和、磷脂/胆汁酸比例失调、胆囊运动功能减退</li>
+                <li><strong>胆色素结石：</strong>溶血性疾病、慢性肝病、胆道感染致非结合胆红素增多</li>
+                <li><strong>胆总管结石：</strong>多为胆囊结石迁移（85%），小部分为原发性</li>
+            </ul>
+
+            <div class="section-title">临床表现</div>
+            <ul>
+                <li><strong>无症状胆囊结石：</strong>70-80%终身无明显症状</li>
+                <li><strong>胆绞痛：</strong>油腻餐后30分钟-2小时右上腹剧痛，可放射至右肩背部</li>
+                <li><strong>胆总管结石：</strong>胆绞痛 + 黄疸 + 发热/寒战（Charcot三联征）</li>
+            </ul>
+
+            <div class="highlight-box danger">
+                <h4>🚨 Charcot三联征 & Reynolds五联征</h4>
+                <p><strong>Charcot三联征（急性胆管炎）：</strong>腹痛 + 黄疸 + 发热/寒战<br>
+                <strong>Reynolds五联征：</strong>三联征 + 意识障碍 + 低血压 → 急性梗阻性化脓性胆管炎（AOSC），需紧急胆道减压！</p>
+            </div>
+
+            <div class="section-title">诊断标准</div>
+            <ul>
+                <li><strong>腹部超声：</strong>首选，敏感性>95%，可见结石声影、胆囊壁增厚</li>
+                <li><strong>MRCP：</strong>评估胆总管结石、胆管扩张程度，金标准无创检查</li>
+                <li><strong>LFTs：</strong>胆总管结石：ALP/GGT显著升高、直接胆红素升高</li>
+            </ul>
+
+            <div class="key-points">
+                <div class="key-point"><strong>🔍 鉴别诊断：</strong>胆囊炎、肝炎、肝脓肿、胰腺炎、壶腹周围癌</div>
+                <div class="key-point"><strong>⚠️ 急性胰腺炎：</strong>胆石症是急性胰腺炎的首要病因，约15-30%胰腺炎由胆石症引起</div>
+            </div>
+
+            <div class="section-title">治疗方案</div>
+            <table>
+                <tr><th>结石类型</th><th>治疗方案</th></tr>
+                <tr><td>无症状胆囊结石</td><td>观察或择期LC（患者意愿、高危因素如瓷样胆囊）</td></tr>
+                <tr><td>有症状胆囊结石</td><td>腹腔镜胆囊切除术（LC），择期手术</td></tr>
+                <tr><td>胆总管结石</td><td>ERCP取石（内镜下括约肌切开+球囊/网篮取石）+ LC</td></tr>
+                <tr><td>急性化脓性胆管炎</td><td>紧急ERCP胆道减压 + 广谱抗生素 + 液体复苏</td></tr>
+            </table>
+
+            <div class="ref"><span>📚 参考文献：</span>Tokyo Guidelines 2018 (TG18) · 中华消化内镜学会ERCP诊疗指南（2022）· UpToDate: "Choledocholithiasis"</div>
+        </div>
+
+        <!-- ========== 疾病3：急性胰腺炎 ========== -->
+        <div class="disease-card">
+            <div class="disease-header">
+                <span class="disease-icon">🔥</span>
+                <div>
+                    <div class="disease-title">急性胰腺炎</div>
+                    <div class="disease-en">Acute Pancreatitis (AP)</div>
+                </div>
+            </div>
+
+            <div class="anatomy-box">
+                <h4>🫁 相关解剖</h4>
+                <div class="anatomy-grid">
+                    <div class="anatomy-item">
+                        <strong>胰腺位置</strong>
+                        腹膜后器官，横跨第1-2腰椎前方，分头、颈、体、尾四部
+                    </div>
+                    <div class="anatomy-item">
+                        <strong>胰管系统</strong>
+                        主胰管（Wirsung管）与胆总管汇合于Vater壶腹，少数人独立开口
+                    </div>
+                    <div class="anatomy-item">
+                        <strong>血供特点</strong>
+                        胰头：胃十二指肠动脉、肠系膜上动脉；胰体尾：脾动脉；炎症易累及血管致出血
+                    </div>
+                    <div class="anatomy-item">
+                        <strong>周围毗邻</strong>
+                        胃窦、十二指肠、脾脏、左肾、腹主动脉——重症胰腺炎易向这些部位蔓延
+                    </div>
+                </div>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Gray1096.png/640px-Gray1096.png" alt="胰腺解剖示意图" class="anatomy-img" onerror="this.style.display='none'">
+            </div>
+
+            <div class="section-title">定义</div>
+            <p>胰腺的急性炎症，可累及邻近器官系统和/或远处器官系统。轻症（80%）为自限性，重症（20%）可伴器官衰竭和胰腺坏死，死亡率显著升高。</p>
+
+            <div class="section-title">流行病学</div>
+            <p>全球发病率约 30-40/10万人年，呈上升趋势。胆结石（30-40%）和酒精（25-35%）是最常见病因。</p>
+
+            <div class="section-title">病理生理</div>
+            <ul>
+                <li><strong>胆石症/酒精：</strong>导致胰管梗阻、胰液排出受阻、腺泡内胰酶激活</li>
+                <li><strong>胰酶激活：</strong>胰蛋白酶原→胰蛋白酶，触发炎症级联，消化自身胰腺组织</li>
+                <li><strong>SIRS/器官衰竭：</strong>重症者炎症介质释放入血，致MODS</li>
+            </ul>
+
+            <div class="section-title">临床表现</div>
+            <ul>
+                <li><strong>典型症状：</strong>急性发作的上腹部持续性剧痛（"撕裂样"），可放射至背部，前倾位可缓解</li>
+                <li><strong>伴随症状：</strong>恶心、呕吐（中度）、发热（感染性坏死时高热）</li>
+                <li><strong>体征：</strong>上腹压痛、轻度肌紧张；重症：Cullen征、Grey-Turner征</li>
+            </ul>
+
+            <div class="highlight-box danger">
+                <h4>🚨 重症急性胰腺炎 — 识别与处理</h4>
+                <p>48小时内出现器官衰竭（Marshall评分≥2分任一器官）或胰腺坏死>30%提示重症。<br>
+                治疗原则：液体复苏（早期目标导向）、器官支持、禁食（肠鸣音恢复后逐步进食）、抗生素（仅明确感染时使用）。</p>
+            </div>
+
+            <div class="section-title">诊断标准</div>
+            <p>符合以下3项中2项即可诊断：</p>
+            <ul>
+                <li><strong>急性腹痛：</strong>典型的急性发作上腹痛</li>
+                <li><strong>血清淀粉酶/脂肪酶：</strong>≥正常上限3倍（脂肪酶特异性更高）</li>
+                <li><strong>影像学：</strong>腹部CT/MRI提示急性胰腺炎征象（增强CT为诊断胰腺坏死金标准，48-72小时后最佳）</li>
+            </ul>
+
+            <div class="key-points">
+                <div class="key-point"><strong>🔍 鉴别诊断：</strong>消化性溃疡穿孔、肠系膜缺血、主动脉夹层、急性胆囊炎/胆管炎、急性心肌梗死</div>
+                <div class="key-point"><strong>⚠️ 并发症：</strong>急性液体积聚（APFC）、胰腺坏死（感染性坏死需抗生素/引流）、胰周脓肿、假性囊肿（>4周）</div>
+            </div>
+
+            <div class="section-title">治疗方案</div>
+            <table>
+                <tr><th>严重程度</th><th>治疗策略</th></tr>
+                <tr><td>轻症 MAP</td><td>短期禁食（48-72小时）、液体复苏、口服镇痛、NPO后逐步恢复流质→低脂饮食</td></tr>
+                <tr><td>中重症 MSAP</td><td>液体复苏（首24小时3-4L晶体液）、器官功能监测、营养支持（肠内营养优先）</td></tr>
+                <tr><td>重症 SAP</td><td>ICU监护、液体复苏、器官支持（呼吸机/CRRT/血管活性药物）、感染性坏死后引流</td></tr>
+            </table>
+
+            <div class="highlight-box info">
+                <h4>💡 Ranson评分 & BISAP评分</h4>
+                <p><strong>Ranson（入院48h）：</strong>≥3分提示重症<br><strong>BISAP（24h）：</strong>5项指标，≥3分死亡率>15%，简单实用，适合早期快速评估</p>
+            </div>
+
+            <div class="ref"><span>📚 参考文献：</span>Mayo Clinic Internal Medicine Board Review · 协和医院重症急性胰腺炎诊疗方案 · IAP/APA急性胰腺炎管理指南（2013）</div>
+        </div>
+
+        <!-- ========== 每日新闻模块（可点击链接） ========== -->
+        <div class="news-section">
+            <h2>📰 每日新闻 · 运动系统健康前沿</h2>
+            <div class="news-grid">
+                <div class="news-card">
+                    <span class="news-card-tag tag-bone">🦴 骨科&运动损伤</span>
+                    <h4>🏆 2026世界杯球星因伤缺阵名单</h4>
+                    <p>巴西罗德里戈（ACL撕裂）、阿根廷福伊特（跟腱断裂）、英格兰麦迪逊（ACL撕裂）、日本南野拓实（ACL撕裂）等20+明星球员确认或可能缺阵世界杯！</p>
+                    <a href="https://www.si.com/soccer/2026-world-cup-biggest-star-players-ruled-out-injury" target="_blank" class="link">→ 点击阅读全文</a>
+                    <p class="source">来源：Sports Illustrated · 2026.03.27</p>
+                </div>
+                <div class="news-card">
+                    <span class="news-card-tag tag-bone">🏀 NBA球星伤停</span>
+                    <h4>卢卡·东契奇腿筋二级拉伤</h4>
+                    <p>湖人队核心东契奇右腿筋二级拉伤，缺席常规赛剩余比赛，季后赛出战存疑。库里右膝伤愈预计4月5日复出。锡安触发合同条款，下赛季80%薪资已保障。</p>
+                    <a href="https://www.espn.com/nba/story/_/id/48377855/2026-nba-buzz-latest-live-updates-news-intel-nba-draft-offseason" target="_blank" class="link">→ 点击阅读全文</a>
+                    <p class="source">来源：ESPN · 2026.04.04</p>
+                </div>
+                <div class="news-card">
+                    <span class="news-card-tag tag-wearable">⌚ 智能穿戴</span>
+                    <h4>Nature: 柔性可穿戴传感器2026突破</h4>
+                    <p>石墨烯/碳纳米管增强材料、拉伸率超280%、多模态生理信号监测（心率/血压/血糖/乳酸）、可降解涂层——柔性可穿戴传感器进入临床临界点。</p>
+                    <a href="https://www.nature.com/articles/s41528-026-00560-6" target="_blank" class="link">→ 点击阅读全文</a>
+                    <p class="source">来源：Nature npj Flexible Electronics · 2026.03</p>
+                </div>
+            </div>
+            <div class="news-grid" style="margin-top: 16px;">
+                <div class="news-card">
+                    <span class="news-card-tag tag-ai">🤖 AI骨科应用</span>
+                    <h4>AI+多模态成像骨科临床转化</h4>
+                    <p>骨折检测（BoneView FDA认证）、骨关节炎AI分级一致性超初级医生（AUC 0.92）、骨质疏松预测（AUC 0.943）——AI骨科进入临床实用阶段。</p>
+                    <a href="https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2025.1728248/full" target="_blank" class="link">→ 点击阅读全文</a>
+                    <p class="source">来源：Frontiers in Medicine · 2026.01</p>
+                </div>
+                <div class="news-card">
+                    <span class="news-card-tag tag-bone">🏃 中国路跑损伤</span>
+                    <h4>中国马拉松跑者损伤风险研究</h4>
+                    <p>研究发现46.5%马拉松跑者存在跑步相关损伤，下肢损伤最常见，BMI≥24、精英训练强度、年龄增长是主要风险因素。科学运动观念缺位是核心问题。</p>
+                    <a href="https://cdn.ebiotrade.com/newsf/2026-1/20260120001353122.htm" target="_blank" class="link">→ 点击阅读全文</a>
+                    <p class="source">来源：EBiotrade · 2026.01.20</p>
+                </div>
+                <div class="news-card">
+                    <span class="news-card-tag tag-ai">📊 AI运动损伤预测</span>
+                    <h4>AI预测不同运动项目伤病</h4>
+                    <p>机器学习（ML）擅长处理训练记录数据，深度学习（DL）处理视频/传感器数据。AI已能预测篮球、足球等不同运动的具体伤病风险和类型。</p>
+                    <a href="https://www.sohu.com/a/872316992_122064773" target="_blank" class="link">→ 点击阅读全文</a>
+                    <p class="source">来源：搜狐 · 2025.03.17</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 导航 Footer -->
+        <div class="nav-footer">
+            <a href="临床知识_Day3_2026-04-05.html" class="nav-link">← Day 3 消化系统</a>
+            <span style="color: #64748b; font-size: 13px;">Day 5 肾脏与泌尿系统 →</span>
+        </div>
+    </div>
+
+    <footer>
+        <p>🩺 每日临床知识 | Mayo Clinic + 北京协和医院临床培训标准</p>
+        <p>本内容仅供临床教学参考，不构成诊疗建议</p>
+    </footer>
+</body>
+</html>
