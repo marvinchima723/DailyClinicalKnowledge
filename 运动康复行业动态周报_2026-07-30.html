@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>运动康复行业动态周报 | 2026-07-30</title>
+<style>
+  :root {
+    --bg-primary: #0a0a0c;
+    --bg-secondary: #141418;
+    --bg-card: #1c1c22;
+    --bg-card-hover: #232330;
+    --accent-blue: #0a84ff;
+    --accent-green: #30d158;
+    --accent-purple: #bf5af2;
+    --accent-orange: #ff9f0a;
+    --accent-red: #ff453a;
+    --accent-teal: #40c8e0;
+    --text-primary: #f5f5f7;
+    --text-secondary: #a1a1a6;
+    --text-tertiary: #6e6e73;
+    --border-color: #2a2a30;
+    --border-highlight: #3a3a42;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(135deg, #0a0a0c 0%, #1a1a2e 40%, #0f2027 100%);
+    padding: 80px 0 60px;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%; right: -20%;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(10,132,255,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(10,132,255,0.15);
+    border: 1px solid rgba(10,132,255,0.3);
+    color: var(--accent-blue);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #f5f5f7 0%, #a1a1a6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+    color: var(--text-secondary);
+    max-width: 700px;
+    line-height: 1.5;
+  }
+
+  .hero-meta {
+    display: flex;
+    gap: 32px;
+    margin-top: 40px;
+    flex-wrap: wrap;
+  }
+
+  .hero-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-tertiary);
+    font-size: 14px;
+  }
+
+  .hero-meta-item strong { color: var(--text-primary); font-weight: 600; }
+
+  /* McKinsey-style Executive Summary */
+  .exec-summary {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 40px;
+    margin: 48px 0;
+  }
+
+  .exec-summary-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-blue);
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+
+  .exec-summary h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    letter-spacing: -0.5px;
+  }
+
+  .exec-summary p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .key-figures {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 32px;
+  }
+
+  .key-figure {
+    background: var(--bg-card);
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+  }
+
+  .key-figure:hover { background: var(--bg-card-hover); border-color: var(--border-highlight); }
+
+  .key-figure-num {
+    font-size: 36px;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--accent-blue), var(--accent-teal));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 8px;
+  }
+
+  .key-figure-label { font-size: 13px; color: var(--text-tertiary); }
+
+  /* Section Headers */
+  .section { padding: 60px 0; border-top: 1px solid var(--border-color); }
+
+  .section-header { margin-bottom: 40px; }
+
+  .section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 12px;
+  }
+
+  .section-tag-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+  .section h2 {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+  }
+
+  .section-desc { font-size: 16px; color: var(--text-secondary); max-width: 700px; }
+
+  /* News Cards */
+  .news-grid { display: grid; gap: 20px; }
+
+  .news-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 28px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .news-card:hover {
+    background: var(--bg-card-hover);
+    border-color: var(--border-highlight);
+    transform: translateY(-2px);
+  }
+
+  .news-card::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0; bottom: 0;
+    width: 3px;
+    background: var(--accent-blue);
+  }
+
+  .news-card.cat-event::before { background: var(--accent-orange); }
+  .news-card.cat-research::before { background: var(--accent-green); }
+  .news-card.cat-clinical::before { background: var(--accent-teal); }
+  .news-card.cat-tech::before { background: var(--accent-purple); }
+  .news-card.cat-funding::before { background: var(--accent-blue); }
+  .news-card.cat-celebrity::before { background: var(--accent-red); }
+
+  .news-meta {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+  }
+
+  .news-category {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+
+  .cat-event .news-category { background: rgba(255,159,10,0.15); color: var(--accent-orange); }
+  .cat-research .news-category { background: rgba(48,209,88,0.15); color: var(--accent-green); }
+  .cat-clinical .news-category { background: rgba(64,200,224,0.15); color: var(--accent-teal); }
+  .cat-tech .news-category { background: rgba(191,90,242,0.15); color: var(--accent-purple); }
+  .cat-funding .news-category { background: rgba(10,132,255,0.15); color: var(--accent-blue); }
+  .cat-celebrity .news-category { background: rgba(255,69,58,0.15); color: var(--accent-red); }
+
+  .news-date { font-size: 13px; color: var(--text-tertiary); }
+
+  .news-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.4;
+  }
+
+  .news-card p {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  .news-card .highlight-box {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 16px;
+  }
+
+  .news-card .highlight-box strong { color: var(--accent-blue); }
+
+  .news-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--accent-blue);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: gap 0.2s;
+  }
+
+  .news-link:hover { gap: 10px; }
+
+  .news-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 12px; }
+
+  .news-tag {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    background: rgba(255,255,255,0.05);
+    padding: 4px 10px;
+    border-radius: 6px;
+  }
+
+  /* Two-column grid for shorter cards */
+  .news-grid-2col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .news-grid-2col { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 32px; }
+    .hero-subtitle { font-size: 16px; }
+    .exec-summary { padding: 24px; }
+    .key-figures { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* Footer */
+  .footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    padding: 48px 0;
+    text-align: center;
+  }
+
+  .footer p { font-size: 14px; color: var(--text-tertiary); margin-bottom: 8px; }
+
+  .footer-sources {
+    margin-top: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .footer-source {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    background: var(--bg-card);
+    padding: 6px 14px;
+    border-radius: 100px;
+    border: 1px solid var(--border-color);
+  }
+
+  /* TOC */
+  .toc {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 32px;
+    margin: 48px 0;
+  }
+
+  .toc h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-tertiary);
+    margin-bottom: 20px;
+  }
+
+  .toc-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+
+  .toc-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    color: var(--text-secondary);
+    font-size: 15px;
+    padding: 10px 0;
+    transition: color 0.2s;
+  }
+
+  .toc-item:hover { color: var(--text-primary); }
+
+  .toc-num {
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--accent-blue);
+    min-width: 24px;
+  }
+
+  @media (max-width: 768px) { .toc-list { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- Hero -->
+<div class="hero">
+  <div class="container">
+    <div class="hero-badge">SPORTS REHAB INTELLIGENCE BRIEF</div>
+    <h1>运动康复行业动态周报</h1>
+    <p class="hero-subtitle">覆盖全球运动赛事损伤、顶尖医学院研究、临床案例、科技前沿、创业融资与明星康复的深度资讯简报</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item"><strong>2026年7月30日</strong></div>
+      <div class="hero-meta-item">期数 <strong>Vol. 30</strong></div>
+      <div class="hero-meta-item">覆盖周期 <strong>过去7天</strong></div>
+      <div class="hero-meta-item">新闻条目 <strong>18条</strong></div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+
+  <!-- Executive Summary -->
+  <div class="exec-summary">
+    <div class="exec-summary-label">EXECUTIVE SUMMARY / 执行摘要</div>
+    <h2>本周核心洞察</h2>
+    <p>过去一周，运动康复领域呈现三条主线：<strong>（1）跟腱伤病潮持续</strong>——NBA球星哈利伯顿跟腱断裂56周后完成胯下扣篮，利物浦前锋埃基蒂克跟腱康复进入脱拐行走阶段，上海申花盖伊跟腱康复进入力量维持期；<strong>（2）力量训练循证证据持续强化</strong>——哈佛团队在BJSM和JACC同月发表两篇重磅研究，分别证实每周90-120分钟抗阻训练可降低13%全因死亡风险和20%女性心血管事件风险；<strong>（3）AI+穿戴赛道资本加速涌入</strong>——青少年脑震荡远程诊疗Cognify Health完成种子轮，印度MSK康复Stance Health获百万美元Pre-seed，国内康复机器人如身机器人完成亿元Pre-A。</p>
+    <div class="key-figures">
+      <div class="key-figure">
+        <div class="key-figure-num">56周</div>
+        <div class="key-figure-label">哈利伯顿跟腱康复周期<br>超预期2个月复出</div>
+      </div>
+      <div class="key-figure">
+        <div class="key-figure-num">20%</div>
+        <div class="key-figure-label">女性抗阻训练≥2h/周<br>CVD风险降幅 (JACC)</div>
+      </div>
+      <div class="key-figure">
+        <div class="key-figure-num">89.7%</div>
+        <div class="key-figure-label">EdgeGuard AI系统<br>损伤预测准确率</div>
+      </div>
+      <div class="key-figure">
+        <div class="key-figure-num">¥1亿+</div>
+        <div class="key-figure-label">如身机器人Pre-A轮<br>康复机器人赛道</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Table of Contents -->
+  <div class="toc">
+    <h3>CONTENTS / 本期目录</h3>
+    <div class="toc-list">
+      <a class="toc-item" href="#sec1"><span class="toc-num">01</span> 主流运动赛事损伤动态</a>
+      <a class="toc-item" href="#sec2"><span class="toc-num">02</span> 顶尖医学院研究进展</a>
+      <a class="toc-item" href="#sec3"><span class="toc-num">03</span> 顶尖医院临床案例</a>
+      <a class="toc-item" href="#sec4"><span class="toc-num">04</span> 运动康复科技前沿</a>
+      <a class="toc-item" href="#sec5"><span class="toc-num">05</span> 创业融资与投资</a>
+      <a class="toc-item" href="#sec6"><span class="toc-num">06</span> 明星运动损伤</a>
+    </div>
+  </div>
+
+  <!-- Section 1: Sports Event Injuries -->
+  <div class="section" id="sec1">
+    <div class="section-header">
+      <div class="section-tag" style="color: var(--accent-orange);">
+        <span class="section-tag-dot" style="background: var(--accent-orange);"></span>
+        CATEGORY 01
+      </div>
+      <h2>主流运动赛事运动损伤</h2>
+      <p class="section-desc">全球足球、篮球等主流赛事运动员伤病动态与康复进展追踪</p>
+    </div>
+    <div class="news-grid">
+
+      <div class="news-card cat-event">
+        <div class="news-meta">
+          <span class="news-category">足球 · 曼城</span>
+          <span class="news-date">2026-07-28</span>
+        </div>
+        <h3>罗德里接受背部手术，世界杯金球奖得主进入康复期</h3>
+        <p>曼城官方确认，中场核心罗德里（Rodri）已完成背部微创手术。这位刚带领西班牙夺得美加墨世界杯冠军并荣膺金球奖的30岁中场，此前一直受背部不适困扰。主帅马雷斯卡表示"他需要休息和恢复，然后归队"。预计恢复期约3周，可能缺席8月16日社区盾杯对阵阿森纳的比赛。罗德里过去两个赛季饱受伤病困扰，包括2024-25赛季的ACL撕裂。</p>
+        <div class="highlight-box">
+          <strong>临床要点：</strong>背部微创手术通常指椎间盘微创切除或椎间孔镜手术，术后3周恢复期提示手术范围较小。对于顶级运动员，术后核心肌群激活训练和脊柱稳定性恢复是重返赛场的关键。
+        </div>
+        <a class="news-link" href="https://sports.cctv.com/2026/07/29/ARTIvf8P1kqrrxRrRpVl6uqO260729.shtml" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">背部手术</span><span class="news-tag">世界杯金球奖</span><span class="news-tag">曼城</span></div>
+      </div>
+
+      <div class="news-card cat-event">
+        <div class="news-meta">
+          <span class="news-category">足球 · 巴萨</span>
+          <span class="news-date">2026-07-27</span>
+        </div>
+        <h3>德容右膝内侧副韧带撕裂，保守治疗预计缺席3-4个月</h3>
+        <p>巴塞罗那队长弗朗基·德容已返回甘伯体育城进行康复。他在2026世界杯期间带伤出战荷兰对阵摩洛哥的关键比赛，赛后检查确诊为右膝内侧副韧带（MCL）撕裂。德容选择保守治疗方案（不手术），将在俱乐部进行系统康复。主帅弗里克不会施加复出压力，康复核心目标是恢复关节稳定性，防止半月板继发损伤。</p>
+        <div class="highlight-box">
+          <strong>康复策略：</strong>MCL撕裂保守治疗适用于I-II度损伤。康复分四阶段：①急性期（0-2周）控制肿胀疼痛 ②亚急性期（2-6周）恢复关节活动度 ③力量强化期（6-12周） ④功能回归期（12-16周）。关键指标：膝关节内外翻应力试验阴性、股四头肌肌力达健侧85%以上。
+        </div>
+        <a class="news-link" href="https://www.163.com/dy/article/L2QFPBKA0549BAP0.html" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">MCL撕裂</span><span class="news-tag">保守治疗</span><span class="news-tag">巴塞罗那</span></div>
+      </div>
+
+      <div class="news-card cat-event">
+        <div class="news-meta">
+          <span class="news-category">NBA · 步行者</span>
+          <span class="news-date">2026-07-26</span>
+        </div>
+        <h3>哈利伯顿跟腱断裂56周后胯下扣篮，超预期2个月复出</h3>
+        <p>印第安纳步行者球星泰瑞斯·哈利伯顿在社交媒体发布训练视频：快攻中完成一记空中胯下换手扣篮，配文"56周！"。2025年6月23日NBA总决赛G7首节，他无对抗倒地确诊右侧跟腱撕裂，次日完成修复手术。康复途中遭遇带状疱疹（病毒攻击面部和右眼），治疗药物导致体重增加。如今已恢复五对五训练，预计赶上2026-27赛季10月揭幕战。步行者官方转发配文"哈利伯顿变得更能跳了！"</p>
+        <div class="highlight-box">
+          <strong>跟腱康复里程碑：</strong>56周（约13个月）的康复速度在跟腱断裂同类重伤中属顶尖水平。胯下扣篮标志爆发力、协调性和单腿起跳能力基本回归。标准跟腱修复术后康复时间线：0-2周保护性制动 → 2-6周被动ROM → 6-12周主动ROM+等长收缩 → 3-6个月渐进负重 → 6-9个月慢跑 → 9-12个月变向/跳跃 → 12个月重返赛场。NBA参考案例：杜兰特（2019跟腱断裂，552天后复出）。
+        </div>
+        <a class="news-link" href="https://www.toutiao.com/article/7666749107179880987/" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">跟腱断裂</span><span class="news-tag">56周康复</span><span class="news-tag">NBA</span></div>
+      </div>
+
+      <div class="news-card cat-event">
+        <div class="news-meta">
+          <span class="news-category">足球 · 利物浦</span>
+          <span class="news-date">2026-07-10</span>
+        </div>
+        <h3>埃基蒂克跟腱断裂后脱拐行走，康复迎来关键里程碑</h3>
+        <p>利物浦前锋埃基蒂克在4月15日跟腱断裂后，终于接近无需辅助独立行走。他的理疗师贝伦加尔-布施曼发布加州康复视频："摆脱保护靴是一个里程碑，看到步态逐渐自然则是另一个。"24岁的埃基蒂克因伤错过了2026世界杯，私下设定了复出目标但遵循医疗团队建议。跟腱断裂是最难恢复的伤病之一，可能导致球员缺阵长达12个月。</p>
+        <a class="news-link" href="https://new.qq.com/rain/a/20260710A05S5200" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">跟腱断裂</span><span class="news-tag">脱拐里程碑</span><span class="news-tag">利物浦</span></div>
+      </div>
+
+      <div class="news-card cat-event">
+        <div class="news-meta">
+          <span class="news-category">足球 · 申花</span>
+          <span class="news-date">2026-07-17</span>
+        </div>
+        <h3>申花外援盖伊跟腱康复进入力量维持阶段</h3>
+        <p>上海申花塞内加尔前锋盖伊的跟腱康复迎来阶段性进展。日常行走仍需拐杖，但已开展避开受伤部位的力量练习——上肢、核心及健侧下肢有序维持肌肉状态。跟腱断裂是足球运动员公认的高难度伤病，过早患肢受力可能二次撕裂，一味休养则造成肌肉萎缩。申花医疗团队选择稳中求进方案，为下赛季冬训做铺垫。</p>
+        <div class="highlight-box">
+          <strong>分段康复理念：</strong>职业运动员重伤康复不是单纯静养。在受伤部位严格制动前提下，康复师规划针对性维持性训练——核心力量、上肢肌肉和协调性。长期完全停训会导致即使伤势痊愈，仍需1-2个月重新找回对抗能力。
+        </div>
+        <a class="news-link" href="https://www.toutiao.com/article/7663389034719085108" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">跟腱断裂</span><span class="news-tag">分段康复</span><span class="news-tag">中超</span></div>
+      </div>
+
+      <div class="news-card cat-event">
+        <div class="news-meta">
+          <span class="news-category">MLB · 天使</span>
+          <span class="news-date">2026-07-09</span>
+        </div>
+        <h3>楚奥特腿后肌伤缺阵3周后复出，赶上周明星赛</h3>
+        <p>天使队巨星"鳟鱼"楚奥特（Mike Trout）因右腿后肌（ hamstring）伤势缺阵3周后，正式离开伤兵名单。复出首战以指定打击先发，跑垒与外野训练已恢复至超90%强度。楚奥特透露"已约一周没有感觉不舒服，连续两天测试后状况良好"。总教练铃木清表示将谨慎安排守备进度。本季受伤前74场比赛缴出17发全垒打、36分打点的近年最佳表现。</p>
+        <a class="news-link" href="https://www.tolo.ro/page/3?live-blog-16276208-2026-07-09" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">腿后肌拉伤</span><span class="news-tag">MLB</span><span class="news-tag">Mike Trout</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Section 2: Research -->
+  <div class="section" id="sec2">
+    <div class="section-header">
+      <div class="section-tag" style="color: var(--accent-green);">
+        <span class="section-tag-dot" style="background: var(--accent-green);"></span>
+        CATEGORY 02
+      </div>
+      <h2>全球顶尖医学院运动康复研究进展</h2>
+      <p class="section-desc">哈佛、浙大等顶尖研究机构最新运动医学与康复科学成果</p>
+    </div>
+    <div class="news-grid">
+
+      <div class="news-card cat-research">
+        <div class="news-meta">
+          <span class="news-category">哈佛 · BJSM</span>
+          <span class="news-date">2026-06-12 发表</span>
+        </div>
+        <h3>哈佛30年追踪研究：每周90-120分钟力量训练是长寿"甜点区"</h3>
+        <p>哈佛大学陈曾熙公共卫生学院在《British Journal of Sports Medicine》发表研究，分析147,374名成年人长达30年随访数据。结果显示：每周90-119分钟抗阻训练（如俯卧撑、深蹲、举重）与全因死亡风险降低13%、心血管疾病死亡风险降低19%、神经退行性疾病死亡风险降低27%相关。超过2小时/周后获益趋于平台。力量训练+有氧运动组合效果最优，全因死亡风险降低近45%。</p>
+        <div class="highlight-box">
+          <strong>临床转化建议：</strong>建议患者每周进行2-3次全身抗阻训练（每次30-45分钟），覆盖主要肌群，结合150-300分钟中等强度有氧运动。复合动作（深蹲、硬拉、推举、划船）优于孤立训练。对于中老年人群，从自重训练开始渐进负荷。
+        </div>
+        <a class="news-link" href="https://health.harvard.edu/exercise-and-fitness/strength-training-over-decades-linked-to-longer-life" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">抗阻训练</span><span class="news-tag">长寿</span><span class="news-tag">BJSM</span><span class="news-tag">147,374人</span></div>
+      </div>
+
+      <div class="news-card cat-research">
+        <div class="news-meta">
+          <span class="news-category">哈佛/浙大 · JACC</span>
+          <span class="news-date">2026-07-12 发表</span>
+        </div>
+        <h3>抗阻训练与女性心血管事件风险降低20%：12万人14.5年随访</h3>
+        <p>哈佛大学与浙江大学医学院联合团队在《JACC》发表研究，分析护士健康研究队列（NHS/NHS II）117,025名女性、14.5年随访数据（累计160万人年）。每周抗阻训练≥2小时的女性，重大心血管疾病风险降低20%，心肌梗死风险降低44%。最优组合：有氧≥15 MET-小时/周 + 抗阻≥1小时/周 + 每天久坐看电视<2小时，CVD风险降低40%。抗阻训练对中风的保护作用未达显著。</p>
+        <div class="highlight-box">
+          <strong>机制解析：</strong>抗阻训练诱导有氧运动无法替代的代谢变化——显著提高胰岛素敏感性、改善代谢特征，可能优先影响冠状动脉粥样硬化负荷、斑块稳定性及内皮功能，这解释了其对心梗的显著保护作用。
+        </div>
+        <a class="news-link" href="https://www.163.com/dy/article/L1LH3BAK051182D7.html" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">抗阻训练</span><span class="news-tag">女性心血管</span><span class="news-tag">JACC</span><span class="news-tag">心梗↓44%</span></div>
+      </div>
+
+      <div class="news-card cat-research">
+        <div class="news-meta">
+          <span class="news-category">哈佛 · 柳叶刀</span>
+          <span class="news-date">2026-07-09 发表</span>
+        </div>
+        <h3>哈佛37年追踪：长期运动让大脑认知年龄年轻1.15-1.27岁</h3>
+        <p>哈佛大学研究团队在《柳叶刀-公共卫生》发表研究，整合NHS和HPFS两大队列数据，纳入超10万人、随访37年、记录10,695例新发痴呆。总运动量最高人群痴呆风险降低28%。步行量最高降24%，有氧运动量最高降11%，阻力训练每周>30分钟降13%。运动量最大者整体认知和语言记忆相当于年轻1.15-1.27岁。最佳运动量约20 MET-小时/周（相当于每周快走5小时或慢跑3小时）。</p>
+        <a class="news-link" href="https://new.qq.com/rain/a/20260710A08QGZ00" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">运动与痴呆</span><span class="news-tag">柳叶刀</span><span class="news-tag">10万人队列</span></div>
+      </div>
+
+      <div class="news-card cat-research">
+        <div class="news-meta">
+          <span class="news-category">中国香港运动医学学会</span>
+          <span class="news-date">2026-07</span>
+        </div>
+        <h3>AI与穿戴科技：从"被动治疗"到"主动预测"的运动医学新范式</h3>
+        <p>中国香港运动医学及科学学会发表专栏文章，指出AI与穿戴健康装置的结合正以前所未有速度改写运动医学版图。ACSM连续第五年将"穿戴式科技"列为全球头号健身趋势。结合训练负荷、睡眠及恢复数据的机器学习模型，损伤预测准确度可达约90%。应用方向包括：损伤风险预测（实时侦测动作偏差与疲劳信号）、个性化康复方案、精准回归运动标准（Return to Play）。香港中文大学已设立智慧骨科及运动医学中心。</p>
+        <a class="news-link" href="https://www.hkelite.org/tc/archives/19265" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">AI穿戴</span><span class="news-tag">损伤预测</span><span class="news-tag">ACSM</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Section 3: Clinical Cases -->
+  <div class="section" id="sec3">
+    <div class="section-header">
+      <div class="section-tag" style="color: var(--accent-teal);">
+        <span class="section-tag-dot" style="background: var(--accent-teal);"></span>
+        CATEGORY 03
+      </div>
+      <h2>Mayo Clinic等顶尖医院临床案例</h2>
+      <p class="section-desc">全球顶级医疗机构的运动医学临床案例与技术应用</p>
+    </div>
+    <div class="news-grid">
+
+      <div class="news-card cat-clinical">
+        <div class="news-meta">
+          <span class="news-category">Mayo Clinic · 病例报告</span>
+          <span class="news-date">2026年发表</span>
+        </div>
+        <h3>四边形间隙综合征： overhead 运动员肩痛的罕见病因</h3>
+        <p>Mayo Clinic物理医学与康复科、神经科及运动医学科联合在《Current Sports Medicine Reports》（2026年第25卷第5期）发表病例报告：一名overhead运动员表现为肩部疼痛，最终确诊为四边形间隙综合征（Quadrilateral Space Syndrome）。该综合征由腋神经和旋肱后动脉在四边形间隙受压引起，在overhead运动员中易与肩袖损伤、盂唇损伤混淆。Mayo团队强调了详细的神经查体和MRI血管成像在鉴别诊断中的关键作用。</p>
+        <a class="news-link" href="https://scholar.cnki.net/en/Detail/index/GARJ2021_7/SJWK64E8931D910C674705CC6085BD7C1B69" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">四边形间隙综合征</span><span class="news-tag">腋神经</span><span class="news-tag">overhead运动员</span></div>
+      </div>
+
+      <div class="news-card cat-clinical">
+        <div class="news-meta">
+          <span class="news-category">Mayo Clinic · 虚拟康复</span>
+          <span class="news-date">2026</span>
+        </div>
+        <h3>梅奥诊所"虚拟高尔夫"康复：元宇宙技术重塑运动医学</h3>
+        <p>Mayo Clinic将元宇宙技术引入运动医学康复领域，针对帕金森病等运动障碍疾病打造"虚拟高尔夫""虚拟舞蹈"等沉浸式训练场景。患者在VR环境中进行平衡和协调性训练，获得即时感官反馈，临床数据显示运动症状改善、跌倒风险降低及训练依从性均显著优于传统方式。同时，微软Mesh平台通过AR眼镜实现远程手术协作指导，使基层手术关键步骤失误率下降40%。</p>
+        <div class="highlight-box">
+          <strong>循证依据：</strong>《IEEE Journal of Biomedical and Health Informatics》研究指出VR沉浸式训练通过神经可塑性机制刺激大脑皮层重组，长期训练使跌倒风险降低30%以上。《Nature Partner Journals: Digital Medicine》数据显示AR远程指导使基层手术关键步骤失误率下降40%。
+        </div>
+        <a class="news-link" href="https://www.toutiao.com/w/1861853214414858/" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">VR康复</span><span class="news-tag">帕金森</span><span class="news-tag">神经可塑性</span></div>
+      </div>
+
+      <div class="news-card cat-clinical">
+        <div class="news-meta">
+          <span class="news-category">Mayo Clinic · 膝关节</span>
+          <span class="news-date">2026</span>
+        </div>
+        <h3>膝关节过伸伤后弹响：半月板撕裂合并股二头肌异常附着</h3>
+        <p>Mayo Clinic凤凰城骨科发表病例报告：一名36岁男性在柔术训练中膝关节过伸受伤，听到弹响。MRI显示外侧半月板撕裂伴翻转碎片。患者接受关节镜下外侧半月板部分切除术后6周恢复柔术训练。5个月后因膝后外侧疼痛和弹响复发就诊，动态超声和MRI复查发现股二头肌异常胫骨附着点。患者随后接受股二头肌滑片重新附着术。</p>
+        <div class="highlight-box">
+          <strong>鉴别诊断要点：</strong>膝后外侧疼痛伴弹响的鉴别包括：股二头肌弹响综合征、腘肌腱半脱位、外侧半月板后角撕裂、弓状韧带复合体损伤。动态超声是诊断弹响病因的重要工具。
+        </div>
+        <a class="news-link" href="https://www.thieme-connect.de/products/ejournals/html/10.1055/s-0043-1777329" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">半月板撕裂</span><span class="news-tag">股二头肌弹响</span><span class="news-tag">关节镜</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Section 4: Technology -->
+  <div class="section" id="sec4">
+    <div class="section-header">
+      <div class="section-tag" style="color: var(--accent-purple);">
+        <span class="section-tag-dot" style="background: var(--accent-purple);"></span>
+        CATEGORY 04
+      </div>
+      <h2>运动康复科技前沿</h2>
+      <p class="section-desc">AI、穿戴传感器、边缘计算在运动损伤预防与康复中的最新应用</p>
+    </div>
+    <div class="news-grid">
+
+      <div class="news-card cat-tech">
+        <div class="news-meta">
+          <span class="news-category">穿戴AI · BMC</span>
+          <span class="news-date">2026-05-26 发表</span>
+        </div>
+        <h3>多模态穿戴传感器+AI预警系统：篮球急停前400ms识别膝外翻风险</h3>
+        <p>《BMC Sports Science, Medicine and Rehabilitation》发表最新研究，构建基于穿戴传感器的运动生物力学损伤预测AI预警系统。系统集成九轴惯性传感器、柔性应变传感器和足底压力传感阵列，采用改进的混合神经网络（TCN+LSTM）提取时空特征。在篮球急停跳投任务中，系统在左膝峰值角度达到16.2°前400ms即识别出膝外翻风险升高。长跑监测中，高风险组第3周即检测到进行性步态不对称，干预后峰值负荷降低18%。边缘计算优化将模型量化至8位整数，端到端延迟控制在毫秒级。</p>
+        <div class="highlight-box">
+          <strong>技术亮点：</strong>动态阈值调整机制、多模态数据融合（关节运动学+局部组织形变+地面反作用力）、边缘AI部署。未来方向：联邦学习框架下多中心数据共享、穿戴外骨骼联动干预、AR可视化反馈。
+        </div>
+        <a class="news-link" href="https://link.springer.com/article/10.1186/s13102-026-01761-2" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">穿戴传感器</span><span class="news-tag">ACL预测</span><span class="news-tag">边缘AI</span><span class="news-tag">400ms预警</span></div>
+      </div>
+
+      <div class="news-card cat-tech">
+        <div class="news-meta">
+          <span class="news-category">AI+穿戴 · Frontiers</span>
+          <span class="news-date">2026-05-29 发表</span>
+        </div>
+        <h3>Frontiers综述：AI与穿戴科技在运动中的性能、损伤风险与心理健康应用</h3>
+        <p>《Frontiers in Artificial Intelligence》发表迷你综述，系统梳理AI与穿戴技术在运动领域的最新证据。GPS、IMU、HRV监测和睡眠追踪等穿戴系统产生高频生理、生物力学和行为数据，AI模型可增强个性化训练处方、改善负荷管理、支持早期识别适应不良模式。但预测准确性和实用性高度依赖数据质量、模型验证和从业者专业知识。综述强调"人在回路"框架——AI作为决策支持工具而非自主权威。</p>
+        <a class="news-link" href="https://www.frontiersin.org/journals/artificial-intelligence/articles/10.3389/frai.2026.1838507/full" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">AI综述</span><span class="news-tag">GPS/IMU/HRV</span><span class="news-tag">人在回路</span></div>
+      </div>
+
+      <div class="news-card cat-tech">
+        <div class="news-meta">
+          <span class="news-category">WAIC 2026</span>
+          <span class="news-date">2026-07-21</span>
+        </div>
+        <h3>WAIC 2026：BleeqUp智能运动方案——从"记录工具"到"运动伙伴"</h3>
+        <p>2026世界人工智能大会（WAIC）上，致敬未知展出BleeqUp智能运动解决方案，聚焦户外运动垂类场景。该方案将高清拍摄、音频交互、实时对讲与专业防护整合于轻量化终端，AI算法与运动场景深度耦合。设备可感知骑行、跑步等动态环境及身体状态，主动输出减速避险、节奏调整等科学建议。推动破解户外运动风险预判难、即时指导缺位等痛点。人民网评论称"AI运动健康正从概念走向场景落地"。</p>
+        <a class="news-link" href="https://so.html5.qq.com/page/real/search_news?docid=70000021_6066a5f0cc367452" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">WAIC</span><span class="news-tag">户外运动AI</span><span class="news-tag">风险预判</span></div>
+      </div>
+
+      <div class="news-card cat-tech">
+        <div class="news-meta">
+          <span class="news-category">NBA认证 · EdgeGuard</span>
+          <span class="news-date">2026-05</span>
+        </div>
+        <h3>全球首个获NBA认证的球员健康AI系统：提前72小时预测伤病风险</h3>
+        <p>彩期（Cavaliers关联）自主研发的"EdgeGuard"球员健康AI系统通过NBA联盟首批"智慧体育技术认证"，成为全球首个获顶级职业联赛认可的运动损伤预测AI平台。系统整合可穿戴传感器（智能护膝、护踝、心率带，100Hz采样）和12台240fps光学追踪摄像头，通过CNN+LSTM联合模型实时识别40+种高风险姿势，提前72小时识别高风险动作模式，准确率89.7%（NBA联合实验室独立验证）。系统已覆盖骑士队全部15名签约球员和发展联盟队员，累计处理超2000小时数据。</p>
+        <div class="highlight-box">
+          <strong>三层架构：</strong>①感知层——穿戴传感器100Hz采集关节角度/肌肉活动/HRV + 场边12台摄像头240fps三维骨骼追踪 ②分析层——边缘计算服务器CNN+LSTM联合处理，识别40+高风险姿势，生成0-100疲劳指数 ③应用层——教练组实时预警与训练负荷调整
+        </div>
+        <a class="news-link" href="https://szb.xdplus.cn/twle/-/SiR6c" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">NBA认证</span><span class="news-tag">EdgeGuard</span><span class="news-tag">72h预测</span><span class="news-tag">89.7%准确率</span></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Section 5: Funding -->
+  <div class="section" id="sec5">
+    <div class="section-header">
+      <div class="section-tag" style="color: var(--accent-blue);">
+        <span class="section-tag-dot" style="background: var(--accent-blue);"></span>
+        CATEGORY 05
+      </div>
+      <h2>运动康复创业及融资</h2>
+      <p class="section-desc">运动健康与康复科技领域的最新投融资动态</p>
+    </div>
+    <div class="news-grid">
+
+      <div class="news-card cat-funding">
+        <div class="news-meta">
+          <span class="news-category">种子轮 · 美国</span>
+          <span class="news-date">2026-07-13</span>
+        </div>
+        <h3>Cognify Health：青少年运动脑震荡24小时远程诊疗，完成数百万美元种子轮</h3>
+        <p>洛杉矶运动健康初创公司Cognify Health完成数百万美元种子轮融资，由Game Changers Ventures领投。该公司专注于青少年运动脑震荡诊疗可及性，采用"软件平台+自建医疗团队"模式——家庭可在24小时内预约虚拟脑震荡专科医生面诊，并获得完整的返校和重返运动方案。创始人Christian Juzang（哈佛毕业）因妹妹排球脑震荡就医困难而创业。公司目前约10人，计划从D2C模式转向联赛和俱乐部机构合作。</p>
+        <div class="highlight-box">
+          <strong>投资信号：</strong>Game Changers Ventures六个月内已投资5家体育科技公司。Cognify是其中唯一触及运动员安全的医疗项目，标志着青少年运动健康正从"合规义务"转变为"可投资品类"。
+        </div>
+        <a class="news-link" href="https://newsx.io/2026/07/14/youth-sports-concussion-care-startup-cognify-health-raises-seed-round-led-by-game-changers-ventures-ysbr" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">脑震荡</span><span class="news-tag">远程医疗</span><span class="news-tag">青少年运动</span></div>
+      </div>
+
+      <div class="news-card cat-funding">
+        <div class="news-meta">
+          <span class="news-category">Pre-seed · 印度</span>
+          <span class="news-date">2026-07</span>
+        </div>
+        <h3>Stance Health获100万美元Pre-seed：AI步态传感器重塑印度MSK康复</h3>
+        <p>印度肌骨康复（MSK）初创公司Stance Health完成100万美元Pre-seed轮融资，由General Catalyst领投，Antler、DEVC、EX Capital（Sword Health创始人）参投，Swiggy联合创始人等天使投资。公司采用AI动作传感器、客观肌力评估和结构化治疗路径，提供"重评估-恢复-再激活"三阶段康复流程。8个月试点期内完成超12,000次康复训练，患者留存率高出行业平均3倍。资金将用于在班加罗尔等城市扩展MSK中心。</p>
+        <a class="news-link" href="https://biovoicenews.com/stance-health-secures-1-million-pre-seed-funding-to-transform-musculoskeletal-care-in-india/" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">MSK康复</span><span class="news-tag">AI步态</span><span class="news-tag">印度市场</span></div>
+      </div>
+
+      <div class="news-card cat-funding">
+        <div class="news-meta">
+          <span class="news-category">Pre-A · 中国</span>
+          <span class="news-date">2026-07-03</span>
+        </div>
+        <h3>如身机器人完成亿元Pre-A：模块化康复机器人覆盖全康复周期</h3>
+        <p>如身机器人宣布完成亿元Pre-A轮融资，由清松资本、润泽科技及平湖泽新共同投资。公司聚焦康复与健身领域，利用模块化力控关节和趣味游戏库搭建康复机器人矩阵，覆盖全康复场景和全康复周期，并向健身领域拓展。资金将用于加速具身智能在养老机构与居家场景中的落地部署。</p>
+        <a class="news-link" href="https://new.qq.com/rain/a/20260703A04LGW00" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">康复机器人</span><span class="news-tag">亿元融资</span><span class="news-tag">具身智能</span></div>
+      </div>
+
+      <div class="news-grid-2col">
+        <div class="news-card cat-funding">
+          <div class="news-meta">
+            <span class="news-category">A轮 · 中国</span>
+            <span class="news-date">2026-05-29</span>
+          </div>
+          <h3>杭州易启未来：84项专利，数千万A轮攻坚运动按摩机器人</h3>
+          <p>杭州易启未来智能科技完成A轮数千万融资，由同创伟业、优山资本、杭州资本"润苗基金"联合投资。公司2025年成立，已拥有84项专利和35条商标，聚焦运动后疲劳缓解的按摩机器人。资金投入核心技术深度攻坚与下一代产品全栈研发。</p>
+          <a class="news-link" href="https://www.toutiao.com/a7645210530310898222" target="_blank">阅读原文 →</a>
+          <div class="news-tags"><span class="news-tag">按摩机器人</span><span class="news-tag">84项专利</span></div>
+        </div>
+
+        <div class="news-card cat-funding">
+          <div class="news-meta">
+            <span class="news-category">融资 · 比利时</span>
+            <span class="news-date">2026-02-04</span>
+          </div>
+          <h3>Runeasi获€100万：KU Leuven衍生AI跑步分析平台覆盖40国</h3>
+          <p>鲁汶大学（KU Leuven）衍生公司Runeasi完成100万欧元融资，Smarter Ventures领投。AI运动传感器集成于运动腰带，捕获跑步和跳跃生物力学数据，生成个性化康复和训练报告。已覆盖40+国家、50,000+次分析，美国为最大市场。</p>
+          <a class="news-link" href="https://nexttechtoday.com/news/belgian-ai-scale-up-runeasi-raises-e1-million/" target="_blank">阅读原文 →</a>
+          <div class="news-tags"><span class="news-tag">AI跑步分析</span><span class="news-tag">KU Leuven</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Section 6: Celebrity Injuries -->
+  <div class="section" id="sec6">
+    <div class="section-header">
+      <div class="section-tag" style="color: var(--accent-red);">
+        <span class="section-tag-dot" style="background: var(--accent-red);"></span>
+        CATEGORY 06
+      </div>
+      <h2>明星运动损伤</h2>
+      <p class="section-desc">体坛与娱乐圈明星的运动损伤与康复历程</p>
+    </div>
+    <div class="news-grid">
+
+      <div class="news-card cat-celebrity">
+        <div class="news-meta">
+          <span class="news-category">滑雪 · 冬奥会</span>
+          <span class="news-date">2026-07-15</span>
+        </div>
+        <h3>Lindsey Vonn：踝关节仍骨折，5个月后首次重返健身房</h3>
+        <p>41岁 Alpine 滑雪名将Lindsey Vonn在2026 ESPYS红毯上透露，2月8日冬奥会速降赛中13秒内失控坠地后，踝关节"仍然骨折"。她遭受复杂胫骨骨折+腓骨头骨折+骨筋膜室综合征，Team USA骨科医生Tom Hackett施行筋膜切开术挽救了她的腿免于截肢。Vonn经历了6周轮椅、2.5个月拐杖、3.5个月无法独立行走。每日康复日程：7:30起床→9-11康复→高压氧舱2小时→17:00-18:30训练，每周6天。她拒绝宣布退役，计划取除金属后修复ACL。</p>
+        <div class="highlight-box">
+          <strong>骨筋膜室综合征科普：</strong>骨筋膜室综合征是创伤后筋膜室内压力急剧升高，导致肌肉、神经、肌腱缺血坏死的紧急情况。筋膜切开术（fasciotomy）是切开筋膜两侧减压的标准急诊手术。Vonn的康复时间线（5个月才开始健身房训练）反映了复杂性胫骨骨折+骨筋膜室综合征的严重性——骨骼完全愈合约需1年。
+        </div>
+        <a class="news-link" href="https://people.com/lindsey-vonn-reveals-her-ankle-is-still-broken-5-months-after-olympics-exclusive-12020367" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">胫骨骨折</span><span class="news-tag">骨筋膜室综合征</span><span class="news-tag">筋膜切开术</span><span class="news-tag">高压氧</span></div>
+      </div>
+
+      <div class="news-card cat-celebrity">
+        <div class="news-meta">
+          <span class="news-category">娱乐 · 时代少年团</span>
+          <span class="news-date">2026-07-02</span>
+        </div>
+        <h3>丁程鑫手指骨裂满1个月：从硬质夹板到柔软绑带的阶段性进展</h3>
+        <p>时代少年团成员丁程鑫左手无名指骨裂满1个月，主动晒出康复进度。从最初硬质固定夹板更换为柔软绑带，手部肿胀明显消退——这是骨裂初步愈合的标志性信号。目前手指仍无法正常弯曲，穿脱衣物需特殊处理。裂纹性骨裂属于稳定性骨折，初步愈合（骨痂形成）通常需4-6周，完全恢复手部功能需2-3个月。节目组已将涉及手部对抗的环节全部替换为轻度互动，服装左袖改为拉链款。</p>
+        <div class="highlight-box">
+          <strong>骨裂康复时间线：</strong>裂纹性骨裂（稳定性骨折）愈合阶段：①炎症期（0-7天）血肿机化 ②修复期（2-4周）骨痂形成，可拆除硬质夹板 ③塑形期（6-12周）骨小梁重塑，恢复功能。高强度动作（舞蹈、对抗）一般需2-3个月恢复期。
+        </div>
+        <a class="news-link" href="https://ent.sina.cn/2026-07-02/detail-inifmrtq5789952.d.html" target="_blank">阅读原文 →</a>
+        <div class="news-tags"><span class="news-tag">骨裂</span><span class="news-tag">夹板固定</span><span class="news-tag">骨痂形成</span></div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="container">
+    <p><strong>运动康复行业动态周报</strong> | Vol. 30 | 2026-07-30</p>
+    <p>本报告由 AI 自动搜集整理，仅供医学教育与行业研究参考，不构成临床诊疗建议</p>
+    <div class="footer-sources">
+      <span class="footer-source">CCTV体育</span>
+      <span class="footer-source">Mayo Clinic</span>
+      <span class="footer-source">Harvard Health</span>
+      <span class="footer-source">BJSM</span>
+      <span class="footer-source">JACC</span>
+      <span class="footer-source">The Lancet</span>
+      <span class="footer-source">Frontiers in AI</span>
+      <span class="footer-source">BMC Sports Sci Med Rehabil</span>
+      <span class="footer-source">Sports Business Journal</span>
+      <span class="footer-source">PEOPLE / US Weekly</span>
+      <span class="footer-source"> Bleacher Report</span>
+      <span class="footer-source">人民网</span>
+      <span class="footer-source">体坛周报</span>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,8 @@
+# Only track sports rehab daily report HTML files
+# Exclude everything else
+*.md
+拳击/
+橄榄球/
+马拉松膝盖/
+MRI关节置换影像学检测_指南共识临床试验报告.html
+.DS_Store

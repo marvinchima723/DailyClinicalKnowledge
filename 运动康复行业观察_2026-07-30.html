@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>运动康复行业观察 | 2026-07-30</title>
+<style>
+  /* ===== Apple Design System — Dark Theme ===== */
+  :root {
+    --bg-primary: #000000;
+    --bg-secondary: #1c1c1e;
+    --bg-tertiary: #2c2c2e;
+    --bg-elevated: #3a3a3c;
+    --text-primary: #ffffff;
+    --text-secondary: #ebebf5;
+    --text-tertiary: #98989f;
+    --text-quaternary: #636366;
+    --accent-blue: #0a84ff;
+    --accent-green: #30d158;
+    --accent-orange: #ff9f0a;
+    --accent-red: #ff453a;
+    --accent-purple: #bf5af2;
+    --accent-teal: #40c8e0;
+    --accent-pink: #ff375f;
+    --accent-indigo: #5e5ce6;
+    --border-subtle: rgba(255,255,255,0.08);
+    --border-strong: rgba(255,255,255,0.15);
+    --card-radius: 16px;
+    --tag-radius: 8px;
+  }
+
+  * { margin:0; padding:0; box-sizing:border-box; }
+
+  body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", "PingFang SC", "Noto Sans SC", sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  .container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  /* ===== Hero Section ===== */
+  .hero {
+    background: linear-gradient(180deg, #1a1a2e 0%, #000000 100%);
+    padding: 64px 0 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -20%;
+    width: 140%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(10,132,255,0.15) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(10,132,255,0.15);
+    color: var(--accent-blue);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+    border: 1px solid rgba(10,132,255,0.3);
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    margin-bottom: 12px;
+    background: linear-gradient(135deg, #ffffff 0%, #a0c4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero .subtitle {
+    font-size: 17px;
+    color: var(--text-tertiary);
+    margin-bottom: 8px;
+  }
+
+  .hero .date {
+    font-size: 15px;
+    color: var(--text-quaternary);
+  }
+
+  /* ===== Executive Summary (McKinsey Style) ===== */
+  .exec-summary {
+    background: var(--bg-secondary);
+    border-radius: var(--card-radius);
+    padding: 32px 36px;
+    margin: 32px 0;
+    border: 1px solid var(--border-subtle);
+    position: relative;
+  }
+
+  .exec-summary::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 24px;
+    bottom: 24px;
+    width: 3px;
+    background: linear-gradient(180deg, var(--accent-blue), var(--accent-purple));
+    border-radius: 2px;
+  }
+
+  .exec-summary h2 {
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--accent-blue);
+    margin-bottom: 16px;
+  }
+
+  .exec-summary p {
+    font-size: 16px;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 12px;
+  }
+
+  .exec-summary .key-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border-subtle);
+  }
+
+  .key-number {
+    flex: 1;
+    min-width: 120px;
+  }
+
+  .key-number .num {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--accent-blue);
+    letter-spacing: -1px;
+  }
+
+  .key-number .label {
+    font-size: 12px;
+    color: var(--text-tertiary);
+    margin-top: 4px;
+  }
+
+  /* ===== Category Section ===== */
+  .category {
+    margin: 48px 0;
+  }
+
+  .category-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .category-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+
+  .category-header h2 {
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+  }
+
+  .category-header .cat-tag {
+    font-size: 12px;
+    color: var(--text-quaternary);
+    margin-left: auto;
+  }
+
+  /* ===== News Card ===== */
+  .news-card {
+    background: var(--bg-secondary);
+    border-radius: var(--card-radius);
+    padding: 28px 32px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border-subtle);
+    transition: all 0.3s ease;
+  }
+
+  .news-card:hover {
+    background: var(--bg-tertiary);
+    border-color: var(--border-strong);
+    transform: translateY(-2px);
+  }
+
+  .news-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+  }
+
+  .news-tag {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    border-radius: var(--tag-radius);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  .tag-injury { background: rgba(255,69,58,0.15); color: var(--accent-red); }
+  .tag-research { background: rgba(48,209,88,0.15); color: var(--accent-green); }
+  .tag-clinical { background: rgba(10,132,255,0.15); color: var(--accent-blue); }
+  .tag-tech { background: rgba(191,90,242,0.15); color: var(--accent-purple); }
+  .tag-funding { background: rgba(255,159,10,0.15); color: var(--accent-orange); }
+  .tag-celebrity { background: rgba(255,55,95,0.15); color: var(--accent-pink); }
+
+  .news-source {
+    font-size: 12px;
+    color: var(--text-quaternary);
+  }
+
+  .news-card h3 {
+    font-size: 19px;
+    font-weight: 650;
+    margin-bottom: 10px;
+    line-height: 1.4;
+  }
+
+  .news-card .summary {
+    font-size: 15px;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+
+  .news-card .key-takeaway {
+    background: rgba(10,132,255,0.08);
+    border-left: 3px solid var(--accent-blue);
+    padding: 12px 16px;
+    border-radius: 0 8px 8px 0;
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-top: 12px;
+  }
+
+  .news-card .key-takeaway strong {
+    color: var(--accent-blue);
+  }
+
+  .news-card .source-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 13px;
+    color: var(--accent-blue);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+  }
+
+  .news-card .source-link:hover {
+    border-bottom-color: var(--accent-blue);
+  }
+
+  /* ===== Stats Bar ===== */
+  .stats-bar {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 16px;
+    margin: 32px 0;
+  }
+
+  .stat-item {
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 20px 24px;
+    text-align: center;
+    border: 1px solid var(--border-subtle);
+  }
+
+  .stat-item .stat-num {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .stat-item .stat-label {
+    font-size: 13px;
+    color: var(--text-tertiary);
+  }
+
+  /* ===== Footer ===== */
+  .footer {
+    text-align: center;
+    padding: 48px 0 64px;
+    border-top: 1px solid var(--border-subtle);
+    margin-top: 48px;
+  }
+
+  .footer p {
+    font-size: 13px;
+    color: var(--text-quaternary);
+    margin-bottom: 4px;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 640px) {
+    .hero h1 { font-size: 30px; }
+    .exec-summary { padding: 24px 20px; }
+    .news-card { padding: 20px 22px; }
+    .key-number .num { font-size: 26px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-badge">SPORTS REHAB INTELLIGENCE</div>
+    <h1>运动康复行业观察</h1>
+    <p class="subtitle">Sports Rehabilitation & Recovery Intelligence Report</p>
+    <p class="date">2026年7月30日 · 周四 · 第31周</p>
+  </div>
+</section>
+
+<!-- ===== EXECUTIVE SUMMARY ===== -->
+<div class="container">
+  <section class="exec-summary">
+    <h2>Executive Summary | 执行摘要</h2>
+    <p>过去24-72小时，运动康复领域呈现三条主线：<strong>脑机接口康复</strong>从政策端与临床端同时爆发——中国残联点名非侵入式BCI设备纳入"十五五"科技助残重点，武汉脑机接口病房让瘫痪5年患者重获手部功能；<strong>明星运动员伤病</strong>持续占据头条——Serena Williams 膝伤恢复向好暗示美网复出，Patrick Mahomes ACL术后获准训练，Conor McGregor 右膝ACL+半月板双重撕裂面临生涯十字路口；<strong>康复科技商业化</strong>加速——UREVO AI恢复靴获红点奖，Cognify Health 脑震荡护理种子轮落地，如身机器人亿元融资推进具身智能康复。</p>
+    <div class="key-numbers">
+      <div class="key-number">
+        <div class="num">22</div>
+        <div class="label">本期监测新闻条数</div>
+      </div>
+      <div class="key-number">
+        <div class="num">6</div>
+        <div class="label">覆盖类别</div>
+      </div>
+      <div class="key-number">
+        <div class="num">3</div>
+        <div class="label">亿元级融资事件</div>
+      </div>
+      <div class="key-number">
+        <div class="num">5+</div>
+        <div class="label">明星运动员伤病追踪</div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ===== CATEGORY 1: 主流运动赛事运动损伤 ===== -->
+<div class="container">
+  <section class="category">
+    <div class="category-header">
+      <div class="category-icon" style="background:rgba(255,69,58,0.2);">⚽</div>
+      <h2>主流运动赛事运动损伤</h2>
+      <span class="cat-tag">5 条</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-injury">NFL</span>
+        <span class="news-source">Sporting News · 2026-07-29</span>
+      </div>
+      <h3>Tua Tagovailoa 背伤发作，缺席训练营</h3>
+      <p class="summary">亚特兰大猎鹰队新签四分卫 Tua Tagovailoa 训练营首日因背部伤势"突然发作"（"something flared up"）被排除出训练名单。主帅 Kevin Stefanski 表示伤情"并不严重"，预计下周回归。同时 Michael Penix Jr. 仍在 ACL 术后恢复中，球队紧急签下老将 Cooper Rush 应急。</p>
+      <div class="key-takeaway"><strong>临床要点：</strong>Tua 有脑震荡史（2022-2023三次），此次背伤虽不严重但凸显猎鹰QB深度危机——两名首发级QB同时伤停，暴露了NFL球队对运动损伤连锁风险的低估。</div>
+      <a href="https://www.sportingnews.com/au/nfl/atlanta-falcons/news/tua-tagovailoa-injury-update-falcons-training-camp/356b0510a4aadedc391c78af" class="source-link" target="_blank">来源 → Sporting News</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-injury">MLS</span>
+        <span class="news-source">懂球帝 · 2026-07-27</span>
+      </div>
+      <h3>迈阿密国际前锋贝尔泰拉梅左肩+鼻部重伤后出院</h3>
+      <p class="summary">MLS 赛场上，迈阿密国际前锋贝尔泰拉梅在对阵蒙特利尔的比赛中禁区争顶时遭遇严重撞击，救护车进场。诊断为左肩和鼻部损伤，在蒙特利尔综合医院观察一晚后出院。俱乐部医疗团队将全程监督康复。</p>
+      <div class="key-takeaway"><strong>临床要点：</strong>争顶头球碰撞是足球运动中肩部脱位/骨折的高发机制，急性处理流程（场边固定→影像评估→关节稳定性评估→手术/保守决策）决定回归时间。</div>
+      <a href="https://www.163.com/dy/article/L2QDUS2E0549BAP0.html" class="source-link" target="_blank">来源 → 懂球帝</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-injury">La Liga</span>
+        <span class="news-source">阿斯报 · 2026-07-27</span>
+      </div>
+      <h3>巴萨小将贝尔纳尔肌肉拉伤，严格监控中</h3>
+      <p class="summary">19岁中场贝尔纳尔出现轻度肌肉超负荷，巴萨对其进行个性化恢复训练。俱乐部格外谨慎——上赛季他在前三轮表现出色后对阵巴列卡诺时遭遇十字韧带撕裂，缺席一年多。同时左后卫巴尔德因耻骨炎缺席训练一周，阿劳霍小腿问题接近回归。</p>
+      <div class="key-takeaway"><strong>临床要点：</strong>ACL重建术后运动员重返训练的"危险窗口期"——肌力不对称+神经肌肉控制未完全恢复时，对侧或同侧再损伤风险显著升高。巴萨的"过度谨慎"策略符合循证实践。</div>
+      <a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_8356a66429315952" class="source-link" target="_blank">来源 → 阿斯报</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-injury">Bundesliga</span>
+        <span class="news-source">直播吧 · 2026-07-28</span>
+      </div>
+      <h3>拜仁新援赛巴里确诊大腿肌肉纤维撕裂</h3>
+      <p class="summary">拜仁跟队记者确认，新援赛巴里（摩洛哥国脚）在世界杯对阵加拿大比赛中受伤，诊为大腿肌肉纤维撕裂。将在休假结束后赴慕尼黑康复，待球队亚洲巡回赛后与队友会合。</p>
+      <div class="key-takeaway"><strong>临床要点：</strong>肌肉纤维撕裂（Grade 2 strain）恢复周期通常3-6周，重返赛场需通过等速肌力测试（H:Q ratio ≥ 0.6）和功能动作筛查（FMS），过早回归再撕裂率高达30%。</div>
+      <a href="https://m.zhibo8.com/news/web/zuqiu/2026-07-28/6a678061419b5native.htm" class="source-link" target="_blank">来源 → 直播吧</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-injury">Serie A</span>
+        <span class="news-source">米兰圈 · 2026-07-25</span>
+      </div>
+      <h3>AC米兰前锋恩昆库肌肉拉伤，缺席季前热身</h3>
+      <p class="summary">米兰前锋恩昆库因碰撞引发肌肉不适，缺席对阵凯尔特人的夏季首场热身赛。埃斯图皮尼安刚返回米兰内洛，P·泰拉恰诺遭遇臀部撞伤。多条伤停让阿莫林的季前备战节奏被打乱。</p>
+      <div class="key-takeaway"><strong>临床要点：</strong>季前赛是足球运动损伤高发期——体能基础不足+技战术负荷突增导致肌肉拉伤集中爆发。FIFA 11+/Nordic hamstring 等神经肌肉预防方案可降低50%下肢损伤率。</div>
+      <a href="https://www.163.com/dy/article/L2M1L83L0529AIO3.html" class="source-link" target="_blank">来源 → 米兰圈</a>
+    </div>
+  </section>
+</div>
+
+<!-- ===== CATEGORY 2: 全球顶尖医学院运动康复研究 ===== -->
+<div class="container">
+  <section class="category">
+    <div class="category-header">
+      <div class="category-icon" style="background:rgba(48,209,88,0.2);">🔬</div>
+      <h2>全球顶尖医学院运动康复研究进展</h2>
+      <span class="cat-tag">5 条</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-research">Science Advances</span>
+        <span class="news-source">南方医科大学 · 2026-07-10</span>
+      </div>
+      <h3>康复训练的"分子密码"：ACSL4驱动巨噬细胞促进肌腱-骨愈合</h3>
+      <p class="summary">南方医科大学曾春团队在 <em>Science Advances</em> 发表研究，利用ACL重建小鼠模型，发现低强度机械刺激通过 ACSL4 介导的脂质代谢重编程，促进肌腱-骨界面巨噬细胞 M2 型极化和胞葬作用。CCL9-CCR1 轴随后介导骨髓基质细胞归巢至修复部位。工程化 CCL9 外泌体可加速修复。这一发现阐明了运动康复诱导愈合的关键分子机制。</p>
+      <div class="key-takeaway"><strong>临床转化：</strong>ACLR后移植物-骨整合不良占生物性失败20-30%，此研究为外泌体疗法提供了明确靶点（ACSL4/CCL9），有望降低翻修手术率。运动康复不再只是"物理层面的训练"，而是有分子靶点的精准干预。</div>
+      <a href="https://news.bioon.com/article/5198943e2329.html" class="source-link" target="_blank">来源 → Bioon</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-research">JAMA Neurology</span>
+        <span class="news-source">2026-07-01</span>
+      </div>
+      <h3>FOCUS：足球专项快速场边脑震荡评估共识方案</h3>
+      <p class="summary">国际Delphi共识制定的 FOCUS 方案（45项、11个域）用于足球比赛中场边快速脑震荡评估。≥80%同意率纳入条目，旨在统一全球场边脑震荡评估标准。作者提出 FOCUS 可实现全球评估标准化，但可行性和诊断准确性仍需在本地验证。</p>
+      <div class="key-takeaway"><strong>临床意义：</strong>脑震荡是运动医学中最被低估的损伤之一。SCAT5需要15-20分钟，而FOCUS专为比赛中"快速决策"设计——但"快"不等于"准"，落地前需行效度验证。</div>
+      <a href="https://medbrevia.com/grandrounds/sports_medicine/2026-07-04" class="source-link" target="_blank">来源 → MedBrevia Grand Rounds</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-research">BJSM Meta-Analysis</span>
+        <span class="news-source">2026-07-04</span>
+      </div>
+      <h3>BFR血流限制训练：低负荷=高负荷，45项RCT证实</h3>
+      <p class="summary"><em>British Journal of Sports Medicine</em> 发表的纳入45项RCT（1652名参与者）的荟萃分析显示，低负荷+BFR（血流限制）训练相比单纯低负荷训练显著改善肌力（SMD 0.82）和功能障碍（SMD 0.63），与高负荷训练无显著差异（SMD 0.08）。不良事件报告不一致，证据确定性从极低到中等。</p>
+      <div class="key-takeaway"><strong>临床应用：</strong>BFR 是 ACL 重建术后早期康复的"游戏规则改变者"——当关节无法承受高负荷时，20-30% 1RM + BFR 即可达成肌肥大效果。但需关注不良反应监测。</div>
+      <a href="https://medbrevia.com/grandrounds/sports_medicine/2026-07-04" class="source-link" target="_blank">来源 → MedBrevia</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-research">JAAOS</span>
+        <span class="news-source">Houston Methodist · 2026-07-08</span>
+      </div>
+      <h3>FIFA 11+ Kids 项目降低女足球员膝关节损伤风险</h3>
+      <p class="summary"><em>Journal of the American Academy of Orthopedic Surgeons</em> 发表研究，14名8-11岁女足球员参加8周 FIFA 11+ Kids 项目后，动态平衡能力显著改善，臀肌/股四头肌力量比提升（与下肢稳定性相关）。女性运动员因髋部力量低、躯干稳定性差导致损伤风险更高。</p>
+      <div class="key-takeaway"><strong>预防医学：</strong>女性运动员ACL损伤率是男性的4-6倍，神经肌肉训练应在青春期前（8-11岁"运动技能习得窗口"）即开始介入。</div>
+      <a href="https://www.orthoatlanta.com/health-news/training-program-could-ward-off-injuries-among-soccer-girls" class="source-link" target="_blank">来源 → OrthoAtlanta</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-research">JISSN</span>
+        <span class="news-source">2026-07-01</span>
+      </div>
+      <h3>肌酸有效提升无氧运动表现；β-丙氨酸无协同获益</h3>
+      <p class="summary">52项RCT的网络荟萃分析显示，肌酸单用可改善冲刺（SMD -0.64）、跳跃（SMD 0.33）、反复冲刺能力（SMD -0.78）和上肢耐力（SMD 0.43）。β-丙氨酸效果不一致，联合使用无协同获益。推荐肌酸单用于无氧和高强度运动增益。</p>
+      <div class="key-takeaway"><strong>营养策略：</strong>肌酸（3-5g/天）仍是运动营养中证据最充分的补剂。运动康复期补充肌酸可预防制动力导致的肌萎缩，同时促进康复训练中的力量增益。</div>
+      <a href="https://medbrevia.com/grandrounds/sports_medicine/2026-07-04" class="source-link" target="_blank">来源 → MedBrevia</a>
+    </div>
+  </section>
+</div>
+
+<!-- ===== CATEGORY 3: Mayo Clinic等顶尖医院临床案例 ===== -->
+<div class="container">
+  <section class="category">
+    <div class="category-header">
+      <div class="category-icon" style="background:rgba(10,132,255,0.2);">🏥</div>
+      <h2>Mayo Clinic等顶尖医院临床案例</h2>
+      <span class="cat-tag">4 条</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-clinical">Mayo Clinic</span>
+        <span class="news-source">2026-04-23</span>
+      </div>
+      <h3>Mayo Clinic 创新"Over-the-Top" TFCC技术助运动员重返匹克球场</h3>
+      <p class="summary">54岁的 Tami Lucius 因慢性腕关节疼痛被迫离开运动场20年。Mayo Clinic 手外科专家 Dr. Sanj Kakar 创新性地使用"Over-the-Top TFCC技术"——通过更小、更灵活的关节镜系统，更精准地在撕裂处放置缝合线，减少辐射暴露和骨折风险。术后 Tami 每周三次无痛重返匹克球场。</p>
+      <div class="key-takeaway"><strong>临床要点：</strong>TFCC撕裂（三角纤维软骨复合体）是腕尺侧疼痛的常见原因，但传统MRI检出率低，需关节镜诊断。Mayo的微创精准缝合技术为"运动回归"提供了更快路径。</div>
+      <a href="https://vipjournal.us/en/blog/innovative-wrist-surgery-helps-athlete-return-to-the-pickleball-court-after-decades-of-pain-video" class="source-link" target="_blank">来源 → Mayo Clinic</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-clinical">Mayo Clinic</span>
+        <span class="news-source">PubMed · PMID:40681241</span>
+      </div>
+      <h3>主动脉夹层后渐进性运动训练：Mayo Clinic 病例报告</h3>
+      <p class="summary">Mayo Clinic 心血管科报告了一例56岁男性业余铁人三项运动员，在I型主动脉夹层急诊修复术后16个月，实施居家个性化渐进运动方案（低-中强度有氧+抗阻→间歇训练）。此前运动在主动脉夹层患者中常被限制或禁用，此病例展示了运动训练的可行性、安全性和获益。</p>
+      <div class="key-takeaway"><strong>临床转化：</strong>心血管事件后运动员的"运动处方"需要循证指南支持——目前缺乏。Mayo的病例为"运动医学+心血管康复"交叉领域提供了实践模板。</div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/40681241/" class="source-link" target="_blank">来源 → PubMed</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-clinical">Mayo Clinic</span>
+        <span class="news-source">PubMed · PMID:40698376</span>
+      </div>
+      <h3>65岁耐力运动员主动脉缩窄晚发诊断：运动生理代偿机制启示</h3>
+      <p class="summary">一名65岁终身耐力运动员在完成马拉松后出现一过性严重左室收缩功能障碍。负荷试验发现高血压反应，心脏MRI确诊为既往未发现的严重主动脉缩窄伴侧支循环形成。患者接受血管内支架植入后血压反应改善、左室功能稳定。该病例突显终身运动对先天性心血管缺陷的代偿作用。</p>
+      <div class="key-takeaway"><strong>临床启示：</strong>运动员心血管筛查不应只看静息状态——运动负荷下的血压反应和影像学评估可能揭示隐匿性病变。"运动即健康"在已知先天性病变者中也需个体化评估。</div>
+      <a href="https://pubmed.ncbi.nlm.nih.gov/40698376" class="source-link" target="_blank">来源 → PubMed</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-clinical">JACC: Case Reports</span>
+        <span class="news-source">DOI:10.1016/J.JACCAS.2026.108253</span>
+      </div>
+      <h3>Mavacamten治疗职业运动员梗阻性肥厚型心肌病：重返赛场</h3>
+      <p class="summary">28岁职业运动员反复晕厥，静息影像示非对称性室间隔肥厚但无梗阻，负荷超声心动图发现严重动态左室流出道梗阻（峰值压差150mmHg）。β受体阻滞剂致疲劳且梯度未降。启动 Mavacamten（心肌肌球蛋白抑制剂）后，随访负荷影像示左室流出道梗阻完全消除，收缩功能保留。运动员重返职业比赛，2年无事件。</p>
+      <div class="key-takeaway"><strong>药物创新：</strong>Mavacamten (Camzyos®) 是全球首款心肌肌球蛋白抑制剂，2022年获FDA批准。此病例支持其作为HCM运动员的"重返赛场"药物替代方案——但需严格的共享决策和随访监测。</div>
+      <a href="https://scholar.cnki.net/Detail/index/GARJ2021_7/SJPD20CE61D034AA13FC1ACA038A372D4A6A" class="source-link" target="_blank">来源 → JACC: Case Reports</a>
+    </div>
+  </section>
+</div>
+
+<!-- ===== CATEGORY 4: 运动康复科技 ===== -->
+<div class="container">
+  <section class="category">
+    <div class="category-header">
+      <div class="category-icon" style="background:rgba(191,90,242,0.2);">🤖</div>
+      <h2>运动康复科技</h2>
+      <span class="cat-tag">5 条</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-tech">Red Dot Award</span>
+        <span class="news-source">GlobeNewswire · 2026-07-10</span>
+      </div>
+      <h3>UREVO AI自适应无线恢复靴获2026红点设计奖</h3>
+      <p class="summary">智能健康品牌 UREVO 凭借 AI-Powered Wireless Recovery Boots 获2026红点设计奖创新设计类大奖。核心突破：AI自适应按摩技术实时读取肌肉状态，在80-180mmHg范围内自动调节气压，支持32+恢复模式，OTA更新持续优化。配备可拆卸无线控制面板和5000mAh电池，四档腿围适配160-210cm身高。</p>
+      <div class="key-takeaway"><strong>行业信号：</strong>传统压缩恢复设备依赖预设档位，UREVO实现了"真实自适应"——传感器+AI算法+边缘计算的融合标志着消费级运动恢复硬件从"智能噱头"向"数据驱动医疗设备"转型。</div>
+      <a href="https://www.globenewswire.com/news-release/2026/07/10/3325328/0/en/UREVO-Wins-Red-Dot-Award-2026-for-AI-Powered-Wireless-Recovery-Boots.html" class="source-link" target="_blank">来源 → GlobeNewswire</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-tech">WAIC 2026</span>
+        <span class="news-source">证券日报 · 2026-07-19</span>
+      </div>
+      <h3>傲意科技WAIC连发三大硬核新品：脑电头环+肌电腕带+下肢外骨骼</h3>
+      <p class="summary">上海傲意科技在WAIC 2026发布三大新品：① CeRelax 消费级脑电头环（科研+消费双轨，脑电/心电一体化采集）；② gForce Ultra 肌电腕带（毫秒级捕捉肌肉收缩，康复训练+机器人遥操作）；③ 下肢智能康复外骨骼（惯性传感捕捉行走意图，髋关节助力改善拖步）。</p>
+      <div class="key-takeaway"><strong>趋势判断：</strong>"脑-肌-机"全栈自研成为康复机器人竞争壁垒。傲意科技副总裁张琦判断："今年焦点从移动形态之争回归产品功能性——决策功能（大脑）+执行能力（末端），两者兼具才能真正完成任务。"</div>
+      <a href="https://www.toutiao.com/article/7664166661200691747/" class="source-link" target="_blank">来源 → 今日头条</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-tech">政策利好</span>
+        <span class="news-source">财联社 · 2026-07-28</span>
+      </div>
+      <h3>中国残联点名非侵入式脑机接口康复设备纳入"十五五"科技助残重点</h3>
+      <p class="summary">7月27日国新办"十五五"主题新闻发布会，中国残联理事长周长奎明确"融合非侵入式脑机接口的智能康复设备"列为重点推动应用场景，将推动纳入补贴范围。同日，Science Corp视网膜芯片PRIMA获欧盟CE认证（全球首款大规模推向市场的BCI设备），84%患者恢复字母阅读能力。脑机接口板块连续2日走强，浙商证券研判国内严肃医疗BCI市场200-600亿元。</p>
+      <div class="key-takeaway"><strong>行业催化：</strong>政策端（残联点名+补贴）+ 技术端（CE认证首破）= 2026年成为BCI量产元年。康复是BCI最先落地的严肃医疗场景——非侵入式设备已可"意念驱动外骨骼"实现闭环康复。</div>
+      <a href="https://cj.sina.cn/articles/view/2868676035/aafc85c302001tnym?vt=4" class="source-link" target="_blank">来源 → 财联社</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-tech">临床突破</span>
+        <span class="news-source">武汉晚报 · 2026-07-24</span>
+      </div>
+      <h3>瘫痪5年后重握拳头：武汉脑机接口病房让"意念"驱动康复</h3>
+      <p class="summary">52岁孙某5年前脑卒中后左侧完全偏瘫，3个月前入组江夏区第一人民医院（协和江南医院）脑机接口病房。佩戴非侵入式脑电采集帽，AI算法实时解码运动意图，驱动外骨骼手套带动手指动作。3个月系统干预后，左手完成抓握、对指等精细动作重建，下肢肌力接近正常，步态平稳，生活基本自理。</p>
+      <div class="key-takeaway"><strong>临床转化：</strong>"脑-机-体"闭环不同于传统被动训练——它直接激活中枢神经重塑机制，形成"感知-决策-执行"完整回路。这是非侵入式BCI在卒中康复领域的里程碑级临床案例。</div>
+      <a href="https://www.toutiao.com/article/7666039891964199433/" class="source-link" target="_blank">来源 → 今日头条/武汉晚报</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-tech">学术前沿</span>
+        <span class="news-source">网信河东 · 2026-07-27</span>
+      </div>
+      <h3>2026中国康复医学会智能康复专委会年会在津举行</h3>
+      <p class="summary">7月24-26日，2026中国康复医学会智能康复专业委员会第五届学术年会在天津市河北区举行，设14个专题分会场（智能神经康复、脑机接口创新、儿童智能康复、智慧银龄康养等）。天津市第一医院新院区将开放500张床位和近5000平方米康复训练大厅。</p>
+      <div class="key-takeaway"><strong>行业动态：</strong>智能康复已从概念走向临床落地——外骨骼机器人辅助标准化重复训练、脑机接口提供神经功能量化评估、步态分析识别跌倒风险。康复医学正在从"经验驱动"转向"数据驱动"。</div>
+      <a href="https://www.toutiao.com/article/7667115046383682099/" class="source-link" target="_blank">来源 → 今日头条/津云</a>
+    </div>
+  </section>
+</div>
+
+<!-- ===== CATEGORY 5: 运动康复创业及融资 ===== -->
+<div class="container">
+  <section class="category">
+    <div class="category-header">
+      <div class="category-icon" style="background:rgba(255,159,10,0.2);">💰</div>
+      <h2>运动康复创业及融资</h2>
+      <span class="cat-tag">4 条</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-funding">Seed Round</span>
+        <span class="news-source">Sports Business Journal · 2026-07-13</span>
+      </div>
+      <h3>Cognify Health：青少年运动脑震荡护理获种子轮融资</h3>
+      <p class="summary">洛杉矶 Cognify Health 完成数百万美元种子轮，Game Changers Ventures 领投。公司独特定位：既是软件平台又是持牌医疗机构——自雇医生而非做转介，承诺24小时内虚拟脑震荡就诊。创始人 Christian Juzang（哈佛毕业）因妹妹排球脑震荡就医困难而创业。长期目标从D2C转向联盟/俱乐部的机构合作。</p>
+      <div class="key-takeaway"><strong>投资逻辑：</strong>Game Changers Ventures 6个月内已投资5家体育科技公司，Cognify是唯一触及运动员安全的标的。信号：青少年运动健康正从"合规义务"转变为"可投资类别"——垂直整合（自雇医生+软件平台）是差异化壁垒。</div>
+      <a href="https://newsx.io/2026/07/14/youth-sports-concussion-care-startup-cognify-health-raises-seed-round-led-by-game-changers-ventures-ysbr" class="source-link" target="_blank">来源 → NEWSx.io</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-funding">Pre-A · ¥1亿</span>
+        <span class="news-source">腾讯新闻 · 2026-07-03</span>
+      </div>
+      <h3>如身机器人完成亿元Pre-A轮融资，推进具身智能康复落地</h3>
+      <p class="summary">如身机器人聚焦康复&健身领域，利用模块化力控关节和趣味游戏库搭建康复机器人矩阵，实现全康复场景和全康复周期覆盖。4月底完成亿元Pre-A轮，清松资本、润泽科技及平湖泽新联合投资。资金将用于加速具身智能在养老机构与居家场景的落地部署。</p>
+      <div class="key-takeaway"><strong>赛道判断：</strong>康复机器人正在从"医院内"走向"居家场景"——模块化+趣味化（游戏化训练）是降低居家使用门槛的关键策略。具身智能+康复是2026年最大风口之一。</div>
+      <a href="https://new.qq.com/rain/a/20260703A04LGW00" class="source-link" target="_blank">来源 → 腾讯新闻</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-funding">Series A</span>
+        <span class="news-source">网易 · 2026-07-22</span>
+      </div>
+      <h3>TYBR Health获A轮投资：可流动生物可吸收水凝胶解决术后粘连</h3>
+      <p class="summary">美国医疗技术公司 TYBR Health 宣布完成A轮融资（Mutual Capital Partners、Neovate Capital Partners、Vensana Capital 联合投资）。核心产品为可流动生物可吸收水凝胶——保护愈合软组织、提升术后活动能力、防止组织粘连，填补了骨科及肌腱修复术后防粘连的技术空白。</p>
+      <div class="key-takeaway"><strong>市场空白：</strong>术后组织粘连是骨科/肌腱手术的"无声并发症"——发生率高但治疗选择少。可流动水凝胶的"屏障+可吸收"设计理念，对运动员术后关节活动度恢复有直接价值。</div>
+      <a href="https://c.m.163.com/news/a/L2I98EUJ05118K7K.html" class="source-link" target="_blank">来源 → 网易</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-funding">CE Mark</span>
+        <span class="news-source">财联社 · 2026-07-27</span>
+      </div>
+      <h3>Science Corp PRIMA视网膜芯片获CE认证：全球首款大规模推向市场的BCI设备</h3>
+      <p class="summary">美国初创公司 Science Corp 的视网膜芯片 PRIMA 获欧盟CE认证，成为全球首款获批大规模推向患者市场的脑机接口设备，获准在30个欧洲国家销售。该芯片可帮助"地图样萎缩"患者恢复部分视力，临床数据显示38名患者中84%恢复字母阅读能力。</p>
+      <div class="key-takeaway"><strong>里程碑：</strong>BCI从"实验室黑科技"走向"临床产品"的标志性事件。虽然PRIMA针对视觉而非运动康复，但它验证了BCI设备的商业化路径——CE认证+大规模推向患者市场+临床有效性数据。</div>
+      <a href="https://cj.sina.cn/articles/view/2868676035/aafc85c302001tnym?vt=4" class="source-link" target="_blank">来源 → 财联社</a>
+    </div>
+  </section>
+</div>
+
+<!-- ===== CATEGORY 6: 明星运动员损伤 ===== -->
+<div class="container">
+  <section class="category">
+    <div class="category-header">
+      <div class="category-icon" style="background:rgba(255,55,95,0.2);">⭐</div>
+      <h2>明星运动员损伤追踪</h2>
+      <span class="cat-tag">5 条</span>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-celebrity">网球</span>
+        <span class="news-source">Complex/ESPN · 2026-07-29</span>
+      </div>
+      <h3>Serena Williams 膝伤恢复向好，TikTok暗示美网复出</h3>
+      <p class="summary">温网首轮右膝急性扭伤后4针穿刺抽液、退出女双。7月4日发Instagram"stay tuned to a city near you"暗示继续参赛。近期 TikTok 发布视频配文"Looks like my knee is finally getting better. Finally!"——膝盖恢复进展向好。教练 Rennae Stubbs 确认 Serena 正在积极瞄准美网回归（8月底），但尚未报名华盛顿/加拿大/辛辛那提等热身赛。</p>
+      <div class="key-takeaway"><strong>运动医学视角：</strong>44岁近4年未打单打、股四头肌腱-髌骨伸膝装置是先天薄弱环节（2003年左膝手术、2015年右膝同部位再伤）。此次最可能为半月板退变性撕裂或髌股关节软骨损伤伴反应性关节积液——保守治疗+PRP/HA注射可在数周内缓解，美网硬地表面比草地对膝关节旋转剪切力更友好。</div>
+      <a href="https://www.complex.com/bets/a/jeff-smith/serena-williams-injury-update-us-open-2026" class="source-link" target="_blank">来源 → Complex</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-celebrity">NFL</span>
+        <span class="news-source">YardBarker · 2026-07-24</span>
+      </div>
+      <h3>Patrick Mahomes ACL+LCL术后获准训练：瞄准赛季揭幕战</h3>
+      <p class="summary">堪萨斯城酋长队 QB Patrick Mahomes 在左膝ACL+LCL撕裂手术后获准参加训练营。"这只是时间表上的又一个里程碑，"Mahomes表示，"你必须继续努力，向教练和医生证明我是和以前一样甚至更好的四分卫。"酋长队预计他将在第1周对阵丹佛野马的周一夜比赛中回归。</p>
+      <div class="key-takeaway"><strong>康复里程碑：</strong>ACL+LCL联合撕裂比单纯ACL撕裂康复周期更长（9-12个月 vs 6-9个月），LCL修复需要保护性负重时间。Mahomes的"获准训练"意味着已通过关节稳定性评估和基础肌力测试，但回归对抗仍需通过功能性测试（变向、跳跃落地对称性）。</div>
+      <a href="https://www.yardbarker.com/nfl/articles/chiefs_patrick_mahomes_breaks_silence_on_being_cleared_after_knee_surgery/s1_17114_44099140" class="source-link" target="_blank">来源 → YardBarker</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-celebrity">UFC</span>
+        <span class="news-source">格斗时代 · 2026-07-20</span>
+      </div>
+      <h3>Conor McGregor 右膝ACL+半月板双重撕裂：38岁生涯十字路口</h3>
+      <p class="summary">UFC 329对阵Max Holloway仅69秒旋转回旋踢落地时右膝失稳退赛。MRI确认右膝ACL+半月板双重撕裂——与2013年左膝同款伤病完全对称。康纳已脱拐正常行走、可完成腿屈伸训练，乐观称"明年夏天前回归完全在能力范围内"。UFC总裁白大拿直接定性："他的膝盖彻底完蛋了。"合同仅剩最后一战。</p>
+      <div class="key-takeaway"><strong>运动医学视角：</strong>38岁 vs 25岁的ACL重建恢复差异巨大——5年空窗期+2021年胫骨骨折旧伤+以往生活方式损耗。ACL+半月板双重撕裂后，重拾"移动+腿法"打法体系（康纳的核心竞争力）的生物力学可行性存疑。退役vs最后一战的时间-伤病豪赌。</div>
+      <a href="https://www.163.com/dy/article/L28PA4OF0529ANHR.html" class="source-link" target="_blank">来源 → 格斗时代</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-celebrity">拳击</span>
+        <span class="news-source">ANI · 2026-07-18</span>
+      </div>
+      <h3>印度两届世界冠军 Nikhat Zareen 膝盖手术成功</h3>
+      <p class="summary">印度两届世界拳击冠军、英联邦运动会金牌得主 Nikhat Zareen 在 Kokilaben Dhirubhai Ambani 医院由 Dr. Dinshaw Pardiwala 主刀成功接受膝盖手术。她在Instagram表示"这只是一个暂停，不是结束"，感谢 Reliance Foundation Sports 赞助支持。此前她因膝痛在5月全国选拔赛中意外落选，无缘2026英联邦运动会和亚运会。</p>
+      <div class="key-takeaway"><strong>临床要点：</strong>Dr. Pardiwala 是印度顶级运动医学外科医生，曾为多位国家队运动员主刀。膝盖手术（推测为关节镜下修复）后拳击运动员回归周期4-6个月——拳台下蹲、闪避动作对膝关节旋转负荷要求高，需通过专项功能测试方可重返擂台。</div>
+      <a href="https://www.malaysiasun.com/news/279194864/indian-boxer-nikhat-zareen-undergoes-successful-knee-surgery-vows-strong-comeback" class="source-link" target="_blank">来源 → Malaysia Sun</a>
+    </div>
+
+    <div class="news-card">
+      <div class="news-meta">
+        <span class="news-tag tag-celebrity">排球</span>
+        <span class="news-source">腾讯新闻 · 2026-07</span>
+      </div>
+      <h3>中国女排吴梦洁左膝关节镜术后恢复良好，有望亚锦回归</h3>
+      <p class="summary">中国女排主攻吴梦洁2026年5月26日在北医三院行左膝关节镜微创手术（MCL修复+半月板清理）。术后近两个月，已度过早期制动期，进入肌力重建与低负荷专项动作尝试阶段。与师姐张常宁（多次重大膝伤康复经验）合拍手势舞视频，精神面貌良好，康复进度符合预期且略超预期。</p>
+      <div class="key-takeaway"><strong>康复心理学：</strong>张常宁的"传帮带"不仅体现在技术动作纠正上，更在心理层面给予陪伴——ACL/MCL重建术后运动员的"再损伤恐惧"（kinesiophobia）是回归的最大心理障碍，有过来人陪伴可显著降低ACL-RSI量表评分。</div>
+      <a href="https://so.html5.qq.com/page/real/search_news?docid=70000021_4346a5ba4a066852" class="source-link" target="_blank">来源 → 腾讯新闻</a>
+    </div>
+  </section>
+</div>
+
+<!-- ===== KEY STATS ===== -->
+<div class="container">
+  <div class="stats-bar">
+    <div class="stat-item">
+      <div class="stat-num" style="color:var(--accent-red);">5</div>
+      <div class="stat-label">赛事运动损伤</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" style="color:var(--accent-green);">5</div>
+      <div class="stat-label">学术研究进展</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" style="color:var(--accent-blue);">4</div>
+      <div class="stat-label">临床案例</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" style="color:var(--accent-purple);">5</div>
+      <div class="stat-label">康复科技</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" style="color:var(--accent-orange);">4</div>
+      <div class="stat-label">融资事件</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-num" style="color:var(--accent-pink);">5</div>
+      <div class="stat-label">明星伤病</div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 运动康复行业观察 · Sports Rehab Intelligence</p>
+    <p>数据来源：Sporting News / BBC / ESPN / JAMA / Science Advances / BJSM / Mayo Clinic / 财联社 等</p>
+    <p>本报告仅供参考，不构成医疗建议 | Generated 2026-07-30</p>
+  </div>
+</footer>
+
+</body>
+</html>
