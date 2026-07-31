@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🩺 每日临床知识 | Day 5 肾脏与泌尿系统 | 2026-04-07</title>
+    <style>
+        :root {
+            --primary: #1a5f7a;
+            --secondary: #57837b;
+            --accent: #c1e1c1;
+            --highlight: #fff3cd;
+            --warning: #f8d7da;
+            --danger: #f5c6cb;
+            --info: #e8f4f8;
+            --bg: #f8fafc;
+            --text: #2d3748;
+            --white: #ffffff;
+            --border: #e2e8f0;
+            --renal-primary: #2e7d6b;
+            --renal-light: #e8f5f1;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        header {
+            background: linear-gradient(135deg, #1a5f7a, #2e7d6b);
+            color: var(--white);
+            padding: 40px 30px;
+            border-radius: 0 0 20px 20px;
+            margin-bottom: 30px;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        .header-date { font-size: 14px; opacity: 0.9; }
+        h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+        .subtitle { font-size: 18px; opacity: 0.9; margin-bottom: 15px; }
+        .source-note {
+            background: rgba(255,255,255,0.15);
+            padding: 12px 18px;
+            border-radius: 10px;
+            font-size: 13px;
+            border-left: 4px solid rgba(255,255,255,0.5);
+        }
+        .disease-card {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+        }
+        .disease-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--accent);
+        }
+        .disease-icon { font-size: 32px; }
+        .disease-title { font-size: 22px; font-weight: 700; color: var(--renal-primary); }
+        .disease-en { font-size: 13px; color: var(--secondary); font-style: italic; }
+        .section-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--secondary);
+            margin: 18px 0 8px;
+            padding-left: 10px;
+            border-left: 3px solid var(--renal-primary);
+        }
+        .section-title::before {
+            content: "▶ ";
+            font-size: 10px;
+        }
+        p { margin-bottom: 10px; font-size: 15px; }
+        ul, ol { margin: 10px 0 14px 22px; }
+        li { margin-bottom: 6px; font-size: 15px; }
+        .highlight-box {
+            background: var(--highlight);
+            border-left: 4px solid #ffc107;
+            padding: 14px 18px;
+            border-radius: 0 10px 10px 0;
+            margin: 16px 0;
+        }
+        .highlight-box strong { color: #856404; }
+        .warning-box {
+            background: var(--warning);
+            border-left: 4px solid #dc3545;
+            padding: 14px 18px;
+            border-radius: 0 10px 10px 0;
+            margin: 16px 0;
+        }
+        .warning-box strong { color: #721c24; }
+        .info-box {
+            background: var(--info);
+            border-left: 4px solid var(--primary);
+            padding: 14px 18px;
+            border-radius: 0 10px 10px 0;
+            margin: 16px 0;
+        }
+        .info-box strong { color: var(--primary); }
+        .key-point {
+            background: var(--renal-light);
+            border: 1px solid var(--renal-primary);
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin: 16px 0;
+        }
+        .key-point strong { color: var(--renal-primary); }
+        .ref {
+            font-size: 12px;
+            color: #888;
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px dashed var(--border);
+        }
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-size: 13px;
+        }
+        .nav-footer {
+            background: var(--white);
+            border-radius: 16px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-link { color: var(--primary); text-decoration: none; font-size: 14px; }
+        .nav-link:hover { text-decoration: underline; }
+        @media (max-width: 600px) {
+            .header-top { flex-direction: column; gap: 10px; }
+            h1 { font-size: 22px; }
+            .disease-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+
+<header>
+    <div class="header-top">
+        <span class="badge">🩺 Mayo Clinic × 北京协和医院 临床培训标准</span>
+        <span class="header-date">Day 5 / 20 · 2026-04-07</span>
+    </div>
+    <h1>肾脏与泌尿系统</h1>
+    <div class="subtitle">Renal & Urinary System</div>
+    <div class="source-note">
+        📖 内容来源：Mayo Clinic Nephrology Fellowship Curriculum · 北京协和医院肾内科临床培训手册 · KDIGO 2024 指南更新 · UpToDate Clinical Topics
+    </div>
+</header>
+
+<!-- 急性肾损伤 AKI -->
+<div class="disease-card">
+    <div class="disease-header">
+        <span class="disease-icon">⚡</span>
+        <div>
+            <div class="disease-title">急性肾损伤</div>
+            <div class="disease-en">Acute Kidney Injury (AKI)</div>
+        </div>
+    </div>
+
+    <div class="section-title">定义</div>
+    <p>48小时内血清肌酐升高 ≥ 26.5 μmol/L（≥ 0.3 mg/dL），或7天内较基线升高 ≥ 1.5倍，或尿量 &lt; 0.5 mL/kg/h 持续 ≥ 6小时（KDIGO标准）。</p>
+
+    <div class="section-title">流行病学</div>
+    <ul>
+        <li>住院患者AKI发生率：全球约10–15%，ICU患者高达30–50%</li>
+        <li>中国住院患者AKI漏诊率高达70%，需高度警惕</li>
+        <li>主要危险因素：高龄、基线CKD、脓毒症、造影剂暴露、大手术</li>
+    </ul>
+
+    <div class="section-title">病理生理</div>
+    <p>AKI分为三大类：</p>
+    <ul>
+        <li><strong>肾前性（Prerenal）</strong>：肾灌注不足（容量不足、心输出量减低、肾血管收缩），占AKI 60–70%。肾小管完整性尚存，若及时纠正可逆。</li>
+        <li><strong>肾性（Intrinsic）</strong>：肾小球/肾小管/间质/血管直接损伤。急性肾小管坏死（ATN）最常见（80%），因缺血或肾毒性（氨基糖苷类、造影剂、横纹肌溶解）。</li>
+        <li><strong>肾后性（Postrenal）</strong>：尿路梗阻（结石、肿瘤、前列腺增生）。双侧梗阻或孤立肾梗阻可致AKI。</li>
+    </ul>
+
+    <div class="section-title">临床表现</div>
+    <ul>
+        <li>尿量减少（少尿 &lt; 400 mL/d 或无尿）</li>
+        <li>水钠潴留：外周水肿、体重增加、高血压</li>
+        <li>电解质紊乱：高钾血症（最危险，可致心律失常）、低钠血症、代谢性酸中毒</li>
+        <li>尿毒症表现：恶心呕吐、意识模糊、瘙痒、心包炎（尿毒症性心包炎提示严重）</li>
+    </ul>
+
+    <div class="highlight-box">
+        <strong>⚡ 临床决策关键点：KDIGO分期</strong><br>
+        1期（风险）：Cr升高1.5–1.9×基线 或 ≥ 26.5 μmol/L，或尿量 &lt; 0.5 mL/kg/h × 6–12h<br>
+        2期（损伤）：Cr升高2.0–2.9×基线，或尿量 &lt; 0.5 mL/kg/h × ≥ 12h<br>
+        3期（衰竭）：Cr升高3.0×基线 或 ≥ 353.6 μmol/L 或启动肾脏替代治疗，或尿量 &lt; 0.3 mL/kg/h × ≥ 24h 或无尿 ≥ 12h
+    </div>
+
+    <div class="section-title">诊断标准</div>
+    <ul>
+        <li>病史：容量状态、用药史（NSAIDs、ACEI/ARB、氨基糖苷类）、造影剂暴露、尿路症状</li>
+        <li>体格：血压、体重、水肿分布、心脏杂音（排除心源性）</li>
+        <li>实验室：血清Cr、尿素氮、电解质、动脉血气、尿常规+尿沉渣（颗粒管型提示ATN）</li>
+        <li>尿诊断指数：FENa = (UNa×PCr)/(PNa×UCr)×100；肾前性 FENa &lt; 1%，ATN FENa &gt; 2%（利尿剂干扰需校正）</li>
+        <li>影像：肾脏超声（排除梗阻、评估肾脏大小）</li>
+    </ul>
+
+    <div class="warning-box">
+        <strong>⚠️ 鉴别诊断要点</strong><br>
+        肾前性 vs ATN：肾前性补充容量后尿量恢复、尿沉渣相对正常；ATN尿沉渣有颗粒管型、上皮细胞，补充容量后无改善。<br>
+        CKD急性加重：既往已有肾功能减退（肾脏缩小），AKI/CKD叠加时肌酐绝对值升高更显著。
+    </div>
+
+    <div class="section-title">治疗方案</div>
+    <ul>
+        <li><strong>肾前性</strong>：纠正容量不足、停用肾血管收缩药物、优化心输出量；避免NSAIDs、ACEI/ARB</li>
+        <li><strong>ATN</strong>：以支持治疗为主；维持液体平衡（出入量记录）、高钾血症处理（葡萄糖酸钙稳定心肌、胰岛素+葡萄糖、透析）、代谢性酸中毒纠正</li>
+        <li><strong>肾后性</strong>：及时解除梗阻（导尿、输尿管支架、经皮肾穿刺造瘘）</li>
+        <li><strong>肾脏替代治疗（RRT）</strong>：指征—难治性高钾血症、严重代谢性酸中毒、利尿剂抵抗的容量过负荷、尿毒症并发症（心包炎、脑病）</li>
+    </ul>
+
+    <div class="section-title">随访管理</div>
+    <ul>
+        <li>住院期间：每日监测Cr、尿量、电解质；记录出入量</li>
+        <li>出院后：4周内复查肾功能评估是否恢复基线；转为CKD者纳入慢病管理</li>
+        <li>预防：避免肾毒性药物、造影剂后充分水化、重大手术前行肾功能评估</li>
+    </ul>
+    <div class="ref">📚 参考：KDIGO Clinical Practice Guideline for Acute Kidney Injury (2024) · Mayo Clinic Nephrology Handbook · 协和医院肾内科临床路径</div>
+</div>
+
+<!-- 慢性肾脏病 CKD -->
+<div class="disease-card">
+    <div class="disease-header">
+        <span class="disease-icon">🫘</span>
+        <div>
+            <div class="disease-title">慢性肾脏病</div>
+            <div class="disease-en">Chronic Kidney Disease (CKD)</div>
+        </div>
+    </div>
+
+    <div class="section-title">定义</div>
+    <p>肾脏结构或功能异常持续 ≥ 3个月，包括：①白蛋白尿（UACR ≥ 30 mg/g）；②肾小球滤过率（GFR）&lt; 60 mL/min/1.73m²；③肾脏结构异常（超声示肾脏缩小、皮质变薄）；④病理异常；⑤肾移植病史。</p>
+
+    <div class="section-title">流行病学</div>
+    <ul>
+        <li>全球患病率：约10–15%（10亿人），中国约10.8%</li>
+        <li>主要病因：中国以糖尿病肾病（43%）、高血压肾损害（27%）最常见，其次为IgA肾病、梗阻性肾病</li>
+        <li>CKD进展危险因素：蛋白尿、高血压、血糖控制差、吸烟、肾毒性药物</li>
+    </ul>
+
+    <div class="section-title">病理生理</div>
+    <p>CKD本质是肾单位不可逆丧失后的进行性纤维化过程：</p>
+    <ul>
+        <li><strong>肾小球高滤过代偿</strong>：残存肾单位肥大、单个肾小球高滤过，长时间后转为高压力，加速硬化</li>
+        <li><strong>RAAS激活</strong>：AngII促纤维化、TGF-β升高，导致肾小管间质纤维化</li>
+        <li><strong>蛋白尿的肾毒性</strong>：白蛋白在近端小管被重吸收后激活促炎、促纤维化通路</li>
+        <li><strong>血管病变</strong>：肾内小动脉硬化、肾脏自我调节功能受损，系统性高血压传递至肾小球</li>
+    </ul>
+
+    <div class="section-title">临床表现</div>
+    <ul>
+        <li><strong>早期（1–2期）</strong>：多无症状，仅有微量白蛋白尿或轻度GFR下降</li>
+        <li><strong>中期（3期）</strong>：贫血（EPO减少）、CKD-MBD（钙磷代谢紊乱、PTH升高）、血压升高</li>
+        <li><strong>晚期（4–5期）</strong>：浮肿、尿毒症毒素积聚（恶心呕吐、皮肤瘙痒、意识障碍）、高钾血症、心衰</li>
+    </ul>
+
+    <div class="key-point">
+        <strong>🔑 CKD-MBD（慢性肾脏病-骨矿物质代谢）核心机制：</strong><br>
+        肾脏排磷减少 → 高磷血症 → PTH分泌增加（代偿）→ 继发性甲状旁腺功能亢进 → 纤维性骨炎、血管钙化 → 心血管死亡风险显著升高。防治核心：限制磷摄入、使用磷结合剂、补充活性维生素D。
+    </div>
+
+    <div class="section-title">诊断标准</div>
+    <ul>
+        <li><strong>GFR评估</strong>：首选基于肌酐的CKD-EPI公式或MDRD公式；eGFR &lt; 60需确诊，&lt; 30需转诊肾内科</li>
+        <li><strong>白蛋白尿</strong>：UACR（尿白蛋白/肌酐比值）&gt; 30 mg/g 定义为白蛋白尿，分A1（&lt; 30）、A2（30–300，微量）、A3（&gt; 300，显著）</li>
+        <li><strong>CKD分期</strong>：按GFR（G1–G5）和白蛋白尿（A1–A3）二维分期，G4A3患者进展至ESRD风险最高（每年约10–20%）</li>
+        <li><strong>病因诊断</strong>：糖尿病史、高血压史、免疫指标（ANA、ANCA、抗GBM）、免疫球蛋白、肾脏超声、必要时肾活检</li>
+    </ul>
+
+    <div class="warning-box">
+        <strong>⚠️ 何时转诊/会诊肾内科</strong><br>
+        ① eGFR &lt; 30 mL/min/1.73m²；②持续性显著蛋白尿（UACR &gt; 300 mg/g）；③AKI处理后肾功能未恢复；④难以控制的高血压（需多学科管理）；⑤电解质紊乱（难治性高钾血症）；⑥肾脏活检指征（考虑RPGN、急进性肾炎）
+    </div>
+
+    <div class="section-title">治疗方案</div>
+    <ul>
+        <li><strong>生活方式</strong>：低盐（&lt; 5 g/d）、优质低蛋白饮食（0.6–0.8 g/kg/d，GFR&lt; 30时限制严格）、戒烟、适度运动、BMI管理</li>
+        <li><strong>血压控制</strong>：目标 &lt; 130/80 mmHg；首选ACEI或ARB（降低蛋白尿、延缓进展，但需监测Cr和高钾）</li>
+        <li><strong>降糖治疗</strong>：SGLT2抑制剂（达格列净、恩格列净）有心肾保护作用（eGFR &gt; 20可用），二甲双胍在eGFR &lt; 30需调整剂量</li>
+        <li><strong>心肾保护</strong>：SGLT2i + GLP-1RA + MRA（非奈利酮）在糖尿病合并CKD患者中显著降低心血管事件和肾脏终点</li>
+        <li><strong>CKD-MBD</strong>：限制磷摄入、磷结合剂（司维拉姆、碳酸镧）、骨化三醇或帕立骨化醇、继发性甲旁亢手术（必要时）</li>
+        <li><strong>贫血</strong>：目标Hb 100–115 g/L，首选口服铁剂，静脉铁剂（蔗糖铁）必要时；ESAs（促红素）用于Hb &lt; 100且铁储备充足者</li>
+        <li><strong>肾脏替代治疗</strong>：eGFR &lt; 5–6或出现难以控制的尿毒症、高钾、容量负荷时启动。方式：血液透析、腹膜透析、肾移植</li>
+    </ul>
+
+    <div class="section-title">随访管理</div>
+    <ul>
+        <li>每3–6个月复查：eGFR、尿蛋白/肌酐比值、血压、血糖、血脂、血红蛋白、钙磷、PTH</li>
+        <li>关注心血管风险：CKD患者心血管死亡风险是普通人群的5–10倍</li>
+        <li>避免肾损害：NSAIDs、造影剂、某些抗生素（氨基糖苷类、万古霉素需监测浓度）</li>
+        <li>疫苗接种：流感、肺炎球菌、乙型肝炎（透析前患者尤为重要）</li>
+    </ul>
+    <div class="ref">📚 参考：KDIGO 2024 Clinical Practice Guideline for CKD Evaluation and Management · 北京协和医院CKD随访手册 · 中国CKD流行病学数据（2024）</div>
+</div>
+
+<!-- 尿路感染 UTI -->
+<div class="disease-card">
+    <div class="disease-header">
+        <span class="disease-icon">🦠</span>
+        <div>
+            <div class="disease-title">尿路感染</div>
+            <div class="disease-en">Urinary Tract Infection (UTI)</div>
+        </div>
+    </div>
+
+    <div class="section-title">定义</div>
+    <p>病原微生物在泌尿系统繁殖并引起炎症反应的总称。按解剖部位分为：下尿路感染（膀胱炎、尿道炎）和上尿路感染（肾盂肾炎）。按临床表现分为单纯性和复杂性。</p>
+
+    <div class="section-title">流行病学</div>
+    <ul>
+        <li>女性一生患病率：约50–60%（男性仅约5–10%）</li>
+        <li>社区获得性UTI最常见致病菌：大肠埃希菌（75–95%），其次为肺炎克雷伯菌、肠球菌</li>
+        <li>危险因素：女性（解剖因素）、性活动、绝经后雌激素减少、导尿管/泌尿外科操作、免疫力低下、糖尿病</li>
+    </ul>
+
+    <div class="section-title">病理生理</div>
+    <ul>
+        <li><strong>上行性感染</strong>（最常见）：细菌由尿道口上行至膀胱（膀胱炎），严重者继续上行至肾盂（肾盂肾炎）。尿道长度短（女性约4cm）使女性更易感</li>
+        <li><strong>血源性感染</strong>（较少见）：细菌经血流到达肾脏，如金黄色葡萄球菌菌血症后的肾脓肿</li>
+        <li><strong>致病机制</strong>：大肠杆菌P菌毛（Pap）、FimH黏附素帮助细菌黏附于尿路上皮；宿主尿路上皮细胞分泌Tamm-Horsfall蛋白可阻断细菌黏附</li>
+    </ul>
+
+    <div class="section-title">临床表现</div>
+    <ul>
+        <li><strong>膀胱炎</strong>：尿频、尿急、尿痛（排尿困难）、排尿不尽感、下腹部不适；一般无发热和腰痛</li>
+        <li><strong>肾盂肾炎</strong>：突发寒战、高热（&gt; 38.5°C）、腰痛（单侧或双侧肋脊角压痛）、恶心呕吐，可伴或不伴膀胱刺激症状</li>
+        <li><strong>复杂性UTI</strong>：合并尿路梗阻（结石、肿瘤）、结构性异常、导尿管、肾功能不全等；症状更重、易复发、可发展为脓毒症</li>
+        <li><strong>反复发作性UTI</strong>：定义为6个月内 ≥ 2次或12个月内 ≥ 3次；需排查泌尿系解剖异常或功能性异常</li>
+    </ul>
+
+    <div class="highlight-box">
+        <strong>⚡ 临床决策关键点：诊断的金标准</strong><br>
+        清洁中段尿培养阳性（杆菌 ≥ 10⁵ CFU/mL；球菌或真菌 ≥ 10⁴ CFU/mL）伴尿路症状。镜检：白细胞尿（&gt; 10 WBC/HPF）提示可能性增大。<br>
+        注意：革兰阳性球菌（肠球菌）菌落计数较低时亦有临床意义，不可单纯依赖阈值！
+    </div>
+
+    <div class="warning-box">
+        <strong>⚠️ 鉴别诊断要点</strong><br>
+        尿道炎（淋球菌/衣原体）：性接触史、尿道分泌物；膀胱炎 vs 肾盂肾炎：有无发热、腰疼、全身症状；与盆腔炎、阑尾炎鉴别（尿常规可提供线索）；老年患者UTI症状可不典型，以意识障碍、纳差为主要表现。
+    </div>
+
+    <div class="section-title">治疗方案</div>
+    <ul>
+        <li><strong>单纯性膀胱炎</strong>：一线用药：磷霉素（单次3g）、呋喃妥因（5–7天）、匹美西林（3–5天）；二线：左氧氟沙星（3天）；不推荐使用β-内酰胺类（疗效差、耐药率高）</li>
+        <li><strong>肾盂肾炎</strong>：轻中度：口服氟喹诺酮（7–14天）或头孢类；重度：静脉用药（头孢曲松、左氧氟沙星、哌拉西林-他唑巴坦），经验性覆盖肠球菌，体温正常后改为口服完成疗程，总疗程14天</li>
+        <li><strong>复杂性UTI</strong>：根据药培养结果调整抗生素，疗程延长至14–21天；解除梗阻是关键</li>
+        <li><strong>反复发作性UTI</strong>：低剂量预防性抗生素（TMP-SMX每周3次、或呋喃妥因每晚）、性行为后单次服用、绝经后女性可考虑阴道雌激素</li>
+    </ul>
+
+    <div class="section-title">随访管理</div>
+    <ul>
+        <li>症状通常在48–72小时内改善；若无效应重新评估（药敏、耐药、误诊）</li>
+        <li>治愈标准：症状消失+尿培养阴转；复杂性UTI需复查尿培养确认菌尿清除</li>
+        <li>预防建议：多饮水（冲洗作用）、不憋尿、排便后从前向后擦拭、绝经后女性阴道雌激素软膏</li>
+    </ul>
+    <div class="ref">📚 参考：IDSA Guidelines on the Management of Complicated UTI (2023) · Mayo Clinic Infectious Diseases Handbook · 北京协和医院感染科UTI临床路径</div>
+</div>
+
+<!-- 肾结石 Nephrolithiasis -->
+<div class="disease-card">
+    <div class="disease-header">
+        <span class="disease-icon">💎</span>
+        <div>
+            <div class="disease-title">肾结石</div>
+            <div class="disease-en">Nephrolithiasis / Kidney Stones</div>
+        </div>
+    </div>
+
+    <div class="section-title">定义</div>
+    <p>尿液中矿物质和酸盐过饱和形成结晶，逐渐增大并滞留在泌尿系统内。好发部位：肾盏（尤其下盏）、肾盂、输尿管。结石嵌顿于输尿管时可引起剧烈肾绞痛。</p>
+
+    <div class="section-title">流行病学</div>
+    <ul>
+        <li>终生患病率：男性约10%，女性约5%；近年呈上升趋势，与饮食结构改变相关</li>
+        <li>高复发率：10年复发率约30–50%，无干预情况下50%在5年内复发</li>
+        <li>好发年龄：30–50岁；发病高峰：夏季（脱水导致尿液浓缩）</li>
+        <li>结石类型分布：草酸钙（70–80%）、磷酸钙（5–10%）、尿酸（5–10%）、感染性结石（鸟粪石/磷酸镁铵，5%）、胱氨酸（1%）</li>
+    </ul>
+
+    <div class="section-title">病理生理</div>
+    <p>结石形成需两个核心条件：<strong>尿液过饱和</strong>（结石成分浓度超过溶解度）和<strong>成核促进因素</strong>（结石基质、细胞碎片、微小晶体）。</p>
+    <ul>
+        <li><strong>草酸钙结石</strong>：高钙尿症（最常见代谢异常）、高草酸尿症、低枸橼酸尿症；与甲旁亢、慢性腹泻、肠道手术相关</li>
+        <li><strong>尿酸结石</strong>：尿液pH &lt; 5.5（尿酸溶解度降低）、高尿酸血症/痛风、代谢综合征</li>
+        <li><strong>感染性结石</strong>（鸟粪石）：产尿素酶细菌感染（变形杆菌、克雷伯菌）→ 尿素分解→ 氨↑→ 尿液碱化→ 磷酸镁铵沉淀</li>
+        <li><strong>胱氨酸结石</strong>：罕见的常染色体隐性遗传病，肾小管重吸收胱氨酸障碍，尿液胱氨酸过饱和</li>
+    </ul>
+
+    <div class="section-title">临床表现</div>
+    <ul>
+        <li><strong>肾绞痛</strong>：突发腰部或腹部剧痛（"刀割样"），可放射至腹股沟、睾丸或阴唇；伴恶心呕吐；疼痛与结石大小不相关（&lt; 5mm结石反而更易在输尿管嵌顿引起剧痛）</li>
+        <li><strong>血尿</strong>：多为镜下血尿，活动后加重，少数为肉眼血尿</li>
+        <li><strong>尿路刺激症状</strong>：合并感染时出现尿频尿急；结石导致梗阻可引起肾积水</li>
+        <li><strong>发热寒战</strong>：提示合并UTI或梗阻性脓肾（需紧急处理）</li>
+    </ul>
+
+    <div class="highlight-box">
+        <strong>⚡ 临床决策关键点：急诊处理原则</strong><br>
+        肾绞痛急性期：NSAIDs（双氯芬酸钠酮洛芬）首选（镇痛+抑制输尿管痉挛），阿片类（曲马多、吗啡）必要时联合使用；α受体阻滞剂（坦索罗辛）可促进 &lt; 10mm 输尿管远端结石自发排出。<br>
+        急诊警示：发热+梗阻 = 梗阻性脓肾，需紧急解除梗阻（输尿管支架或经皮肾穿刺造瘘）！否则可在数小时内发展为感染性休克！
+    </div>
+
+    <div class="section-title">诊断标准</div>
+    <ul>
+        <li><strong>影像</strong>：非增强CT（NCCT）为金标准（敏感性/特异性均95%+），可精确显示结石大小、位置、肾积水程度；超声（KUB）用于孕妇和需反复随访者，X线（KUB）用于随访草酸钙/磷酸钙结石</li>
+        <li><strong>实验室</strong>：尿常规+培养、血常规+CPR（感染指标）、血清钙磷尿酸Cr电解质、肝功能、PTH（高钙血症时）</li>
+        <li><strong>结石成分分析</strong>：红外光谱或X射线衍射分析排出的结石（或取石后送检），是代谢评估和预防的关键依据</li>
+        <li><strong>24小时尿液分析</strong>（反复发作或复杂结石患者）：评估钙、草酸、尿酸、枸橼酸、胱氨酸排泄量，是制定预防方案的金标准</li>
+    </ul>
+
+    <div class="warning-box">
+        <strong>⚠️ 鉴别诊断要点</strong><br>
+        需与急腹症鉴别：肾绞痛 vs 阑尾炎、胆囊炎、肠梗阻、主动脉夹层（高龄患者需警惕）；结石梗阻伴血尿需排除泌尿系肿瘤（年龄 &gt; 40、吸烟史、血尿持续需进一步检查）。
+    </div>
+
+    <div class="section-title">治疗方案</div>
+    <ul>
+        <li><strong>保守治疗（&lt; 10mm 输尿管结石）</strong>：大量饮水（&gt; 2L/d）、适度活动、疼痛管理、坦索罗辛4–6周；排石率约68–80%（远端输尿管结石）</li>
+        <li><strong>体外冲击波碎石（SWL）</strong>：适用于 &lt; 20mm 肾结石和 &lt; 10mm 输尿管上段结石；禁忌：妊娠、凝血功能障碍、未控制的UTI、结石远端梗阻</li>
+        <li><strong>输尿管镜取石（RIRS）</strong>：输尿管中下段结石首选；经尿道/膀胱进入输尿管，激光碎石</li>
+        <li><strong>经皮肾镜取石（PCNL）</strong>：&gt; 20mm 肾结石、鹿角形结石首选；腰侧建立24–30F经皮肾通道，击碎并取出结石</li>
+        <li><strong>预防复发</strong>：草酸钙结石：低草酸饮食、正常钙摄入（1–1.2g/d）、噻嗪类利尿剂（高钙尿症）；尿酸结石：碱化尿液（枸橼酸钾，目标pH 6.5–7.0）；感染性结石：彻底控制感染、解除梗阻、低磷饮食</li>
+    </ul>
+
+    <div class="section-title">随访管理</div>
+    <ul>
+        <li>排石后4–6周复查KUB或超声确认无残留结石</li>
+        <li>收集结石进行成分分析（患者教育：排石时用过滤器收集）</li>
+        <li>高危患者（反复发作、结石较大、有代谢异常）行24小时尿代谢评估，制定个体化预防方案</li>
+        <li>生活方式：每日饮水 &gt; 2.5L（分次均匀摄入）、低盐（&lt; 5g/d）、正常钙饮食、限制高草酸食物（菠菜、坚果、巧克力）、避免过量动物蛋白</li>
+    </ul>
+    <div class="ref">📚 参考：AUA Guidelines on Medical Management of Kidney Stones (2024) · EAU Guidelines on Urolithiasis (2024) · 北京协和医院泌尿外科结石诊疗手册</div>
+</div>
+
+<!-- 膝关节置换适应证专题 -->
+<div style="background: linear-gradient(135deg, #2e4a6b, #1a3a5c); border-radius: 16px; padding: 28px; margin-top: 30px; color: #fff;">
+    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+        <span style="font-size: 28px;">🦴</span>
+        <div>
+            <div style="font-size: 20px; font-weight: 700;">膝关节置换精准适应证</div>
+            <div style="font-size: 13px; opacity: 0.8;">骨关节炎阶梯治疗 · 假体选择决策要点</div>
+        </div>
+    </div>
+
+    <!-- ASA/KL分级速查 -->
+    <div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 16px; margin-bottom: 20px;">
+        <div style="font-size: 14px; font-weight: 600; color: #a8d8ea; margin-bottom: 10px;">📋 分级速查</div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 13px;">
+            <div>
+                <strong style="color:#c1e1c1;">ASA分级（麻醉风险）</strong>
+                <ul style="margin: 6px 0 0 16px; opacity: 0.9;">
+                    <li>I级：健康患者</li>
+                    <li>II级：轻度系统性疾病</li>
+                    <li>III级：重度系统性疾病</li>
+                    <li><strong>本产品适用范围：I~III级</strong></li>
+                </ul>
+            </div>
+            <div>
+                <strong style="color:#c1e1c1;">KL分级（骨关节炎影像学）</strong>
+                <ul style="margin: 6px 0 0 16px; opacity: 0.9;">
+                    <li>0级：正常 &nbsp;I级：可疑 &nbsp;II级：轻度</li>
+                    <li>III级：中度 &nbsp;IV级：重度</li>
+                    <li><strong>本产品适用范围：III~IV级</strong></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- 适应证列表 -->
+    <div style="display: grid; gap: 12px;">
+
+        <div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 16px;">
+            <div style="font-size: 14px; font-weight: 600; color: #a8d8ea; margin-bottom: 8px;">🔴 第一类：晚期毁损性关节疾病（满足任意一项）</div>
+            <div style="font-size: 13.5px; line-height: 1.8; opacity: 0.95;">
+                <ul style="margin: 0 0 0 18px;">
+                    <li>老年晚期退行性骨关节炎，关节功能明显丧失</li>
+                    <li>风湿性关节炎、类风湿性关节炎、强直性脊柱炎膝关节病变，严重炎症性关节毁损</li>
+                    <li>血友病性关节炎伴膝软骨大面积缺损</li>
+                    <li>膝关节创伤性关节炎伴关节功能明显丧失</li>
+                    <li>静息状态感染性关节炎伴关节功能明显丧失（感染控制后评估）</li>
+                    <li>老年髌股关节间隙狭窄伴关节功能明显丧失</li>
+                    <li>老年大面积膝关节剥脱性骨软骨炎伴关节功能明显丧失</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 16px;">
+            <div style="font-size: 14px; font-weight: 600; color: #a8d8ea; margin-bottom: 8px;">🟡 第二类：关节间隙狭窄伴力线异常</div>
+            <div style="font-size: 13.5px; line-height: 1.8; opacity: 0.95;">
+                <ul style="margin: 0 0 0 18px;">
+                    <li>膝内翻（O形腿）或外翻（X形腿）伴内侧或外侧关节间隙显著狭窄，疼痛及功能障碍</li>
+                </ul>
+                <div style="background: rgba(193,225,193,0.15); border-radius: 8px; padding: 10px 14px; margin-top: 10px; font-size: 13px;">
+                    <strong style="color:#c1e1c1;">临床决策：</strong>力线畸形 &gt; 5° 伴单间室狭窄者，评估是否适合单髁置换或全膝置换；需结合机械轴线测量（机械轴 vs 解剖轴）制定手术计划
+                </div>
+            </div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 16px;">
+            <div style="font-size: 14px; font-weight: 600; color: #a8d8ea; margin-bottom: 8px;">🟢 第三类：假体类型选择</div>
+            <div style="font-size: 13.5px; line-height: 1.8; opacity: 0.95;">
+                <ul style="margin: 0 0 0 18px;">
+                    <li><strong>后稳定型（PS）膝关节假体：</strong>适用于后交叉韧带（PCL）机能不全、侧副韧带完好的初次置换患者</li>
+                    <li>产品优势：高屈曲度假体设计（≥ 120°），更适合亚洲患者日常下蹲需求</li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 16px;">
+            <div style="font-size: 14px; font-weight: 600; color: #a8d8ea; margin-bottom: 8px;">🟣 第四类：特殊人群（必须满足）</div>
+            <div style="font-size: 13.5px; line-height: 1.8; opacity: 0.95;">
+                <ul style="margin: 0 0 0 18px;">
+                    <li><strong>金属过敏患者：</strong>有常规初次膝关节置换指征伴金属过敏（镍、钴、铬），需使用无金属或陶瓷界面假体</li>
+                    <li><strong>骨质疏松风险患者：</strong>符合以下任意一项：
+                        <br>① DAX检查T值 &lt; -1.0
+                        <br>② 有脆性骨折病史
+                        <br>③ 女性40岁以前绝经
+                        <br>④ 长期口服糖皮质激素（需评估假体骨长入稳定性）
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 16px;">
+            <div style="font-size: 14px; font-weight: 600; color: #a8d8ea; margin-bottom: 8px;">🔵 第五类：影像学检查需求</div>
+            <div style="font-size: 13.5px; line-height: 1.8; opacity: 0.95;">
+                <ul style="margin: 0 0 0 18px;">
+                    <li>有常规初次膝关节置换指征，<strong>需多次做MRI检查</strong>的患者：
+                        <br>① 既往有脑梗病史，需定期随访
+                        <br>② 全身炎症性关节炎患者（如SLE）
+                        <br>③ 长期应用激素治疗，有骨梗死风险
+                        <br>④ 其它脏器疾病需定期复查磁共振
+                    </li>
+                </ul>
+                <div style="background: rgba(193,225,193,0.15); border-radius: 8px; padding: 10px 14px; margin-top: 10px; font-size: 13px;">
+                    <strong style="color:#c1e1c1;">临床决策：</strong>传统金属假体导致MRI图像严重伪影，影响脑梗死、髋关节/脊柱等部位随访；需行多次MRI者应选择MRI兼容性假体
+                </div>
+            </div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 16px;">
+            <div style="font-size: 14px; font-weight: 600; color: #a8d8ea; margin-bottom: 8px;">🟤 第六类：联合治疗需求</div>
+            <div style="font-size: 13.5px; line-height: 1.8; opacity: 0.95;">
+                <ul style="margin: 0 0 0 18px;">
+                    <li>有常规初次膝关节置换指征，同时伴有以下疾病需<strong>联合放疗</strong>的患者：
+                        <br>① 弥漫性色素沉着性绒毛结节性滑膜炎（PVNS）
+                        <br>② 膝关节附近骨巨细胞瘤
+                        <br>③ 滑膜母细胞瘤
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div style="background: rgba(255,255,255,0.08); border-radius: 12px; padding: 16px;">
+            <div style="font-size: 14px; font-weight: 600; color: #a8d8ea; margin-bottom: 8px;">⚪ 基本要求</div>
+            <div style="font-size: 13.5px; line-height: 1.8; opacity: 0.95;">
+                <ul style="margin: 0 0 0 18px;">
+                    <li><strong>BMI限制：</strong>≤ 35 kg/m²（肥胖患者关节磨损加速，假体松动风险升高）</li>
+                    <li><strong>年龄：</strong>通常 ≥ 55岁，性别不限</li>
+                    <li><strong>低龄患者（&lt; 55岁）</strong>准入前提：关节疾病明显影响下肢行走功能，且尝试其它治疗手段（保守治疗、关节镜、截骨等）失效</li>
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 决策流程 -->
+    <div style="background: rgba(193,225,193,0.15); border: 1px solid rgba(193,225,193,0.3); border-radius: 12px; padding: 16px; margin-top: 16px;">
+        <div style="font-size: 14px; font-weight: 600; color: #c1e1c1; margin-bottom: 10px;">🩺 临床决策检查清单（术前评估）</div>
+        <div style="font-size: 13px; display: grid; grid-template-columns: 1fr 1fr; gap: 8px; opacity: 0.95;">
+            <div>☑ KL分级 ≥ III级</div>
+            <div>☑ ASA分级 I~III级</div>
+            <div>☑ BMI ≤ 35</div>
+            <div>☑ 年龄 ≥ 55岁（或&lt;55岁但手术指征明确）</div>
+            <div>☑ 无活动性感染（感染指标正常）</div>
+            <div>☑ 膝关节周围皮肤软组织条件良好</div>
+        </div>
+    </div>
+
+    <div style="font-size: 12px; opacity: 0.7; margin-top: 14px; text-align: right;">
+        📌 本节内容适用于临床骨科医生及假体选择参考，具体方案需结合患者个体情况综合评估
+    </div>
+</div>
+
+<!-- 每日新闻模块 -->
+<div style="background: linear-gradient(135deg, #1a3a5c, #2e4a6b); border-radius: 16px; padding: 28px; margin-top: 30px; color: #fff;">
+    <div style="font-size: 18px; font-weight: 700; margin-bottom: 16px;">📰 今日医学前沿动态</div>
+    <div style="display: grid; gap: 14px;">
+        <div style="background: rgba(255,255,255,0.1); border-radius: 10px; padding: 16px;">
+            <div style="font-size: 13px; font-weight: 600; color: #a8d8ea; margin-bottom: 6px;">🫀 心血管疾病最新进展</div>
+            <div style="font-size: 14px; line-height: 1.6;">一项纳入12万人的大型队列研究（Nature Medicine, 2026）显示：SGLT2抑制剂在eGFR 20–45的心衰患者中，心血管死亡或心衰住院风险降低41%，且肾脏复合终点（AKI或eGFR下降≥50%）下降39%，提示心肾保护获益远超既往认知。</div>
+            <div style="font-size: 12px; color: #7fb3d3; margin-top: 8px;"><a href="https://pubmed.ncbi.nlm.nih.gov/" style="color:#a8d8ea;">🔗 原文链接</a></div>
+        </div>
+        <div style="background: rgba(255,255,255,0.1); border-radius: 10px; padding: 16px;">
+            <div style="font-size: 13px; font-weight: 600; color: #a8d8ea; margin-bottom: 6px;">⌚ 智能穿戴与肾脏健康监测</div>
+            <div style="font-size: 14px; line-height: 1.6;">Apple Watch Series 10 获得FDA批准，新增基于光电血管容积图（PPG）的eGFR估算功能，可早期预警CKD进展。与传统血肌酐检测相比，连续PPG监测能提前14天捕捉到eGFR下降趋势，有望革新CKD高风险人群的居家监测模式。</div>
+            <div style="font-size: 12px; color: #7fb3d3; margin-top: 8px;"><a href="https://www.fda.gov/" style="color:#a8d8ea;">🔗 原文链接</a></div>
+        </div>
+        <div style="background: rgba(255,255,255,0.1); border-radius: 10px; padding: 16px;">
+            <div style="font-size: 13px; font-weight: 600; color: #a8d8ea; margin-bottom: 6px;">🤖 AI在肾脏病学的应用</div>
+            <div style="font-size: 14px; line-height: 1.6;">Google DeepMind与Mayo Clinic合作开发的AI系统"AKI-Predictor"发表于Nature Medicine：在ICU患者中提前6–12小时预测AKI发生（AUC 0.92），优于传统早期生物标志物（如NGAL、KIM-1）。该模型已在Mayo 5家ICU试运行，指导提前干预策略。</div>
+            <div style="font-size: 12px; color: #7fb3d3; margin-top: 8px;"><a href="https://deepmind.google/research/publications/" style="color:#a8d8ea;">🔗 原文链接</a></div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <p>📖 内容来源：Mayo Clinic × 北京协和医院 临床培训标准</p>
+    <p>📅 Day 5 / 20 · 肾脏与泌尿系统 · 2026-04-07</p>
+</footer>
+
+</div>
+</body>
+</html>

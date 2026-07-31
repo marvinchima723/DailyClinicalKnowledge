@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日临床知识 | Day 2 呼吸系统 | 2026-04-04</title>
+    <style>
+        :root {
+            --primary: #1a5276;
+            --secondary: #2980b9;
+            --accent: #17a589;
+            --highlight: #f39c12;
+            --alert: #e74c3c;
+            --bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text: #2c3e50;
+            --text-light: #7f8c8d;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'PingFang SC', 'Microsoft YaHei', 'Helvetica Neue', sans-serif; background: var(--bg); color: var(--text); line-height: 1.8; }
+        .header { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; padding: 40px 20px; text-align: center; }
+        .header h1 { font-size: 2rem; margin-bottom: 10px; }
+        .header .subtitle { font-size: 1.1rem; opacity: 0.9; }
+        .header .meta { margin-top: 15px; font-size: 0.95rem; opacity: 0.8; }
+        .badge { display: inline-block; background: var(--accent); padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; margin: 5px; }
+        .badge.warning { background: var(--highlight); }
+        .badge.alert { background: var(--alert); }
+        .source-bar { background: #e8f4f8; border-left: 4px solid var(--secondary); padding: 15px 20px; margin: 20px 0; font-size: 0.9rem; color: var(--text-light); }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        .card { background: var(--card-bg); border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); margin-bottom: 25px; overflow: hidden; }
+        .card-header { background: linear-gradient(90deg, var(--primary), var(--secondary)); color: white; padding: 18px 25px; font-size: 1.25rem; font-weight: 600; }
+        .card-body { padding: 25px; }
+        h2 { color: var(--primary); font-size: 1.3rem; margin: 25px 0 15px; padding-bottom: 8px; border-bottom: 2px solid #e8f4f8; }
+        h2:first-child { margin-top: 0; }
+        h3 { color: var(--secondary); font-size: 1.1rem; margin: 20px 0 10px; }
+        p { margin-bottom: 12px; }
+        ul, ol { margin: 10px 0 15px 25px; }
+        li { margin-bottom: 8px; }
+        .highlight-box { background: #fff8e1; border-left: 4px solid var(--highlight); padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .key-point { background: #e8f8f5; border-left: 4px solid var(--accent); padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .alert-box { background: #fdf2f2; border-left: 4px solid var(--alert); padding: 15px 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .table-wrapper { overflow-x: auto; margin: 20px 0; }
+        table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+        th { background: var(--primary); color: white; padding: 12px 15px; text-align: left; }
+        td { padding: 12px 15px; border-bottom: 1px solid #eee; }
+        tr:hover { background: #f8f9fa; }
+        .disease-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin: 20px 0; }
+        .disease-item { background: linear-gradient(135deg, #e8f4f8, #d5e8ed); padding: 15px; border-radius: 8px; border-left: 4px solid var(--secondary); }
+        .disease-item strong { color: var(--primary); display: block; margin-bottom: 5px; }
+        .progress-ring { display: flex; justify-content: center; gap: 30px; margin: 30px 0; flex-wrap: wrap; }
+        .progress-item { text-align: center; }
+        .circle { width: 80px; height: 80px; border-radius: 50%; background: conic-gradient(var(--accent) 18deg, #e0e0e0 0deg); display: flex; align-items: center; justify-content: center; margin: 0 auto 8px; }
+        .circle-inner { width: 60px; height: 60px; border-radius: 50%; background: white; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--primary); font-size: 1.2rem; }
+        .references { background: #f4f6f7; padding: 20px; border-radius: 8px; margin-top: 30px; font-size: 0.9rem; color: var(--text-light); }
+        .references h4 { color: var(--text); margin-bottom: 10px; }
+        .footer { text-align: center; padding: 30px; color: var(--text-light); font-size: 0.85rem; }
+        @media (max-width: 768px) { .header h1 { font-size: 1.5rem; } .card-body { padding: 15px; } }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>每日临床知识</h1>
+        <div class="subtitle">Mayo Clinic + 北京协和医院 临床培训标准</div>
+        <div class="meta">
+            <span class="badge">Day 2 / 20</span>
+            <span class="badge">呼吸系统 Respiratory</span>
+            <span>2026年4月4日 周六</span>
+        </div>
+    </div>
+
+    <div class="source-bar">
+        <strong>培训标准来源：</strong>Mayo Clinic Internal Medicine Board Review, 协和呼吸科住院医师手册, UpToDate临床顾问, GOLD 2025指南, 中华医学会呼吸病学分会指南
+    </div>
+
+    <div class="container">
+        <!-- 概述 -->
+        <div class="card">
+            <div class="card-header">呼吸系统今日要点</div>
+            <div class="card-body">
+                <div class="disease-grid">
+                    <div class="disease-item"><strong>支气管哮喘</strong>气道慢性炎症性疾病</div>
+                    <div class="disease-item"><strong>COPD</strong>慢阻肺全球倡议</div>
+                    <div class="disease-item"><strong>肺炎</strong>社区获得性/医院获得性</div>
+                    <div class="disease-item"><strong>肺栓塞</strong>静脉血栓栓塞症</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 进度 -->
+        <div class="progress-ring">
+            <div class="progress-item"><div class="circle"><div class="circle-inner">1</div></div>心血管</div>
+            <div class="progress-item"><div class="circle"><div class="circle-inner">2</div></div>呼吸</div>
+            <div class="progress-item"><div class="circle"><div class="circle-inner">3</div></div>消化</div>
+            <div class="progress-item"><div class="circle"><div class="circle-inner">4</div></div>肝胆胰</div>
+            <div class="progress-item"><div class="circle"><div class="circle-inner">5</div></div>肾脏</div>
+        </div>
+
+        <!-- 支气管哮喘 -->
+        <div class="card">
+            <div class="card-header">1. 支气管哮喘 Bronchial Asthma</div>
+            <div class="card-body">
+                <h2>定义</h2>
+                <p>支气管哮喘是一种以慢性气道炎症、气道高反应性和可逆性气流受限为特征的异质性疾病。临床表现为反复发作的喘息、气短、胸闷和咳嗽，症状往往在夜间和清晨加重。</p>
+
+                <h2>流行病学</h2>
+                <p>全球约有3亿哮喘患者，中国20岁以上成人哮喘患病率约为4.2%，总数约4570万。儿童患病率呈上升趋势，约10-15%。</p>
+
+                <h2>病理生理</h2>
+                <ul>
+                    <li><strong>气道炎症：</strong>嗜酸性粒细胞浸润为主，IgE介导的I型变态反应</li>
+                    <li><strong>气道高反应性（AHR）：</strong>气道对多种刺激因素出现过强的收缩反应</li>
+                    <li><strong>气道重塑：</strong>长期炎症导致气道壁增厚、平滑肌增生、黏液腺肥大</li>
+                    <li><strong>可逆性气流受限：</strong>支气管舒张试验阳性（FEV1改善≥12%且绝对值增加≥200ml）</li>
+                </ul>
+
+                <div class="key-point">
+                    <strong>核心机制：</strong>Th2细胞介导的过敏反应 → 嗜酸性粒细胞浸润 → 气道高反应性 + 可逆性气流受限
+                </div>
+
+                <h2>临床表现</h2>
+                <ul>
+                    <li><strong>典型三联征：</strong>喘息、咳嗽、胸闷</li>
+                    <li><strong>发作特点：</strong>夜间/清晨加重，季节性或接触过敏原后发作</li>
+                    <li><strong>体征：</strong>呼气相延长、双肺满布哮鸣音（危重时可消失"寂静胸"）</li>
+                    <li><strong>特殊类型：</strong>咳嗽变异性哮喘（CVA）、胸闷变异性哮喘（CTVA）、运动性哮喘</li>
+                </ul>
+
+                <h2>诊断标准</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <tr><th>检查项目</th><th>意义</th><th>阳性标准</th></tr>
+                        <tr><td>支气管舒张试验</td><td>评估可逆性气流受限</td><td>FEV1改善≥12%且绝对值增加≥200ml</td></tr>
+                        <tr><td>PEF日内变异率</td><td>评估气流受限波动</td><td>连续2周PEF变异率≥20%</td></tr>
+                        <tr><td>支气管激发试验</td><td>评估气道高反应性</td><td>乙酰甲胆碱PC20≤8mg/ml</td></tr>
+                        <tr><td>呼出气一氧化氮（FeNO）</td><td>嗜酸性气道炎症标志物</td><td>>25ppb（提示Th2炎症）</td></tr>
+                    </table>
+                </div>
+
+                <h2>治疗方案</h2>
+                <div class="highlight-box">
+                    <strong>GINA 2025 阶梯治疗方案（5步）</strong>
+                    <ul style="margin-top:10px;">
+                        <li><strong>Step 1（轻度间歇）：</strong>按需吸入SABA（如沙丁胺醇）</li>
+                        <li><strong>Step 2（轻度持续）：</strong>低剂量ICS（如布地奈德）+ 按需SABA</li>
+                        <li><strong>Step 3（中型）：</strong>低剂量ICS/LABA（如信必可）维持</li>
+                        <li><strong>Step 4（中重度）：</strong>中剂量ICS/LABA，必要时加用LAMA</li>
+                        <li><strong>Step 5（重度）：</strong>高剂量ICS/LABA + 考虑生物制剂（奥马珠单抗、美泊利珠单抗等）</li>
+                    </ul>
+                </div>
+
+                <h3>急性发作处理</h3>
+                <ul>
+                    <li><strong>轻-中度：</strong>雾化吸入SABA（如沙丁胺醇0.5-1ml + 生理盐水），每20分钟可重复；口服泼尼松龙0.5-1mg/kg</li>
+                    <li><strong>重度-危重：</strong>持续雾化SABA + 静脉甲泼尼龙40-80mg q6-12h；必要时机械通气</li>
+                </ul>
+
+                <div class="alert-box">
+                    <strong>警示信号：</strong>寂静胸、意识改变、血氧饱和度<90%、说话不能成句 → 立即住院！
+                </div>
+
+                <h2>随访管理</h2>
+                <ul>
+                    <li>每1-3月评估症状控制（ACT评分）及肺功能</li>
+                    <li>避免过敏原暴露，戒烟</li>
+                    <li>患者教育：正确使用吸入装置，书面哮喘行动计划</li>
+                    <li>目标：达到并维持临床控制，维持正常活动能力</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- COPD -->
+        <div class="card">
+            <div class="card-header">2. 慢性阻塞性肺疾病 COPD</div>
+            <div class="card-body">
+                <h2>定义</h2>
+                <p>COPD是一种以持续性气流受限为特征的可以预防和治疗的疾病，气流受限呈进行性发展，与气道和肺对有毒颗粒或气体的慢性炎症反应增强有关。</p>
+
+                <h2>流行病学</h2>
+                <p>全球约3.8亿COPD患者，中国40岁以上人群患病率13.7%，约1亿患者。全球第三大死因，年死亡约300万。</p>
+
+                <h2>病理生理</h2>
+                <ul>
+                    <li><strong>吸烟（最重要危险因素）：</strong>导致中性粒细胞、巨噬细胞浸润，蛋白酶-抗蛋白酶失衡</li>
+                    <li><strong>小气道病变：</strong>气道狭窄、纤维化；肺气肿：肺泡壁破坏（α1-抗胰蛋白酶缺乏相关年轻患者）</li>
+                    <li><strong>通气/血流比例失调：</strong>低氧血症主要机制</li>
+                    <li><strong>呼气气流受限：</strong>小气道在呼气相提前关闭，导致气体陷闭（air trapping）</li>
+                </ul>
+
+                <div class="key-point">
+                    <strong>核心特征：</strong>持续性气流受限（不完全可逆）+ 肺气肿/小气道病变 → 气体陷闭 + 通气/血流失调
+                </div>
+
+                <h2>临床表现</h2>
+                <ul>
+                    <li><strong>慢性咳嗽：</strong>晨起明显，伴痰液（白色黏液痰为主）</li>
+                    <li><strong>进行性呼吸困难：</strong>活动后加重，"气短"为主要就诊原因</li>
+                    <li><strong>桶状胸、语颤减弱、叩诊过清音、呼吸音降低</strong></li>
+                    <li><strong>急性加重（AECOPD）：</strong>咳嗽、痰量增多、脓性痰、呼吸困难加重</li>
+                </ul>
+
+                <h2>诊断标准</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <tr><th>指标</th><th>意义</th><th>诊断切点</th></tr>
+                        <tr><td>FEV1/FVC</td><td>气流受限金标准</td><td>吸入支气管扩张剂后 FEV1/FVC < 0.70</td></tr>
+                        <tr><td>GOLD分级</td><td>气流受限严重程度</td><td>GOLD 1-4级（基于FEV1占预计值 %）</td></tr>
+                        <tr><td>mMRC呼吸困难评分</td><td>症状评估</td><td>0-4分</td></tr>
+                        <tr><td>CAT评分</td><td>生活质量影响</td><td>0-40分</td></tr>
+                    </table>
+                </div>
+
+                <h2>GOLD综合评估与分组</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <tr><th></th><th>症状少（mMRC 0-1, CAT < 10）</th><th>症状多（mMRC ≥ 2, CAT ≥ 10）</th></tr>
+                        <tr><td><strong>急性加重风险低</strong><br>(每年<2次, 无住院)</td><td style="background:#c8f7c5;">GOLD A<br>低风险, 少症状</td><td style="background:#fdebd0;">GOLD B<br>低风险, 多症状</td></tr>
+                        <tr><td><strong>急性加重风险高</strong><br>(每年≥2次或≥1次住院)</td><td style="background:#aed6f1;">GOLD C<br>高风险, 少症状</td><td style="background:#f5b7b1;">GOLD D<br>高风险, 多症状</td></tr>
+                    </table>
+                </div>
+
+                <h2>治疗方案</h2>
+                <h3>稳定期治疗</h3>
+                <ul>
+                    <li><strong>A组：</strong>支扩剂（长效或短效SAMA/SABA）</li>
+                    <li><strong>B组：</strong>LABA + LAMA（双联长效支气管扩张）</li>
+                    <li><strong>C/D组：</strong>LABA + LAMA，D组加用ICS（血嗜酸粒细胞≥300/μl时ICS获益更大）</li>
+                </ul>
+                <h3>急性加重处理</h3>
+                <ul>
+                    <li><strong>抗感染：</strong>脓性痰 + 呼吸困难加重 → 抗生素（阿莫西林/克拉维酸、左氧氟沙星）</li>
+                    <li><strong>支气管舒张：</strong>雾化SABA + SAMA</li>
+                    <li><strong>糖皮质激素：</strong>口服泼尼松龙30-40mg/d，5-7天</li>
+                    <li><strong>氧疗：</strong>目标SpO2 88-92%</li>
+                    <li><strong>通气支持：</strong>严重者NIV或IPPV</li>
+                </ul>
+
+                <div class="alert-box">
+                    <strong>COPD-哮喘重叠（ACO）：</strong>患者同时具有哮喘和COPD特征，嗜酸粒细胞增高，ICS治疗获益明显。需谨慎排除哮喘-COPD重叠后再做诊断。
+                </div>
+
+                <h2>随访管理</h2>
+                <ul>
+                    <li>戒烟是最重要干预（药物：伐尼克兰、安非他酮）</li>
+                    <li>肺康复：运动训练 + 教育</li>
+                    <li>流感/肺炎疫苗接种</li>
+                    <li>长期家庭氧疗（PaO2≤55mmHg或SpO2≤88%）</li>
+                    <li>评估合并症（心血管、骨质疏松、焦虑抑郁）</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 肺炎 -->
+        <div class="card">
+            <div class="card-header">3. 社区获得性肺炎 CAP</div>
+            <div class="card-body">
+                <h2>定义</h2>
+                <p>社区获得性肺炎是指在医院外获得的感染性肺实质炎症，包括在入院后48小时内发病的肺炎。</p>
+
+                <h2>流行病学</h2>
+                <p>CAP年发病率5-11/1000人，成人住院患者死亡率6-10%，ICU患者可达25-50%。是65岁以上老年人首位感染性死因。</p>
+
+                <h2>常见病原体</h2>
+                <div class="table-wrapper">
+                    <table>
+                        <tr><th>类型</th><th>常见病原体</th></tr>
+                        <tr><td>典型病原体</td><td>肺炎链球菌（30-50%）、流感嗜血杆菌、卡他莫拉菌</td></tr>
+                        <tr><td>非典型病原体</td><td>肺炎支原体（20-30%，青年人）、肺炎衣原体、军团菌</td></tr>
+                        <tr><td>病毒</td><td>流感病毒（季节性）、RSV、鼻病毒、腺病毒</td></tr>
+                        <tr><td>少见病原体</td><td>铜绿假单胞菌（结构性肺病、ICU）、金黄色葡萄球菌（流感后）</td></tr>
+                    </table>
+                </div>
+
+                <div class="key-point">
+                    <strong>临床鉴别：</strong>典型肺炎（急起高热、寒战、脓痰、肺实变体征）与非典型肺炎（相对缓起、干咳、轻微体征、"游走性"浸润）的区别对初始经验性治疗选择至关重要。
+                </div>
+
+                <h2>诊断标准</h2>
+                <ul>
+                    <li><strong>临床表现：</strong>咳嗽、咳痰、发热、胸痛、呼吸困难 + 肺部湿啰音</li>
+                    <li><strong>影像学：</strong>胸部X线/CT显示新出现的浸润影、实变影或磨玻璃影</li>
+                    <li><strong>实验室：</strong>血常规（WBC↑、NEU↑）、CRP/PCT升高</li>
+                    <li><strong>重症标准（需住院）：</strong>CURB-65≥2分 或 符合任一主要标准</li>
+                </ul>
+
+                <h3>CURB-65评分</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <tr><th>指标</th><th>1分</th></tr>
+                        <tr><td>Confusion（意识障碍）</td><td>新出现</td></tr>
+                        <tr><td>Urea（尿素）</td><td>>7mmol/L</td></tr>
+                        <tr><td>Respiratory rate（呼吸频率）</td><td>≥30次/分</td></tr>
+                        <tr><td>Blood pressure（血压）</td><td>SBP<90mmHg 或 DBP≤60mmHg</td></tr>
+                        <tr><td>65（年龄）</td><td>≥65岁</td></tr>
+                    </table>
+                </div>
+                <p><strong>评分含义：</strong>0-1分门诊治疗，2分住院评估，3-5分住院治疗（死亡率显著升高）</p>
+
+                <h2>治疗方案</h2>
+                <div class="highlight-box">
+                    <strong>经验性抗生素选择（中国成人CAP指南2024）</strong>
+                    <ul style="margin-top:10px;">
+                        <li><strong>门诊（无基础病）：</strong>阿莫西林或多西环素或大环内酯类（我国耐药率低）</li>
+                        <li><strong>门诊（有基础病）：</strong>β内酰胺类 + 大环内酯类 或 呼吸喹诺酮（莫西沙星、左氧氟沙星）</li>
+                        <li><strong>住院（非ICU）：</strong>β内酰胺类 + 大环内酯类 或 呼吸喹诺酮单药</li>
+                        <li><strong>住院（ICU）：</strong>β内酰胺类（头孢曲松/头孢噻肟）+ 大环内酯类 或 呼吸喹诺酮</li>
+                    </ul>
+                </div>
+
+                <h3>抗感染疗程</h3>
+                <p>轻-中度：5-7天；重症：7-10天；铜绿假单胞菌/ MRSA：14-21天。退热48-72小时、临床稳定后可口服续贯治疗。</p>
+
+                <div class="alert-box">
+                    <strong>提醒：</strong>影像学吸收滞后于临床改善，不必为"肺部阴影未吸收"延长抗生素！
+                </div>
+
+                <h2>随访管理</h2>
+                <ul>
+                    <li>48-72小时评估治疗反应（体温、症状、氧合）</li>
+                    <li>影像学随访：6-8周后复查（吸烟者、老年患者需排除恶性肿瘤）</li>
+                    <li>疫苗：流感疫苗（每年）、肺炎球菌疫苗（PCV15/PCV20或PPSV23）</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 肺栓塞 -->
+        <div class="card">
+            <div class="card-header">4. 肺血栓栓塞症 PTE</div>
+            <div class="card-body">
+                <h2>定义</h2>
+                <p>PTE是来自静脉系统（右心）或右心的血栓堵塞肺动脉或其分支，导致肺循环和呼吸功能障碍的临床综合征。深静脉血栓形成（DVT）是主要栓子来源。</p>
+
+                <h2>流行病学</h2>
+                <p>年发病率约1-2/1000人，欧盟每年约30-40万例死亡。住院患者VTE风险增加10-100倍。是猝死第三常见原因。</p>
+
+                <h2>危险因素（Virchow三联征）</h2>
+                <ul>
+                    <li><strong>静脉瘀滞：</strong>长期卧床、制动、肥胖、怀孕</li>
+                    <li><strong>血管内皮损伤：</strong>手术、创伤、中心静脉置管</li>
+                    <li><strong>高凝状态：</strong>恶性肿瘤、抗磷脂综合征、遗传性血栓倾向、肾病综合征</li>
+                </ul>
+
+                <h2>病理生理</h2>
+                <ul>
+                    <li><strong>血流动力学：</strong>肺血管阻力↑ → 右心压力↑ → 右心功能不全 → 左心前负荷↓ → 低血压/休克</li>
+                    <li><strong>气体交换：</strong>通气/血流失调 + 肺泡无效腔↑ → 低氧血症</li>
+                    <li><strong>心脏：</strong>右心室壁张力↑ → 心肌缺血（ coronary perfusion ↓）</li>
+                </ul>
+
+                <div class="key-point">
+                    <strong>临床线索：</strong>不明原因呼吸困难 + 心动过速 + 低氧血症 + 单侧下肢肿胀 → 需排查PTE
+                </div>
+
+                <h2>临床表现</h2>
+                <ul>
+                    <li><strong>症状：</strong>呼吸困难（最常见）、胸痛（多为胸膜性）、咯血、晕厥、心悸</li>
+                    <li><strong>体征：</strong>呼吸急促、心率快、血压下降、颈静脉怒张、P2亢进、三尖瓣返流杂音</li>
+                    <li><strong>DVT体征：</strong>单侧下肢肿胀、压痛、皮温增高</li>
+                </ul>
+
+                <h2>诊断标准</h2>
+                <div class="alert-box">
+                    <strong>诊断流程：</strong>疑诊（临床评估）→ 确诊（影像学）→ 评估严重程度（血流动力学）
+                </div>
+
+                <h3>疑诊评估（ Wells评分）</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <tr><th>项目</th><th>分数</th></tr>
+                        <tr><td>临床症状DVT（下肢肿、压痛）</td><td>3.0</td></tr>
+                        <tr><td>PTE可能性大于DS或 Ds或心率>100bpm</td><td>1.5</td></tr>
+                        <tr><td>制动或近4周手术史</td><td>1.5</td></tr>
+                        <tr><td>既往DVT/PE病史</td><td>1.5</td></tr>
+                        <tr><td>咯血</td><td>1.0</td></tr>
+                        <tr><td>恶性肿瘤</td><td>1.0</td></tr>
+                    </table>
+                </div>
+                <p>>4分高度可能，≤4分低度可能</p>
+
+                <h3>确诊检查</h3>
+                <ul>
+                    <li><strong>CT肺动脉造影（CTPA）：</strong>首选，敏感性95%，特异性90%</li>
+                    <li><strong>V/Q显像：</strong>用于CTPA禁忌或肾功能不全患者</li>
+                    <li><strong>肺动脉造影：</strong>金标准，有创，复杂病例</li>
+                </ul>
+
+                <h3>血流动力学评估</h3>
+                <div class="table-wrapper">
+                    <table>
+                        <tr><th>指标</th><th>高危PTE（休克/低血压）</th><th>非高危PTE</th></tr>
+                        <tr><td>血压</td><td>SBP<90mmHg 或↓>40mmHg</td><td>血压正常</td></tr>
+                        <tr><td>右心功能</td><td>CTPA/TEE显示右心增大</td><td>无右心功能不全</td></tr>
+                        <tr><td>心肌标志物</td><td>cTnI/H、BNP显著升高</td><td>正常或轻度升高</td></tr>
+                    </table>
+                </div>
+
+                <h2>治疗方案</h2>
+                <h3>抗凝治疗（所有PTE均需）</h3>
+                <ul>
+                    <li><strong>初始抗凝：</strong>低分子肝素（LMWH，如依诺肝素1mg/kg q12h）或磺达肝癸钠或普通肝素（ICU、血小板波动大）</li>
+                    <li><strong>口服抗凝：</strong>DOAC（利伐沙班20mg qd、阿哌沙班5mg bid、达比加群150mg bid + LMWH桥接）</li>
+                    <li><strong>VKA（华法林）：</strong>需LMWH桥接，INR 2-3</li>
+                </ul>
+
+                <h3>溶栓治疗（高危PTE）</h3>
+                <ul>
+                    <li><strong>适应证：</strong>血流动力学不稳定（休克、SBP<90mmHg）、心脏骤停</li>
+                    <li><strong>药物：</strong>tPA 100mg 静脉滴注2小时 或 尿激酶</li>
+                    <li><strong>绝对禁忌：</strong>活动性出血、近期颅内出血</li>
+                </ul>
+
+                <h3>介入/手术治疗</h3>
+                <p>溶栓禁忌或失败 + 血流动力学恶化 → 导管取栓或手术取栓</p>
+
+                <div class="alert-box">
+                    <strong>注意：</strong>对于高危PTE合并心脏骤停/呼吸衰竭患者，如家属理解病情，可考虑ECMO支持！
+                </div>
+
+                <h2>随访管理</h2>
+                <ul>
+                    <li>抗凝疗程：诱因明确（手术/制动）3-6月；不明原因6-12月；肿瘤/抗磷脂综合征/复发则长期抗凝</li>
+                    <li>定期复查下肢超声（评估DVT消退）</li>
+                    <li>急性期后复查CTPA（评估血栓溶解情况）</li>
+                    <li>弹力袜（左踝-大腿，压力梯度）改善血栓后综合征</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 参考文献 -->
+        <div class="references">
+            <h4>参考文献</h4>
+            <ul>
+                <li>1. Global Initiative for Asthma (GINA). 2025 Report. <em>Global Strategy for Asthma Management and Prevention</em>.</li>
+                <li>2. Global Initiative for Chronic Obstructive Lung Disease (GOLD). 2025 Report. <em>Global Strategy for Diagnosis, Management, and Prevention of COPD</em>.</li>
+                <li>3. 中华医学会呼吸病学分会. 中国成人社区获得性肺炎诊断和治疗指南（2024年版）. <em>中华结核和呼吸杂志</em>.</li>
+                <li>4. 中华医学会呼吸病学分会. 肺血栓栓塞症诊治与预防指南（2018版）. <em>中华医学杂志</em>.</li>
+                <li>5. Mayo Clinic Internal Medicine Board Review, 2024-2025.</li>
+                <li>6. UpToDate. Patient education: Asthma in adults; COPD; Community-acquired pneumonia; Pulmonary embolism.</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>每日临床知识 | Mayo Clinic + 北京协和医院 临床培训标准</p>
+            <p>本内容仅供临床医学生/住院医师学习使用，不作为临床决策依据</p>
+        </div>
+    </div>
+</body>
+</html>
