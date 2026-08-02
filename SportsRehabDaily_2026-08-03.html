@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Rehab Daily | 2026-08-03</title>
+    <meta name="description" content="运动康复领域24小时最新动态：6大分类精选新闻，深度机制解读与临床要点。">
+    <meta property="og:title" content="Sports Rehab Daily | 2026-08-03">
+    <meta property="og:description" content="🏆赛事 🎓研究 🏥临床 🤖科技 💰融资 ⭐明星——运动康复24小时深度快报。">
+    <meta property="og:image" content="https://marvinchima723.github.io/DailyClinicalKnowledge/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://marvinchima723.github.io/DailyClinicalKnowledge/SportsRehabDaily_2026-08-03.html">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Sports Rehab Daily">
+    <meta property="og:locale" content="zh_CN">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Sports Rehab Daily | 2026-08-03">
+    <meta name="twitter:description" content="运动康复24小时深度快报：6大分类精选新闻与临床记忆点。">
+    <meta name="twitter:image" content="https://marvinchima723.github.io/DailyClinicalKnowledge/og-image.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0c;
+            --bg-secondary: #121214;
+            --bg-card: #1c1c1e;
+            --bg-card-hover: #2c2c2e;
+            --text-primary: #f5f5f7;
+            --text-secondary: #a1a1a6;
+            --text-muted: #6e6e73;
+            --border: #38383a;
+            --gold: #FFD700;
+            --blue: #007AFF;
+            --green: #34C759;
+            --purple: #AF52DE;
+            --orange: #FF9500;
+            --red: #FF3B30;
+            --clinical-box: #1a3a2e;
+            --clinical-border: #34C759;
+            --memory-box: #3a1a1a;
+            --memory-border: #FF3B30;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            min-height: 100vh;
+        }
+        .container { max-width: 820px; margin: 0 auto; padding: 0 20px 60px; }
+        /* Hero Banner */
+        .hero {
+            background: linear-gradient(135deg, #0f1a2e 0%, #1a0f2e 50%, #0f2e1a 100%);
+            padding: 60px 20px 50px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--border);
+        }
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400"><defs><linearGradient id="g" x1="0%25" y1="0%25" x2="100%25" y2="100%25"><stop offset="0%25" stop-color="%23FFD700" stop-opacity="0.03"/><stop offset="100%25" stop-color="%23007AFF" stop-opacity="0.03"/></linearGradient></defs><rect fill="url(%23g)" width="800" height="400"/><circle cx="650" cy="100" r="200" fill="%23FFD700" opacity="0.02"/><circle cx="150" cy="300" r="150" fill="%23007AFF" opacity="0.02"/></svg>');
+            background-size: cover;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255,215,0,0.1);
+            border: 1px solid rgba(255,215,0,0.3);
+            color: var(--gold);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #fff 0%, #ccc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-meta {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+        .hero-date {
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+        /* Executive Summary */
+        .exec-summary {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px 32px;
+            margin: 32px 0;
+        }
+        .exec-title {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .exec-title::before {
+            content: '◆';
+            color: var(--gold);
+            font-size: 8px;
+        }
+        .exec-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(56,56,58,0.5);
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+        .exec-item:last-child { border-bottom: none; }
+        .exec-item .icon { font-size: 14px; flex-shrink: 0; margin-top: 1px; }
+        .exec-item strong { color: var(--text-primary); font-weight: 600; }
+        /* Section Headers */
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin: 44px 0 20px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid var(--border);
+        }
+        .section-icon { font-size: 28px; }
+        .section-label {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .section-label.gold { background: rgba(255,215,0,0.12); color: var(--gold); }
+        .section-label.blue { background: rgba(0,122,255,0.12); color: var(--blue); }
+        .section-label.green { background: rgba(52,199,89,0.12); color: var(--green); }
+        .section-label.purple { background: rgba(175,82,222,0.12); color: var(--purple); }
+        .section-label.orange { background: rgba(255,149,0,0.12); color: var(--orange); }
+        .section-label.red { background: rgba(255,59,48,0.12); color: var(--red); }
+        .section-title { font-size: 22px; font-weight: 700; }
+        .section-count { font-size: 12px; color: var(--text-muted); margin-left: auto; }
+        /* News Cards */
+        .news-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+            border-left: 4px solid var(--border);
+            transition: all 0.2s;
+            position: relative;
+        }
+        .news-card:hover { background: var(--bg-card-hover); }
+        .news-card.gold { border-left-color: var(--gold); }
+        .news-card.blue { border-left-color: var(--blue); }
+        .news-card.green { border-left-color: var(--green); }
+        .news-card.purple { border-left-color: var(--purple); }
+        .news-card.orange { border-left-color: var(--orange); }
+        .news-card.red { border-left-color: var(--red); }
+        .card-eyebrow {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+        }
+        .card-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .card-tag.gold { background: rgba(255,215,0,0.15); color: var(--gold); }
+        .card-tag.blue { background: rgba(0,122,255,0.15); color: var(--blue); }
+        .card-tag.green { background: rgba(52,199,89,0.15); color: var(--green); }
+        .card-tag.purple { background: rgba(175,82,222,0.15); color: var(--purple); }
+        .card-tag.orange { background: rgba(255,149,0,0.15); color: var(--orange); }
+        .card-tag.red { background: rgba(255,59,48,0.15); color: var(--red); }
+        .card-source { font-size: 11px; color: var(--text-muted); }
+        .card-title {
+            font-size: 17px;
+            font-weight: 700;
+            line-height: 1.35;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+        .card-hook {
+            font-size: 14px;
+            font-style: italic;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+            padding-left: 14px;
+            border-left: 2px solid rgba(161,161,166,0.3);
+        }
+        .card-body {
+            font-size: 13.5px;
+            color: var(--text-secondary);
+            line-height: 1.65;
+            margin-bottom: 16px;
+        }
+        .card-body .highlight { color: var(--gold); font-weight: 600; }
+        .card-body .data-num {
+            display: inline-block;
+            background: rgba(255,215,0,0.1);
+            color: var(--gold);
+            padding: 1px 8px;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 13px;
+        }
+        .card-body .mechanism {
+            background: rgba(0,122,255,0.06);
+            border: 1px solid rgba(0,122,255,0.15);
+            border-radius: 8px;
+            padding: 12px 16px;
+            margin: 12px 0;
+            font-size: 12.5px;
+        }
+        .card-body .mechanism strong { color: var(--blue); }
+        .clinical-box {
+            background: var(--clinical-box);
+            border: 1px solid var(--clinical-border);
+            border-radius: 10px;
+            padding: 14px 18px;
+            margin-bottom: 14px;
+        }
+        .clinical-box-title { font-size: 11px; font-weight: 700; color: var(--clinical-border); letter-spacing: 1px; margin-bottom: 6px; }
+        .clinical-box-text { font-size: 13px; color: #a8d5c2; line-height: 1.5; }
+        .memory-card {
+            background: var(--memory-box);
+            border: 1px solid var(--memory-border);
+            border-radius: 10px;
+            padding: 16px 20px;
+            margin: 20px 0;
+        }
+        .memory-card-title { font-size: 11px; font-weight: 700; color: var(--memory-border); letter-spacing: 1px; margin-bottom: 8px; }
+        .memory-card-text { font-size: 14px; color: #ffb3b3; font-weight: 500; line-height: 1.5; }
+        .card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 12px;
+            color: var(--blue);
+            text-decoration: none;
+            padding: 6px 14px;
+            background: rgba(0,122,255,0.08);
+            border-radius: 8px;
+            transition: all 0.2s;
+        }
+        .card-link:hover { background: rgba(0,122,255,0.15); }
+        /* Stats Row */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin: 14px 0;
+        }
+        .stat-card {
+            background: rgba(255,215,0,0.05);
+            border: 1px solid rgba(255,215,0,0.15);
+            border-radius: 10px;
+            padding: 14px;
+            text-align: center;
+        }
+        .stat-num { font-size: 24px; font-weight: 800; color: var(--gold); }
+        .stat-label { font-size: 11px; color: var(--text-muted); margin-top: 4px; }
+        /* Timeline */
+        .timeline {
+            display: flex;
+            align-items: center;
+            gap: 0;
+            margin: 14px 0;
+            overflow-x: auto;
+            padding-bottom: 4px;
+        }
+        .timeline-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 80px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 14px;
+            left: -50%;
+            width: 100%;
+            height: 2px;
+            background: rgba(255,215,0,0.2);
+            z-index: 0;
+        }
+        .timeline-item:first-child::before { display: none; }
+        .timeline-dot {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            border: 2px solid var(--gold);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            z-index: 1;
+            margin-bottom: 6px;
+        }
+        .timeline-label { font-size: 10px; color: var(--text-muted); text-align: center; }
+        .timeline-time { font-size: 11px; color: var(--gold); font-weight: 600; }
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 1px solid var(--border);
+            margin-top: 50px;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+        .footer-logo { font-size: 20px; margin-bottom: 10px; }
+        .footer-note { max-width: 500px; margin: 0 auto 10px; line-height: 1.5; }
+        .footer-powered { color: var(--text-secondary); font-size: 11px; }
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 28px; }
+            .section-title { font-size: 18px; }
+            .container { padding: 0 16px 40px; }
+            .exec-summary { padding: 20px; }
+            .news-card { padding: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- HERO BANNER -->
+<div class="hero">
+    <div class="hero-badge">🏃 Sports Rehab Daily</div>
+    <h1>运动康复领域24小时最新动态</h1>
+    <div class="hero-meta">Sports Rehabilitation & Injury Intelligence Report</div>
+    <div class="hero-date">📅 2026年8月3日（星期一）| Generated by WorkBuddy @ 06:55</div>
+</div>
+
+<div class="container">
+
+<!-- EXECUTIVE SUMMARY -->
+<div class="exec-summary">
+    <div class="exec-title">Executive Summary · 执行摘要</div>
+    <div class="exec-item">
+        <span class="icon">▲</span>
+        <span><strong>哈佛30年大型研究：</strong>力量训练<strong>90-119分钟/周</strong>是"甜蜜点"——全因死亡↓<strong>13%</strong>，心血管↓<strong>19%</strong>，神经疾病↓<strong>27%</strong>（BJSM 2026.06）</span>
+    </div>
+    <div class="exec-item">
+        <span class="icon">■</span>
+        <span><strong>Lindsey Vonn 奥运重伤5月后：</strong>复杂胫骨骨折+ACL断裂+骨筋膜室综合征→经历5次手术→现已恢复健身房负重训练，踝关节骨折仍未完全愈合</span>
+    </div>
+    <div class="exec-item">
+        <span class="icon">●</span>
+        <span><strong>中国运动员伤病警示：</strong>孙颖莎（左踝距腓前韧带慢性磨损+足底筋膜炎+多部位劳损）退出瑞典大满贯，2025年打满119场比赛，平均不到3天一场</span>
+    </div>
+    <div class="exec-item">
+        <span class="icon">▲</span>
+        <span><strong>AI步态分析革命：</strong>BMC系统评价证实可穿戴传感器+AI可在7ms内触发腓骨肌刺激保护，识别踝关节损伤亚型，准确预测再伤风险</span>
+    </div>
+    <div class="exec-item">
+        <span class="icon">■</span>
+        <span><strong>康复融资持续升温：</strong>杭州易启未来（AI按摩机器人，A轮）、Impower Health（步态追踪，$750K）、Stance Health India（$1M）获得新一轮融资</span>
+    </div>
+</div>
+
+<!-- SECTION 1: 赛事损伤 -->
+<div class="section-header">
+    <span class="section-icon">🏆</span>
+    <span class="section-label gold">赛事损伤</span>
+    <span class="section-title">Sports Injury Intelligence</span>
+    <span class="section-count">4条 · 24h</span>
+</div>
+
+<div class="news-card gold">
+    <div class="card-eyebrow">
+        <span class="card-tag gold">🦵 慢性劳损</span>
+        <span class="card-source">WTT官方 · 2026-08-02</span>
+    </div>
+    <div class="card-title">孙颖莎退出瑞典大满贯：脚踝韧带"磨"出慢性伤，119场比赛后的强制停机</div>
+    <div class="card-hook">"不是突发伤病，是身体在连续高强度输出后发出的强制停机信号"</div>
+    <div class="card-body">
+        8月2日，WTT官方宣布孙颖莎退出瑞典大满贯，由池旼亨递补。退赛原因：<strong>左脚踝距腓前韧带慢性磨损合并足底筋膜炎</strong>，同时伴随腰部、肩部和手指关节的<strong>多部位累积性劳损</strong>。医疗团队给出的康复周期为<strong>4-6周</strong>。<br><br>
+        这不是一次意外受伤——2025年她打了<strong>119场比赛</strong>，平均不到三天一场。7月乒超联赛大连、雄安两个阶段全程未上场，7月31日以全国青联常委身份公开出席活动，8月2日WTT公告落地，俱乐部和教练组目标明确：<strong>亚运会（9月）才是今年唯一的硬指标</strong>。
+        <div class="mechanism">
+            <strong>🔬 机制解读：</strong>距腓前韧带（ATFL）是踝关节外侧最薄弱环节，在跖屈+内翻位反复承受剪切力。马拉松/乒乓球运动员长期在此位跑步，ATFL胶原纤维发生<strong>III型弹性纤维替代性重塑</strong>→韧带刚度↓→慢性疼痛→代偿性步态改变→足底筋膜炎（跖腱膜在跟骨附着处反复牵拉）。<br>
+            <strong>临床警示：</strong>多部位劳损（脚踝+腰部+肩部+手指）提示存在<strong>运动链代偿失衡</strong>——需评估髋关节动力链和核心稳定性，而非仅局部处理。
+        </div>
+        <div class="stats-row">
+            <div class="stat-card"><div class="stat-num">119</div><div class="stat-label">2025年参赛场次</div></div>
+            <div class="stat-card"><div class="stat-num">&lt;3</div><div class="stat-label">平均间隔天数</div></div>
+            <div class="stat-card"><div class="stat-num">4-6w</div><div class="stat-label">建议康复周期</div></div>
+        </div>
+    </div>
+    <div class="clinical-box">
+        <div class="clinical-box-title">🔑 临床决策要点</div>
+        <div class="clinical-box-text">累积性劳损≠急性损伤，核心问题是<strong>训练量与恢复量失衡</strong>。建议：①暂停高强度赛事2-4周；②物理治疗师评估下肢力线+髋-核心稳定性；③亚运会前逐步恢复，监测疲劳指标（HRV/睡眠质量）；④多部位疼痛需排查全身性因素（维生素D/甲状腺功能/自身免疫）。</div>
+    </div>
+    <a class="card-link" href="https://www.toutiao.com/article/7669441776998924835" target="_blank">📰 原文链接：头条体育</a>
+</div>
+
+<div class="news-card gold">
+    <div class="card-eyebrow">
+        <span class="card-tag gold">🦴 韧带损伤</span>
+        <span class="card-source">懂球帝 · 2026-08-02</span>
+    </div>
+    <div class="card-title">戴伟浚社媒晒单独训练视频：韧带损伤后6周康复倒计时</div>
+    <div class="card-hook">"谢谢大家这段时间的鼓励和关心！在努力归来了！"</div>
+    <div class="card-body">
+        8月1日晚，深圳新鹏城球员<strong>戴伟浚</strong>在社交媒体发布单独训练视频，确认伤情恢复进展。7月10日官方公告：训练中不慎扭伤脚踝，确诊为<strong>韧带损伤</strong>，预计康复周期约<strong>6周</strong>。2026赛季代表深圳新鹏城出战17场，贡献3次助攻。
+        <div class="mechanism">
+            <strong>🔬 机制解读：</strong>踝关节扭伤后韧带损伤（I-III级）的康复分期：<br>
+            Week 0-2：RICE原则 + 保护性负重 → 减轻疼痛/肿胀<br>
+            Week 2-4：等长收缩 → 维持肌力 + 关节活动度训练<br>
+            Week 4-6：渐进性抗阻 → 本体感觉训练（平衡板）<br>
+            关键：腓骨肌（peroneal muscles）的早期激活可↓再伤率39%
+        </div>
+    </div>
+    <div class="clinical-box">
+        <div class="clinical-box-title">🔑 临床决策要点</div>
+        <div class="clinical-box-text">踝关节扭伤后6周康复期内，<strong>本体感觉训练</strong>（单腿平衡、平衡板）是预防复发的核心——研究显示可降低<strong>39%</strong>再伤率。单纯静养而不做神经肌肉训练，再伤风险↑3倍。</div>
+    </div>
+    <a class="card-link" href="https://www.163.com/dy/article/L3B9C3PL0549BAP0.html" target="_blank">📰 原文链接：网易体育</a>
+</div>
+
+<div class="news-card gold">
+    <div class="card-eyebrow">
+        <span class="card-tag gold">🦴 骨折</span>
+        <span class="card-source">OneFootball · 2026-08-01</span>
+    </div>
+    <div class="card-title">皇马女队Athenea右锁骨骨折：训练赛第36分钟被迫离场，需要手术</div>
+    <div class="card-hook">"右锁骨骨折，需手术——夏训首场友谊赛便遭重创"</div>
+    <div class="card-body">
+        8月1日，皇马女足明星球员<strong>Athenea del Castillo</strong>在夏训首场友谊赛中对阵皇马CFF，第36分钟因碰撞导致<strong>右锁骨骨折</strong>，将接受手术治疗。皇马女队失去锋线核心。该伤势在足球运动员中属于相对高发，多因直接撞击或摔倒时肩部着地。
+        <div class="mechanism">
+            <strong>🔬 机制解读：</strong>锁骨中段骨折（占锁骨骨折85%）的愈合时间轴：<br>
+            术后2-4周：八字绷带/悬臂带固定 → 早期钟摆运动<br>
+            4-6周：主动辅助ROM训练（外展&lt;90°）<br>
+            6-8周：渐进抗阻训练<br>
+            ⚠️ 足球运动员锁骨愈合后需专项评估肩关节外展投掷动作的力学恢复
+        </div>
+    </div>
+    <div class="clinical-box">
+        <div class="clinical-box-title">🔑 临床决策要点</div>
+        <div class="clinical-box-text">锁骨骨折术后康复需特别关注：①肩胛骨稳定性（Scapular dyskinesis评估）；②投掷力学重建；③神经肌肉控制恢复后，方可逐步回归对抗性训练。一般恢复周期：<strong>8-12周</strong>。</div>
+    </div>
+    <a class="card-link" href="https://onefootball.com.br/en/news/athenea-sufre-una-lesion-en-plena-la-pretemporada-43219816" target="_blank">📰 原文链接：OneFootball</a>
+</div>
+
+<div class="news-card gold">
+    <div class="card-eyebrow">
+        <span class="card-tag gold">💪 韧带断裂</span>
+        <span class="card-source">中央社 · 2026-07-08</span>
+    </div>
+    <div class="card-title">中职救援王林诗翔右手肘韧带肌腱断裂：高雄长庚MRI确诊，台钢雄鹰宣布手术</div>
+    <div class="card-hook">"守护神倒下——去年30次救援成功+新人王，今年7月状态急转直下"</div>
+    <div class="card-body">
+        台钢雄鹰"守护神"<strong>林诗翔</strong>7月6日于高雄长庚纪念医院接受右肘MRI检查，诊断为<strong>右肘尺侧副韧带断裂（UCL）</strong>及<strong>尺侧腕屈肌肌腱断裂</strong>，球团决定手术治疗。7月5日面对统一7-ELEVEn狮第9局登板，仅投0.2局便因状态异常退场。去年获中职救援王+新人王，今年出赛26场获14次救援成功。
+        <div class="mechanism">
+            <strong>🔬 机制解读：</strong>肘关节尺侧副韧带（UCL）断裂的投手损伤机制：<br>
+            投掷late cocking期→肘内侧剪切力峰值→屈肌群共同激活代偿→肌腱止点撕脱→韧带断裂<br>
+            合并尺侧腕屈肌腱断裂提示<strong>过载性退行性改变</strong>（并非单次外伤），需排查投球技术异常（外翻角过大）和训练量管理问题。
+        </div>
+    </div>
+    <div class="clinical-box">
+        <div class="clinical-box-title">🔑 临床决策要点</div>
+        <div class="clinical-box-text">UCL断裂投手建议<strong>Tommy John手术（韧带重建）</strong>，康复周期<strong>12-18个月</strong>。需全面评估：①投球生物力学；②局灶性肌腱病变范围；③是否存在慢性过载史；④神经卡压合并症（尺神经）。</div>
+    </div>
+    <a class="card-link" href="https://www.163.com/game/article/DK3UFFO400318PFH_mobile.html" target="_blank">📰 原文链接：中央社/163游戏</a>
+</div>
+
+<div class="memory-card">
+    <div class="memory-card-title">💡 临床记忆点</div>
+    <div class="memory-card-text">高强度运动后的多部位慢性劳损提示：系统性疾病排查 + 运动链整体评估同等重要。孙颖莎的"累积性损伤模式"需要运动医学团队从训练量管理→下肢力线→核心稳定性→恢复策略进行多维度干预，而非单一局部处理。</div>
+</div>
+
+<!-- SECTION 2: 医学院研究 -->
+<div class="section-header">
+    <span class="section-icon">🎓</span>
+    <span class="section-label blue">医学院研究</span>
+    <span class="section-title">Academic Research Frontiers</span>
+    <span class="section-count">1条 · BJSM顶刊</span>
+</div>
+
+<div class="news-card blue">
+    <div class="card-eyebrow">
+        <span class="card-tag blue">🏋️ 力量训练</span>
+        <span class="card-source">Harvard T.H. Chan + BJSM · 2026-06-02</span>
+    </div>
+    <div class="card-title">哈佛30年14.7万人研究：力量训练的"甜蜜点"找到了——比你想的少得多</div>
+    <div class="card-hook">"90-119分钟/周的力量训练，全因死亡↓13%，CVD↓19%，神经疾病↓27%——超过120分钟反而不再获益"</div>
+    <div class="card-body">
+        哈佛T.H. Chan公卫学院Zhang Yiwen等人在<strong>BJSM 2026</strong>发表里程碑式研究，纳入三大队列（HPFS/NHS/NHS II）共<strong>147,374名</strong>成年人，随访长达<strong>30年</strong>，揭示力量训练的剂量-效应关系。
+
+        <div class="stats-row">
+            <div class="stat-card"><div class="stat-num">90-119</div><div class="stat-label">最佳分钟/周</div></div>
+            <div class="stat-card"><div class="stat-num">↓13%</div><div class="stat-label">全因死亡风险</div></div>
+            <div class="stat-card"><div class="stat-num">↓19%</div><div class="stat-label">心血管死亡</div></div>
+            <div class="stat-card"><div class="stat-num">↓27%</div><div class="stat-label">神经疾病死亡</div></div>
+        </div>
+
+        <div class="mechanism">
+            <strong>🔬 机制深度解读：</strong>力量训练延寿的分子通路：<br>
+            ① <strong>mTOR通路激活</strong> → 肌肉蛋白合成↑ → II型快肌纤维横截面积↑ → 基础代谢率↑<br>
+            ② <strong>IGF-1分泌↑</strong> → 支持脑白质结构完整性 → 认知减退速度↓（神经疾病死亡↓27%）<br>
+            ③ <strong>肌抑素(myostatin)↓</strong> → 肌肉质量保留 → 老年人跌倒风险↓<br>
+            ④ <strong>胰岛素敏感性↑</strong> → 代谢综合征风险↓ → 心血管保护<br>
+            ⑤ 每周<strong>&gt;120分钟</strong>后获益平台期：蛋白质合成最大化后，继续增加量不再↑合成效率（mTOR通路饱和）。
+        </div>
+
+        最强组合效应：有氧运动（150分钟/周）+ 力量训练（90-119分钟/周）→ 全因死亡↓<strong>45%</strong>（vs. 既不练力量也不做有氧者）。最低有效剂量：<strong>1-29分钟/周</strong>即可使癌症死亡风险↓<strong>21%</strong>。
+    </div>
+    <div class="clinical-box">
+        <div class="clinical-box-title">🔑 临床要点（面向患者）</div>
+        <div class="clinical-box-text">推荐处方：每周<strong>3次×30-40分钟</strong>的力量训练（深蹲/硬拉/划船/推举），或<strong>2次×45-60分钟</strong>，覆盖主要肌群。不需要健身房——阻力带+自重训练即可满足90-119分钟甜蜜点。现有心血管疾病/骨质疏松/骨关节炎患者开始前需评估。</div>
+    </div>
+    <a class="card-link" href="https://bjsm.bmj.com/content/bjsports/60/12/874.full.pdf" target="_blank">📰 原文链接：BJSM 2026;60:874</a>
+</div>
+
+<div class="memory-card">
+    <div class="memory-card-title">💡 临床记忆点</div>
+    <div class="memory-card-text">力量训练延寿的"甜蜜点"是90-119分钟/周，不是越多越好。机制核心是<strong>mTOR通路激活→IGF-1分泌→脑白质保护</strong>。最关键的临床启示：从"零"开始练力量的获益最大，推荐处方：每周3次，每次30-40分钟，覆盖大肌群复合动作。</div>
+</div>
+
+<!-- SECTION 3: MAYO临床 -->
+<div class="section-header">
+    <span class="section-icon">🏥</span>
+    <span class="section-label green">Mayo Clinic 临床</span>
+    <span class="section-title">Clinical Case Reports</span>
+    <span class="section-count">2条 · 临床案例</span>
+</div>
+
+<div class="news-card green">
+    <div class="card-eyebrow">
+        <span class="card-tag green">🦵 膝关节弹响</span>
+        <span class="card-source">Mayo Clinic + Thieme · 2026</span>
+    </div>
+    <div class="card-title">Mayo Clinic：后外侧膝关节弹响——MRI发现"异常股二头肌腱"解剖变异</div>
+    <div class="card-hook">"半月板修复后仍然弹响？——超声+MRI联合诊断揭示被忽视的解剖异常"</div>
+    <div class="card-body">
+        Mayo Clinic（凤凰城）运动医学团队在<strong>Thieme Case Report</strong>发表了一例36岁巴西柔术运动员的复杂临床病例：初次MRI显示外侧半月板撕裂（flipped fragment），行关节镜下半月板部分切除术后5个月，弹响症状复发。再次评估中，动态超声+MRI联合诊断发现<strong>异常股二头肌腱附着变异</strong>——肌腱不仅附着于腓骨头，还发出副束附着于胫骨，在屈伸过程中跨过增厚的外侧副韧带产生弹响。最终行股二头肌腱副束tenodesis术，术后症状完全缓解并重返柔术。
+        <div class="mechanism">
+            <strong>🔬 机制解读：</strong>股二头肌腱解剖变异（Biceps Femoris Anatomical Variation）在普通人群中的发生率约5-10%，但大多数为偶然发现。当合并以下因素时产生症状：<br>
+            ① 外侧半月板撕裂修复术后→局部瘢痕组织→改变了后外侧间隙解剖关系<br>
+            ② 腓骨头形态异常（exostosis）→肌腱跨过时的摩擦力↑<br>
+            ③ 髂胫束紧张→外侧支持带力学改变<br>
+            关键：<strong>动态超声（Dynamic Ultrasound）</strong>可在患者活动时实时观察肌腱滑动，是诊断此类变异的标准。
+        </div>
+    </div>
+    <div class="clinical-box">
+        <div class="clinical-box-title">🔑 临床要点</div>
+        <div class="clinical-box-text">半月板修复术后持续膝关节外侧弹响，应考虑<strong>后外侧结构复合损伤</strong>，而非单纯半月板问题。建议：①<strong>动态超声评估</strong>（活动位实时观察肌腱滑动）；②MRI需特别关注后外侧角解剖；③治疗策略：保守治疗（物理治疗/超声引导注射）→ 失败后考虑手术松解或肌腱固定术。</div>
+    </div>
+    <a class="card-link" href="https://www.thieme-connect.de/products/ejournals/html/10.1055/s-0043-1777329?device=mobile" target="_blank">📰 原文链接：Thieme / Mayo Clinic</a>
+</div>
+
+<div class="news-card green">
+    <div class="card-eyebrow">
+        <span class="card-tag green">🏃 髂骨应力骨折</span>
+        <span class="card-source">Mayo Clinic Florida · Case Rep Orthop 2026</span>
+    </div>
+    <div class="card-title">Mayo Clinic Florida：高中生短跑运动员下耻骨支应力性骨折——罕见案例报告</div>
+    <div class="card-hook">"短跑运动员的髂骨支应力骨折——文献中多见于马拉松跑者，短跑极为罕见"</div>
+    <div class="card-body">
+        Mayo Clinic Florida运动医学团队发表<strong>高中生短跑运动员下耻骨支应力性骨折</strong>病例。耻骨支应力骨折占所有应力性骨折的<strong>1%-2%</strong>，通常见于军事新兵和长跑运动员，在短跑运动员中极为罕见。该案例提示：高频高强度短跑冲刺训练（起跑加速期髂腰肌/内收肌群反复强烈收缩→肌肉牵拉力传递至耻骨支）同样可以诱发应力骨折。
+        <div class="mechanism">
+            <strong>🔬 机制解读：</strong>耻骨支应力骨折损伤机制：<br>
+            短跑加速期（acceleration phase）→髂腰肌+内收肌群（adductor magnus, pectineus）在耻骨支附着处产生<strong>重复牵拉力</strong>（Repetitive tensile loading）→骨重建失衡（重塑速度跟不上微损伤积累速度）→应力骨折。<br>
+            <strong>鉴别诊断：</strong>腹股沟疼痛鉴别：内收肌劳损 vs. 耻骨支应力骨折 vs. 髋关节盂唇撕裂 vs. 运动型疝（Sports Hernia）。
+        </div>
+    </div>
+    <div class="clinical-box">
+        <div class="clinical-box-title">🔑 临床要点</div>
+        <div class="clinical-box-text">耻骨支应力骨折在短跑运动员中易被漏诊（X线早期敏感性低，MRI是金标准）。临床警示：<strong>内收肌群止点反复疼痛</strong>伴运动后加重，保守治疗2-4周无效者→MRI排除应力骨折。治疗原则：4-8周减负荷训练（避免跑步/冲刺）→症状消失后渐进性重返运动。</div>
+    </div>
+    <a class="card-link" href="https://medfetch.com/r/47047/42253776" target="_blank">📰 原文链接：Case Rep Orthop 2026; Mayo Clinic Florida</a>
+</div>
+
+<div class="memory-card">
+    <div class="memory-card-title">💡 临床记忆点</div>
+    <div class="memory-card-text">Mayo Clinic两例病例均提示：<strong>功能性检查（动态超声）联合高级影像（MRI）是运动医学复杂病例的标准诊断路径</strong>。半月板术后弹响+髂骨支应力骨折——看似"不相关"的案例，背后共同逻辑是：运动员的疼痛需要系统性评估后外侧结构链/髋-骨盆-核心动力链，而非局部单一结构思维。</div>
+</div>
+
+<!-- SECTION 4: 康复科技 -->
+<div class="section-header">
+    <span class="section-icon">🤖</span>
+    <span class="section-label purple">康复科技</span>
+    <span class="section-title">Rehabilitation Technology</span>
+    <span class="section-count">2条 · AI+可穿戴</span>
+</div>
+
+<div class="news-card purple">
+    <div class="card-eyebrow">
+        <span class="card-tag purple">📊 AI步态分析</span>
+        <span class="card-source">BMC Sports Science · 2026</span>
+    </div>
+    <div class="card-title">AI步态分析革命：可穿戴传感器在7ms内触发保护反应，识别踝关节损伤亚型</div>
+    <div class="card-hook">"诊所内走得好，回家后全是代偿——可穿戴传感器填补了167小时的康复监测空白"</div>
+    <div class="card-body">
+        BMC Sports Science, Medicine and Rehabilitation 2026年发表系统评价，揭示可穿戴传感器+AI步态分析正在<strong>彻底改变踝/膝术后康复</strong>。研究的核心发现：<br><br>
+        ① <strong>实时踝关节不稳检测</strong>：IMU传感器可在7ms内识别有害踝关节运动（比有意识保护反射快），并触发腓骨肌功能性电刺激（peroneal muscle stimulation）提供实时保护。<br><br>
+        ② <strong>踝关节损伤亚型鉴别</strong>：鞋垫集成传感器可区分下胫腓联合损伤（syndesmotic injury）与单纯外侧韧带损伤，准确率↑，减少对反复影像学检查的依赖。<br><br>
+        ③ <strong>真实世界数据捕获</strong>：诊所内的步态评估仅反映患者在"被观察"状态下的表现，而<strong>167小时/周</strong>的真实生活数据才是再伤风险的核心预测因子。
+        <div class="stats-row">
+            <div class="stat-card"><div class="stat-num">7ms</div><div class="stat-label">保护响应时间</div></div>
+            <div class="stat-card"><div class="stat-num">167h</div><div class="stat-label">每周真实监测</div></div>
+            <div class="stat-card"><div class="stat-num">↑90%</div><div class="stat-label">目标下肢推力对称</div></div>
+        </div>
+    </div>
+    <div class="clinical-box">
+        <div class="clinical-box-title">🔑 临床要点</div>
+        <div class="clinical-box-text">踝关节术后康复决策：从"时间节点决策"（如"12周了可以恢复运动"）转向<strong>"生物力学就绪度决策"</strong>——客观指标：①患侧推力达到健侧90%以上；②步态对称指数正常化；③无残留髋/膝代偿模式。可穿戴传感器使这一转变成为可能。</div>
+    </div>
+    <a class="card-link" href="https://www.orthoandwellness.com/blog/wearable-sensors-and-smart-rehab-how-ai-driven-gait-analysis-is-transforming-ankle-and-knee-recovery" target="_blank">📰 原文链接：BMC Sports Science 2026</a>
+</div>
+
+<div class="news-card purple">
+    <div class="card-eyebrow">
+        <span class="card-tag purple">🧠 神经肌肉监测</span>
+        <span class="card-source">OKT Orthokinetic Track · 2026</span>
+    </div>
+    <div class="card-title">OKT ELSA：AI肩关节监测系统揭示"运动看起来正常但肌肉早已失活"的临床现实</div>
+    <div class="card-hook">"1/3的运动员复出后再伤——因为他们'看起来'好了，但关键的稳定肌早已萎缩失活"</div>
+    <div class="card-body">
+        Orthokinetic Track（OKT，波士顿，2021年创立）发布AI肩关节监测系统<strong>ELSA™（Enhanced Live Shoulder Assist）</strong>，揭示一个关键临床真相：<strong>1/3的运动员在肩关节术后复出后再次受伤</strong>——原因是传统运动分析只关注"看得见的动作"，无法探测"看不见的肌肉激活"。
+        <div class="mechanism">
+            <strong>🔬 机制解读：</strong>肩关节稳定性的"冰山模型"：<br>
+            水面上（可见）：肩袖肌群（冈上肌/冈下肌/小圆肌/肩胛下肌）的共同收缩<br>
+            水面下（被忽视）：前锯肌（serratus anterior）→肩胛骨前倾/外旋；下斜方肌→肱骨头居中<br>
+            关键：当深层稳定肌激活延迟（&gt;50ms）时，肩峰下间隙↓，导致撞击综合征→肩袖撕裂复发风险↑<br>
+            OKT的EMG+IMU融合传感器可检测到<strong>20%-50%</strong>的异常肌肉激活——这些在纯运动分析中完全不可见。
+        </div>
+    </div>
+    <div class="clinical-box">
+        <div class="clinical-box-title">🔑 临床要点</div>
+        <div class="clinical-box-text">肩关节康复评估必须包含<strong>神经肌肉激活评估</strong>（而非仅ROM和肌力）：①前锯肌激活延迟测试（serratus anterior punch）；②下斜方肌 vs. 上斜方肌激活比值；③肩袖-肩胛稳定肌协调性。EMG生物反馈训练是纠正深层稳定肌失活的标准方法。</div>
+    </div>
+    <a class="card-link" href="https://orthokintrack.com/?i=8728204121590" target="_blank">📰 原文链接：OKT Orthokinetic Track</a>
+</div>
+
+<div class="memory-card">
+    <div class="memory-card-title">💡 临床记忆点</div>
+    <div class="memory-card-text">AI可穿戴的临床价值：<strong>填补"观察盲区"</strong>——真实世界中167小时的步态/肌肉激活数据，以及肉眼无法识别的深层肌肉失活。这代表了从"经验医学"到"数据驱动康复"的范式转变，临床医生应主动拥抱这一工具，而非依赖主观感觉。</div>
+</div>
+
+<!-- SECTION 5: 创业融资 -->
+<div class="section-header">
+    <span class="section-icon">💰</span>
+    <span class="section-label orange">创业融资</span>
+    <span class="section-title">Startup & Funding Pulse</span>
+    <span class="section-count">3条 · 融资动态</span>
+</div>
+
+<div class="news-card orange">
+    <div class="card-eyebrow">
+        <span class="card-tag orange">🤖 AI康复机器人</span>
+        <span class="card-source">头条 · 2026-05-29</span>
+    </div>
+    <div class="card-title">杭州易启未来完成数千万A轮：AI运动后疲劳缓解机器人获同创伟业+杭州国资联合注资</div>
+    <div class="card-hook">"资本涌入运动康复AI赛道——不只是融资，更是在赌下一个万亿级消费健康入口"</div>
+    <div class="card-body">
+        杭州易启未来智能科技有限公司宣布完成<strong>A轮数千万人民币</strong>融资，由同创伟业、优山资本及杭州资本旗下"润苗基金"联合投资，天使股东网易持续提供资源支持。本轮资金将重点投入AI按摩机器人的核心技术深度攻坚与下一代创新型产品全栈研发。
+        <div class="mechanism">
+            <strong>🔬 产品解读：</strong>AI按摩机器人技术路径：<strong>微型柔性传感器阵列</strong>（实时捕捉压力/角度/肌电趋势）+ <strong>低功耗Edge AI计算模块</strong>（本地零延迟反馈）+ <strong>智能脉动压感触觉反馈</strong>（动态引导调整姿势/优化力线）。目标场景：运动后肌群放松/慢性劳损缓解/运动前激活。杭州正打造具身智能全产业链，易启未来入选国家具身智能应用中试基地。
+        </div>
+    </div>
+    <div class="clinical-box">
+        <div class="clinical-box-title">🔑 行业观察</div>
+        <div class="clinical-box-text">AI按摩机器人属于"被动康复设备"，临床价值在于<strong>提升恢复效率</strong>（增加血流量/降低DOMS延迟性肌肉酸痛），但不能替代主动康复训练。临床医生应了解此类设备的技术边界，用于补充而非替代物理治疗方案。</div>
+    </div>
+    <a class="card-link" href="https://www.toutiao.com/article/7645160626087592494" target="_blank">📰 原文链接：头条科技</a>
+</div>
+
+<div class="news-card orange">
+    <div class="card-eyebrow">
+        <span class="card-tag orange">📊 步态追踪</span>
+        <span class="card-source">Boomerang Ventures · 2026-02</span>
+    </div>
+    <div class="card-title">Impower Health获$750K Pre-Seed：跑步机步态追踪技术让健身房也有"实验室级"步态分析</div>
+    <div class="card-hook">"$75万美元Pre-Seed——把实验室步态分析'民主化'到健身房和康复诊所"</div>
+    <div class="card-body">
+        Boomerang Ventures（印第安纳波利斯）领投<strong>Impower Health（奥马哈）</strong>750,000美元Pre-Seed轮。公司核心产品：在跑步机上加装步态追踪模块，使康复诊所和健身房也能进行<strong>实验室级别的步态分析</strong>，帮助测量和改善运动障碍问题。本轮资金将用于商业化策略压力测试、IP保护和OEM授权许可布局。
+        <div class="mechanism">
+            <strong>🔬 技术解读：</strong>跑步机步态分析的核心价值：<br>
+            ① 标准化测试条件（固定速度/坡度）→ 可重复性↑<br>
+            ② 对称性分析（步长/着地时间/垂直地面反作用力）→ 识别代偿模式<br>
+            ③ 实时反馈接口 → 患者可视化自己的步态改善轨迹<br>
+            ④ 远程监测能力 → 治疗师远程监控家庭康复依从性
+        </div>
+    </div>
+    <div class="clinical-box">
+        <div class="clinical-box-title">🔑 临床要点</div>
+        <div class="clinical-box-text">跑步机步态分析可作为可穿戴传感器的<strong>补充验证工具</strong>。对于基层康复诊所，跑步机步态分析系统（无需穿戴设备）降低了硬件门槛，是提升康复评估标准化程度的好选择。</div>
+    </div>
+    <a class="card-link" href="https://www.boomerang.vc/boomerang-leads-750k-pre-seed-round-for-impower-health/" target="_blank">📰 原文链接：Boomerang Ventures</a>
+</div>
+
+<div class="news-card orange">
+    <div class="card-eyebrow">
+        <span class="card-tag orange">🏥 MSK诊所</span>
+        <span class="card-source">BioVoice India · 2026-01</span>
+    </div>
+    <div class="card-title">Stance Health India获$1M Pre-Seed：AI运动传感器+三阶段康复框架，剑指印度MSK万亿市场</div>
+    <div class="card-hook">"General Catalyst领投——用AI标准化印度'碎片化'的肌肉骨骼康复市场"</div>
+    <div class="card-body">
+        印度班加罗尔肌肉骨骼（MSK）康复公司<strong>Stance Health</strong>获得100万美元Pre-Seed轮，融资方包括：<strong>General Catalyst</strong>（领投方）、Antler、DEVC、EX Capital（Sword Health创始团队）以及Swiggy联合创始人等天使投资者。本轮资金用于：①开发专有技术平台；②在班加罗尔及其他印度主要城市扩张多学科MSK中心网络。
+        <div class="mechanism">
+            <strong>🔬 商业模式解读：</strong>Stance Health的三阶段康复框架：<strong>Reassess（再评估）→ Restore（恢复）→ Reignite（重燃）</strong><br>
+            技术护城河：①AI运动传感器（实时运动分析）；②客观肌力评估（标准化力量测试）；③结构化治疗路径（循证医学驱动）。<br>
+            商业数据：试点中心运营8个月内完成<strong>12,000+次康复会话</strong>，患者留存率达行业平均水平<strong>3倍</strong>。印度Orthopedic Heads from Manipal Hospitals & Kauvery Hospitals背书。
+        </div>
+    </div>
+    <div class="clinical-box">
+        <div class="clinical-box-title">🔑 行业观察</div>
+        <div class="clinical-box-text">印度MSK康复市场的"标准化"痛点与中国基层康复现状高度相似。Stance Health的"AI传感器+三阶段框架+多学科闭环"模式值得中国运动康复创业公司参考——<strong>临床标准化输出是核心竞争力</strong>，而非单纯硬件。</div>
+    </div>
+    <a class="card-link" href="https://biovoicenews.com/stance-health-secures-1-million-pre-seed-funding-to-transform-musculoskeletal-care-in-india/" target="_blank">📰 原文链接：BioVoice India</a>
+</div>
+
+<div class="memory-card">
+    <div class="memory-card-title">💡 临床记忆点</div>
+    <div class="memory-card-text">全球运动康复融资呈现三大趋势：①<strong>AI+传感器替代主观评估</strong>（步态/肌力/神经肌肉）；②<strong>边缘计算（Edge AI）实现零延迟反馈</strong>；③<strong>标准化临床路径数字化</strong>（Stance Health的三阶段框架）。临床医生应关注这些技术转化为临床工具的时间节点。</div>
+</div>
+
+<!-- SECTION 6: 明星损伤 -->
+<div class="section-header">
+    <span class="section-icon">⭐</span>
+    <span class="section-label red">明星损伤</span>
+    <span class="section-title">Celebrity Injury Intelligence</span>
+    <span class="section-count">2条 · 康复进展</span>
+</div>
+
+<div class="news-card red">
+    <div class="card-eyebrow">
+        <span class="card-tag red">🦵 多发伤</span>
+        <span class="card-source">People / Parade / Yahoo · 2026-07</span>
+    </div>
+    <div class="card-title">Lindsey Vonn 奥运重伤5个月后："仍然骨折，但力量正在回来"</div>
+    <div class="card-hook">"从轮椅→拄拐→健身房负重训练——一位41岁滑雪传奇的极限康复"</div>
+    <div class="card-body">
+        2026年2月8日冬奥会高山速降赛，出发仅<strong>13秒</strong>便发生恐怖撞车事故。诊断：<strong>左胫骨复合骨折</strong>+出发前一周已存在的<strong>ACL断裂</strong>+<strong>踝关节骨折</strong>+<strong>骨筋膜室综合征</strong>（危及肢体的紧急情况）。在意大利特雷维索医院急诊手术，经历了<strong>5次手术</strong>，医院卧床近两周，多次面临截肢风险。
+        <div class="stats-row">
+            <div class="stat-card"><div class="stat-num">5</div><div class="stat-label">手术次数</div></div>
+            <div class="stat-card"><div class="stat-num">5月+</div><div class="stat-label">当前康复时长</div></div>
+            <div class="stat-card"><div class="stat-num">3.5月</div><div class="stat-label">轮椅/拄拐期</div></div>
+            <div class="stat-card"><div class="stat-num">⚠️</div><div class="stat-label">踝关节未愈合</div></div>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item"><div class="timeline-dot">🚑</div><div class="timeline-time">D0</div><div class="timeline-label">急诊手术</div></div>
+            <div class="timeline-item"><div class="timeline-dot">🏥</div><div class="timeline-time">Week 2</div><div class="timeline-label">出院</div></div>
+            <div class="timeline-item"><div class="timeline-dot">🦽</div><div class="timeline-time">Week 3</div><div class="timeline-label">轮椅期</div></div>
+            <div class="timeline-item"><div class="timeline-dot">🦯</div><div class="timeline-time">Week 6</div><div class="timeline-label">拄拐</div></div>
+            <div class="timeline-item"><div class="timeline-dot">🚶</div><div class="timeline-time">Week 14</div><div class="timeline-label">独立行走</div></div>
+            <div class="timeline-item"><div class="timeline-dot">🏋️</div><div class="timeline-time">Month 5</div><div class="timeline-label">负重训练</div></div>
+        </div>
+        当前康复日程：7:30起床→8:00早餐→9-11点居家PT→高压氧舱→16:00-18:30健身房力量训练→每周6天。7月15日接受《人物》采访时表示："踝关节仍然骨折，拄拐了3个半月才能独自行走，健身房训练是5个月来首次实现。"
+    </div>
+    <div class="clinical-box">
+        <div class="clinical-box-title">🔑 临床要点</div>
+        <div class="clinical-box-text">Lindsey Vonn案例展示了复杂多发伤的系统康复策略：①<strong>急性期：骨筋膜室综合征→急诊筋膜切开术</strong>（保肢关键）；②<strong>稳定期：多学科联合康复</strong>（PT+高压氧+力量训练）；③<strong>心理支持同等重要</strong>（Vonn本人强调的心理康复与身体康复同等重要）；④<strong>重返运动决策</strong>：踝关节骨折完全愈合前重返竞技滑雪仍是长期目标，非短期目标。</div>
+    </div>
+    <a class="card-link" href="https://www.usmagazine.com/sports/news/lindsey-vonns-ankle-still-broken-after-olympics-injury/" target="_blank">📰 原文链接：People Magazine</a>
+</div>
+
+<div class="memory-card">
+    <div class="memory-card-title">💡 临床记忆点</div>
+    <div class="memory-card-text">Lindsey Vonn的康复历程揭示两个关键原则：①复杂多发伤（骨折+韧带断裂+骨筋膜室综合征）需要<strong>多学科联合决策</strong>，而非单一外科或康复；②"重返运动"是长期目标——踝关节完全愈合前需要分阶段生物力学重建，任何加速都应以客观指标为依据，而非时间压力。</div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <div class="footer-logo">🏃⚕️</div>
+    <div class="footer-note">本报告由 WorkBuddy 自动生成，汇集运动康复领域24小时内的6大分类精选动态。新闻内容来自公开渠道，仅供临床参考，不构成医疗建议。所有临床决策请遵循所在机构规范和最新循证指南。</div>
+    <div style="margin: 12px 0; font-size: 13px; color: var(--text-secondary);">Generated: 2026-08-03 06:55 GMT+8 | SportsRehabDaily v3.0</div>
+    <div class="footer-powered">Powered by WorkBuddy · 临床专家智能助理</div>
+</div>
+
+</div><!-- container -->
+
+</body>
+</html>
